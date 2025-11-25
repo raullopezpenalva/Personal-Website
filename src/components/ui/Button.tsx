@@ -5,6 +5,7 @@ interface ButtonProps {
     to?: string;
     onClick?: () => void;
     variant?: "primary" | "secondary" | "ghost";
+    className?: string;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -12,19 +13,20 @@ export const Button: React.FC<ButtonProps> = ({
     to,
     onClick,
     variant = "primary",
+    className = "",
 }) => {
-    const className = `btn btn-${variant}`;
+    const classes = `btn btn-${variant}${className ? " " + className : ""}`;
 
     if (to) {
         return (
-            <Link to={to} className={className}>
+            <Link to={to} className={classes}>
                 {children}
             </Link>
         );
     }
 
     return (
-        <button onClick={onClick} className={className}>
+        <button onClick={onClick} className={classes}>
             {children}
         </button>
     );

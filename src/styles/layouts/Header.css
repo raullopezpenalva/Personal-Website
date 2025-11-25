@@ -1,0 +1,77 @@
+/* Header styles */
+.Header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Asegura que quede por encima del contenido */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    background-color: #1e1e1e;
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid #222326;
+}
+
+/* Heaader-left section styles */
+.Header-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.Header-logo {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #4c6a4c;
+}
+
+.Header-logo img {
+    height: 35px;
+    /* o el tamaño que prefieras */
+    width: auto;
+    margin-left: 35px;
+}
+
+/* Header-center section styles */
+.Header-center {
+    flex: 0 1 auto;
+    margin: 0 auto;
+}
+
+.Header-nav {
+    display: flex;
+    gap: 4.0rem;
+    align-items: center;
+}
+
+.Header-nav a {
+    font-family: var(--font-text);
+    text-decoration: none;
+    color: #717274;
+    font-size: 1rem;
+}
+
+.Header-nav a.active {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #5e6ad2;
+}
+
+
+/* Header-right section styles */
+.Header-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+.btn.Header-contact-btn {
+    margin-left: 2rem;;
+    font-family: var(--font-text);
+    display: flex;
+    font-size: 1rem; /* Cambia el tamaño del texto */ /* Ajusta el padding interno */
+    margin-right: 246px;
+    color: #2c2c2c;
+}
