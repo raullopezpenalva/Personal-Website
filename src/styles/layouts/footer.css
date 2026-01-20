@@ -1,9 +1,10 @@
 /* Footer styles */
 .footer {
-    background-color: #f5f5f5;
-    color: #4c6a4c;
+    background-color: #0F1012;
+    color: #717274;
     padding: 2.5rem 1rem;
-    margin-top: 3rem;
+    margin-top: 0rem;
+    border-top: #717274 1px solid;
 }
 
 .footer-inner {
@@ -19,7 +20,7 @@
     align-items: center;
     flex-wrap: wrap;
     padding-bottom: 1.8rem;
-    border-bottom: 1px solid #1f2937;
+    border-bottom: 1px solid #717274;
 }
 
 /* Footer brand styles */
@@ -35,12 +36,12 @@
     font-weight: 700;
     font-size: 1.1rem;
     margin: 0;
-    color: rgb(0, 0, 0);
+    color: #F4F5F8;
 }
 
 .footer-tagline {
     font-size: 0.9rem;
-    color: #9ca3af;
+    color: #717274;
     margin: 0.4rem 0 0;
 }
 
@@ -56,18 +57,18 @@
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.16rem;
-    color: #9ca3af
+    color: #717274
 }
 
 .footer-nav a {
-    color: #d1d5db;
+    color: #717274;
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.3s, transform 0.15s;
 }
 
 .footer-nav a:hover {
-    color: #f9fafb;
+    color: #5e6ad2;
     transform: translateX(2px);
 }
 
@@ -80,7 +81,7 @@
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.16rem;
-    color: #9ca3af;
+    color: #717274;
     margin-bottom: 0.5rem;
 }
 
@@ -94,26 +95,24 @@
     width: 2.3rem;
     height: 2.3rem;
     border-radius: 999px;
-    border: 1px solid #374151;
+    border: 0px solid #717274;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: #e5e7eb;
-    background: #111827;
+    color: #F4F5F8;
+    background: #0F1012;
     transition: background 0.2s, border-color 0.2s, transform 0.15s;
 } 
 
 .footer-icon-link:hover {
-    background: #1f2937;
-    border-color: #4c6a4c;
-    color: #bbf7d0;
     transform: translateY(-1px);
 }
+
 /* Footer bottom section */
 .footer-bottom-copy {
     padding-top: 1.2rem;
     font-size: 0.85rem;
-    color: #9ca3af;
+    color: #717274;
 }
 
 /* Responsive styles */

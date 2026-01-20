@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: center;
     height: 64px;
-    background-color: #1e1e1e;
+    background-color: #0F1012;
     backdrop-filter: blur(6px);
     border-bottom: 1px solid #222326;
 }
@@ -54,7 +54,12 @@
 .Header-nav a.active {
     font-size: 1rem;
     font-weight: bold;
+    color: #F4F5F8;
+}
+
+.Header-nav a:hover {
     color: #5e6ad2;
+
 }
 
 

@@ -1,6 +1,7 @@
 /* Hero section styles */
 .hero {
     padding: 3rem 0 2rem;
+    background-color: #0F1012;
 }
 
 .hero-inner {
@@ -13,20 +14,20 @@
     text-transform: uppercase;
     font-size: 0.75rem;
     letter-spacing: 0.16rem;
-    color: #647067;
+    color: #717274;
     margin-bottom: 0.8rem;
 }
 
 .hero-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #222;
+    color: #F4F5F8;
     margin-bottom: 1rem;
 }
 
 .hero-text {
     font-size: 1.125rem;
-    color: #444;
+    color: #717274;
     margin-bottom: 1.5rem;
 }
 
@@ -38,8 +39,8 @@
 
 /* CTA HomePage styles */
 .call-to-action {
-    background-color: #4c6a4c;
-    color: white;
+    background-color: #222326;
+    color: #F4F5F8;
     padding: 3rem 2rem;
     border-radius: 8px;
     text-align: center;

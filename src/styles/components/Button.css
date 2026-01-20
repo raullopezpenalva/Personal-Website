@@ -15,7 +15,7 @@
 .btn-primary {
     background: #F4F5F8;
     color: #222222;
-    opacity: 0.9;
+    opacity: 0.75;
 }
 
 .btn-primary:hover {
@@ -25,13 +25,13 @@
 /* Secondary button style */
 .btn-secondary {
     background: transparent;
-    border-color: #4c6a4c;
-    color: #4c6a4c;
+    border-color: #717274;
+    color: #717274;
 }
 
 .btn-secondary:hover {
-    background: #e9f5e9;
-    transform: translateY(-2px);
+    background: #F4F5F8;
+    color: #222222;
 }
 
 /* Ghost button style */

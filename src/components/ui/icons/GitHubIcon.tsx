@@ -10,7 +10,7 @@ const GitHubIcon: React.FC = () => (
 		height="24"
 		aria-hidden="true"
 	>
-		<rect width="24" height="24" rx="4" fill="currentColor" fillOpacity="0.08" />
+		<rect width="24" height="24" rx="4" fill="#0F1012" fillOpacity="1" />
 		<path
 			fillRule="evenodd"
 			clipRule="evenodd"
