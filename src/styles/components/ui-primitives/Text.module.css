@@ -1,0 +1,43 @@
+.text {
+    color: #717274;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+/* variants */
+.body {
+    font-size: 1rem;
+}
+
+.lead {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #F4F5F8;
+}
+
+.muted {
+    font-size: 0.95rem;
+    color: #5c5d5f;
+}
+
+.caption {
+    font-size: 0.85rem;
+    color: #5c5d5f;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* alignment */
+.align-left {
+    text-align: left;
+}
+.align-center {
+    text-align: center;
+}
+.align-right {
+    text-align: right;
+}

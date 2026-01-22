@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Button } from '../ui/Button';
+import { Button } from '../ui-primitives/Button';
 
 const Header: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const Header: React.FC = () => {
         <nav className="Header-nav">
           <NavLink to="/">Inicio</NavLink>
           <NavLink to="/about">Sobre mí</NavLink>
-          <NavLink to="/services">Servicios</NavLink>
+          <NavLink to="/vision">Visión</NavLink>
           <NavLink to="/projects">Proyectos</NavLink>
           <NavLink to="/blog">Blog</NavLink>
         </nav>

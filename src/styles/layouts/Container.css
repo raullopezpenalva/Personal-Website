@@ -1,0 +1,11 @@
+/* Container styles */
+.Container {
+    width: 100%;
+    max-width: 1100px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+}
+
+.Container.prose {
+    max-width: 700px;
+}
