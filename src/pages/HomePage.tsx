@@ -8,7 +8,7 @@ const HomePage: React.FC = () => {
   return (
     <>
       {/* HERO */}
-      <section className="hero">
+      <Section id="hero">
         <div className="hero-inner">
           <p className="hero-kicker">Escalablidad · DevOps · Infraestructura</p>
           <h1 className="hero-title">
@@ -26,7 +26,7 @@ const HomePage: React.FC = () => {
             </Button>
           </div>
         </div>
-      </section>
+      </Section>
       
       {/* SERVICES */}
       <Section

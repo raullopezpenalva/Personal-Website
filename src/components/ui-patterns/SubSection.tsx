@@ -12,7 +12,7 @@ const SubSection: React.FC<SubSectionProps> = ({ id, title, subtitles, children 
         <section id={id} className="Subsection">
             {(title || subtitles) && (
                 <header className="header">
-                    {title && <h2 className="lead">{title}</h2>}
+                    {title && <h2 className="title">{title}</h2>}
                     {subtitles && <p className="subtitle">{subtitles}</p>}
                 </header>
             )}

@@ -4,19 +4,19 @@
 
 /* gaps */
 .gap-xs {
-    gap: 0.4rem;
+    gap: var(--gap-xs);
 }
 .gap-sm {
-    gap: 0.8rem;
+    gap: var(--gap-sm);
 }
 .gap-md {
-    gap: 1.2rem;
+    gap: var(--gap-md);
 }
 .gap-lg {
-    gap: 1.6rem;
+    gap: var(--gap-lg);
 }
 .gap-xl {
-    gap: 2.4rem;
+    gap: var(--gap-xl);
 }
 
 /* alignment */

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from '../../styles/components/ui-primitives/Text.module.css';
 
-type Variant = "body" | "lead" | "muted" | "caption" | "title";
+type Variant = "body" | "lead" | "muted" | "caption" | "title" | "parragraph";
 type Align = "left" | "center" | "right" | "justify";
 
 interface TextProps {

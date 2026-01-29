@@ -1,12 +1,17 @@
 .text {
-    color: #717274;
-    line-height: 1.6;
+    color: var(--fg);
+    line-height: var(--lh-base);
     white-space: pre-line;
 }
 
 /* variants */
-.body {
-    font-size: 1rem;
+.variant-parragraph {
+    margin-top: var(--text-parraph-margin-normal);
+    margin-bottom: var(--text-parraph-margin-normal);
+}
+.variant-body {
+    font-size: var(--font-size-md);
+    margin: var(--text-body-margin) 0;
 }
 
 .lead {

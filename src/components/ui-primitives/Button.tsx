@@ -4,7 +4,7 @@ interface ButtonProps {
     children: React.ReactNode;
     to?: string;
     onClick?: () => void;
-    variant?: "primary" | "secondary" | "ghost";
+    variant?: "primary" | "secondary" | "alternative" | "muted";
     className?: string;
 }
 

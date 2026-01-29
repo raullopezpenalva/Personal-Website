@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "src/styles/components/ui-primitives/Stack.module.css";
+import styles from "../../styles/components/ui-primitives/Stack.module.css";
 
 type Gap =  "xs" | "sm" | "md" | "lg" | "xl";
 

@@ -1,21 +1,25 @@
 /* Button styles */
 .btn {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    border-radius: 9px;
-    font-size: 0.8rem;
-    font-weight: 600;
+    display: inline-flex;
+    padding: var(--btn-padding);
+    border-radius: var(--btn-corner-radius);
+    font-size: var(--btn-font-size);
+    font-weight: var(--font-weight-medium);;
     cursor: pointer;
-    border: 0.5px solid transparent;
     transition: all 0.3s ease;
     text-decoration: none;
+    height: var(--btn-height);
+    align-items: center;
+    justify-content: center;
+    gap: var(--btn-gap);
 }
 
 /* Primary button style */
 .btn-primary {
-    background: #F4F5F8;
-    color: #222222;
-    opacity: 0.75;
+    background: var(--btn-bg-primary);
+    color: var(--btn-fg-primary);
+    border: 1px solid var(--btn-border-primary);
+    opacity: 0.85;
 }
 
 .btn-primary:hover {
@@ -24,22 +28,32 @@
 
 /* Secondary button style */
 .btn-secondary {
-    background: transparent;
-    border-color: #717274;
-    color: #717274;
+    background: var(--btn-bg-secondary);
+    color: var(--btn-fg-secondary);
+    opacity: 0.85;
 }
 
 .btn-secondary:hover {
-    background: #F4F5F8;
-    color: #222222;
+    opacity: 1;
 }
 
-/* Ghost button style */
-.btn-ghost {
-    background: transparent;
-    color: #4c6a4c;
+/* Alternative button style */
+.btn-alternative {
+    background: var(--btn-bg-alternative);
+    color: var(--btn-fg-alternative);
 }
 
-.btn-ghost:hover {
+.btn-alternative:hover {
     opacity: 0.8;
+}
+
+/* Muted button style */
+.btn-muted {
+    background: transparent;
+    color: var(--fg);
+}
+
+.btn-muted:hover {
+    background: var(--btn-bg-muted-hover);
+    color: var(--fg-title);
 }
