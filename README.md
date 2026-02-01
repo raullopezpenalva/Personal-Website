@@ -1,4 +1,7 @@
+
 # Personal Website
+
+**Live:** coming soon
 
 This repository contains the source code for my personal website, built as static application using React and Vite.
 
@@ -156,6 +159,43 @@ npm run test:run
 npm run test:ci
 ```
 
+## 🔁 CI/CD & Deployment
+
+This repository contains only the website source code and its delivery pipeline.
+
+### CI (Quality Gates)
+
+GitHub Actions is used to validate changes through automated checks:
+
+- **Pull Requests → `dev`**
+  - Runs linting and tests to validate changes early.
+  - Ensures contributions remain consistent with the project's coding standards.
+
+- **Pull Requests → `main`**
+  - Runs the full validation pipeline (lint + tests).
+  - Produces a production build and publishes a versioned container image to **GitHub Container Registry (GHCR)**.
+
+- **Merges → `main`**
+  - Produces a production build and publishes a versioned container image to **GitHub Container Registry (GHCR)**.
+
+### Deployment (Self-hosted)
+
+Deployment to my self-hosted infrastructure is managed from a separate, private **infrastructure repository**.
+
+The deployment flow is:
+
+1. This repository publishes a container image containing the static build output. The container image packages the `dist/` output and serves it using Nginx.
+2. The infrastructure repository pins the desired image version (tag/SHA) and deploys it to the server.
+3. A dedicated reverse proxy routes the public domain to the running `personal-website` container.
+
+This separation keeps infrastructure details and secrets out of the public codebase while maintaining a fully automated delivery workflow.
 
 
+## 🚧 Project Status
 
+Actively maintained.  
+The structure is stable, while content and design are iterated over time.
+
+## 📄 License
+
+MIT License
