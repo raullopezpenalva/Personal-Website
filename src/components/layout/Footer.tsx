@@ -1,6 +1,6 @@
-import EmailIcon from "../ui/icons/EmailIcon.tsx";
-import GitHubIcon from "../ui/icons/GitHubIcon.tsx";
-import LinkedInIcon from "../ui/icons/LinkedInIcon.tsx";
+import EmailIcon from "../ui-primitives/icons/EmailIcon.tsx";
+import GitHubIcon from "../ui-primitives/icons/GitHubIcon.tsx";
+import LinkedInIcon from "../ui-primitives/icons/LinkedInIcon.tsx";
 
 const Footer: React.FC = () => {
     const currentYear = new Date().getFullYear();

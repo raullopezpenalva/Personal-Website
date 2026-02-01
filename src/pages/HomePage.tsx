@@ -1,6 +1,6 @@
-import Section from "../components/ui/Section";
-import { Button } from "../components/ui/Button";
-import ServiceCard from "../components/ui/ServiceCard";
+import Section from "../components/ui-patterns/Section";
+import { Button } from "../components/ui-primitives/Button";
+import ServiceCard from "../components/domain/ServiceCard";
 import { services } from "../data/services";
 
 
@@ -8,25 +8,25 @@ const HomePage: React.FC = () => {
   return (
     <>
       {/* HERO */}
-      <section className="hero">
+      <Section id="hero">
         <div className="hero-inner">
-          <p className="hero-kicker">Tecnología · Código · Infraestructura</p>
+          <p className="hero-kicker">Escalablidad · DevOps · Infraestructura</p>
           <h1 className="hero-title">
-            Hola, soy Raúl López Penalva
+            Raúl López Penalva
           </h1>
           <p className="hero-text">
-            Diseño y gestión de sistemas escalables y eficientes.
+            Ingeniería técnica desde el big picture
           </p>
           <div className="hero-actions">
-            <Button to="/services" variant="primary">
-              Ver Servicios
+            <Button to="/about" variant="primary">
+              Visión técnica
             </Button>
             <Button to="/contact" variant="secondary">
-              Contáctame
+              Contacto
             </Button>
           </div>
         </div>
-      </section>
+      </Section>
       
       {/* SERVICES */}
       <Section

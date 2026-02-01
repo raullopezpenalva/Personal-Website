@@ -6,5 +6,5 @@ import { router } from './router';
 test('renders home page', () => {
   render(<RouterProvider router={router} />);
   
-  expect(screen.getByText(/Hola, soy Raúl López Penalva/i)).toBeInTheDocument();
+  expect(screen.getByText(/2026/i)).toBeInTheDocument();
 });

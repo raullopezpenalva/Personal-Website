@@ -1,11 +1,12 @@
-@import "./layouts/HomePage.css";
 @import "./layouts/Header.css";
-@import "./layouts/footer.css";
-
+@import "./layouts/Footer.css";
+@import "./layouts/Container.css";
 
 
 
 /* Layout styles */
 .Layout-main {
-    padding: 2rem 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }

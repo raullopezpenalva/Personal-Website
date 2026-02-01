@@ -1,6 +1,10 @@
-@import "./components/Button.css";
-@import "./components/Section.css";
-@import "./components/ServiceCard.css";
-@import "./components/Container.css";
+@import "./components/ui-primitives/Button.css";
+@import "./components/ui-patterns/Section.css";
+@import "./components/domain/ServiceCard.css";
+@import "./components/ui-primitives/Stack.module.css";
+@import "./components/ui-primitives/Grid.module.css";
+@import "./components/ui-primitives/Text.module.css";
+@import "./components/ui-patterns/SubSection.css";
+
 
 

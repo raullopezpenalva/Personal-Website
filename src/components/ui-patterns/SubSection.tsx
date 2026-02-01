@@ -1,15 +1,15 @@
 import React from "react";
 
-interface SectionProps {
+interface SubSectionProps {
     id?: string;
     title?: string;
     subtitles?: string;
     children: React.ReactNode;
 }
 
-const Section: React.FC<SectionProps> = ({ id, title, subtitles, children }) => {
+const SubSection: React.FC<SubSectionProps> = ({ id, title, subtitles, children }) => {
     return (
-        <section id={id} className="Section">
+        <section id={id} className="Subsection">
             {(title || subtitles) && (
                 <header className="header">
                     {title && <h2 className="title">{title}</h2>}
@@ -23,4 +23,4 @@ const Section: React.FC<SectionProps> = ({ id, title, subtitles, children }) => 
     );
 };
 
-export default Section;
+export default SubSection;
