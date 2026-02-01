@@ -1,7 +1,11 @@
 /* Generic section styles */
 .Section {
     padding: var(--space-section) 0 var(--space-section);
-
+    background: linear-gradient(
+        to top,
+        var(--bg),
+        var(--surface-1)
+    );
 }
 
 .Section-inner {

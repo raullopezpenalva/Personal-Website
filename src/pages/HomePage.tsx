@@ -8,9 +8,9 @@ const HomePage: React.FC = () => {
   return (
     <>
       {/* HERO */}
-      <Section id="hero">
+      <Section id="hero" className="hero-section">
         <div className="hero-inner">
-          <p className="hero-kicker">Escalablidad · DevOps · Infraestructura</p>
+          <p className="hero-kicker">Escalabilidad · DevOps · Infraestructura</p>
           <h1 className="hero-title">
             Raúl López Penalva
           </h1>

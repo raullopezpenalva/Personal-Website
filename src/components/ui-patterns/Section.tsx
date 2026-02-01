@@ -5,11 +5,12 @@ interface SectionProps {
     title?: string;
     subtitles?: string;
     children: React.ReactNode;
+    className?: string;
 }
 
-const Section: React.FC<SectionProps> = ({ id, title, subtitles, children }) => {
+const Section: React.FC<SectionProps> = ({ id, title, subtitles, children, className }) => {
     return (
-        <section id={id} className="Section">
+        <section id={id} className={`Section ${className ? className : ""}`}>
             <div className="Section-inner" >
                 {(title || subtitles) && (
                     <header className="header">

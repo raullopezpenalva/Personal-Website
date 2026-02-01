@@ -142,7 +142,7 @@
   --kbd-size: 18px;
 
   /* Hero section variables */
-  --hero-padding: var(--space-7) 0 var(--space-6);
+  --hero-padding: var(--space-section) 0 var(--space-section);
 
   
 }
