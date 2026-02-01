@@ -37,7 +37,15 @@ const AboutPage: React.FC = () => {
                             id="about-my-journey-studies"
                             title="Formación técnica y académica"
                         >
-                            <BulletList className="about-my-journey-studies-content">
+                            <BulletList className="about-my-journey-studies-content"
+                                items={[
+                                    "Ingeniería Técnica en Electrónica Industrial",
+                                    "Ciclo Formativo de Grado Medio en Instalaciones Eléctricas y Automáticas",
+                                    "Ciclo Formativo de Grado Superior en Sistemas de Telecomunicaciones e Informáticos",
+                                    "Ciclo Formativo de Grado Superior en Sonido para Audiovisuales y Espectáculos (IRTVE)",
+                                    "DevOps BootCamp by Lemoncode (actualmente cursando)"
+                                ]}>
+                                <Bullet>Ingeniería Técnica en Electrónica Industrial</Bullet>
                                 <Bullet>Ciclo Formativo de Grado Medio en Instalaciones Eléctricas y Automáticas</Bullet>
                                 <Bullet>Ciclo Formativo de Grado Superior en Sistemas de Telecomunicaciones e Informáticos</Bullet>
                                 <Bullet>Ciclo Formativo de Grado Superior en Sonido para Audiovisuales y Espectáculos (IRTVE)</Bullet>
@@ -48,7 +56,13 @@ const AboutPage: React.FC = () => {
                             id="about-my-journey-experience"
                             title="Experiencia profesional"
                         >
-                            <BulletList className="about-my-journey-experience-content">
+                            <BulletList className="about-my-journey-experience-content"
+                                items={[
+                                    "Técnico de sonido para audiovisuales y espectáculos en IRTVE",
+                                    "Montaje y operación de sistemas de sonido profesionales",
+                                    "Soporte técnico en eventos en vivo y producciones audiovisuales",
+                                    "Mantenimiento y gestión de infraestructuras técnicas"
+                                ]}>
                                 <Bullet>Trabajo en entornos técnicos complejs: eventos, rodajes audiovisuales, instalaciones</Bullet>
                                 <Bullet>Experiencia con sistemas de sonido, iluminación y vídeo a gran escala</Bullet>
                                 <Bullet>Colaboración con equipos multidisciplinares en entornos de alta presión</Bullet>
@@ -71,7 +85,13 @@ const AboutPage: React.FC = () => {
                     <Text>Desde el micrófono del cantante hasta el oído del espectador.</Text>
                     <Text>Desde la captura de una señal hasta su entrega final.</Text>
                     <Text>No solo elementos técnicos, sino también:</Text>
-                    <BulletList className="about-big-picture-bullet-list">
+                    <BulletList className="about-big-picture-bullet-list"
+                        items={[
+                            "las personas implicadas",
+                            "los flujos de trabajo",
+                            "la infraestructura ",
+                            "los puntos críticos del sistema"
+                        ]}>
                         <Bullet>las personas implicadas</Bullet>
                         <Bullet>los flujos de trabajo</Bullet>
                         <Bullet>la infraestructura </Bullet>
@@ -90,7 +110,12 @@ const AboutPage: React.FC = () => {
                     <Text>He trabajado en eventos, rodajes audiovisuales e instalaciones técnicas, muchas veces ocupando una parte del workflow total.</Text>
                     <Text>Pero incluso en esos contextos, siempre he necesitado entender todo el flujo.</Text>
                     <Text>Por ejemplo, en entornos como un informativo televisivo:</Text>
-                    <BulletList className="about-professional-growth-bullet-list">
+                    <BulletList className="about-professional-growth-bullet-list"
+                        items={[
+                            "desde el redactor y el cámara que generan el contenido",
+                            "pasando por los sistemas técnicos y humanos",
+                            "hasta la emisión en directo al aire"
+                        ]}>
                         <Bullet>desde el redactor y el cámara que generan el contenido</Bullet>
                         <Bullet>pasando por los sistemas técnicos y humanos</Bullet>
                         <Bullet>hasta la emisión en directo al aire</Bullet>
@@ -103,16 +128,19 @@ const AboutPage: React.FC = () => {
                 id="about-learned-in-my-career"
                 title="Lo que aprendí trabajando en sistemas reales"
             >
-                <BulletList className="about-learned-in-my-career-content">
-                    <Bullet>Los problemas casi nunca está donde fallan</Bullet>
-                    <Bullet>Optimizar una parte suele empeorar otra</Bullet>
-                    <Bullet>Los sistemas son dinámicos y cambian con el tiempo</Bullet>
-                    <Bullet>La comunicación entre personas es clave</Bullet>
-                    <Bullet>La documentación y estandarización evitan errores</Bullet>
-                    <Bullet>La mayoría de errores son de diseño, no de ejecución</Bullet>
-                    <Bullet>La presión revela si un sistema está bien pensado</Bullet>
-                    <Bullet>Entender el flujo completo ahorra más tiempo que correr</Bullet>
-                </BulletList>
+                <BulletList
+                    className="about-learned-in-my-career-content"
+                    items={[
+                        "Los problemas casi nunca está donde fallan",
+                        "Optimizar una parte suele empeorar otra",
+                        "Los sistemas son dinámicos y cambian con el tiempo",
+                        "La comunicación entre personas es clave",
+                        "La documentación y estandarización evitan errores",
+                        "La mayoría de errores son de diseño, no de ejecución",
+                        "La presión revela si un sistema está bien pensado",
+                        "Entender el flujo completo ahorra más tiempo que correr"
+                    ]}
+                />
             </Section>
 
             <Section
