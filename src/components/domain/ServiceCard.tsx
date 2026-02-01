@@ -7,7 +7,7 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
     return (
-        <article className="card service-card">
+        <article className="service-card">
             <h3>{service.title}</h3>
             <p>{service.description}</p>
         </article>
