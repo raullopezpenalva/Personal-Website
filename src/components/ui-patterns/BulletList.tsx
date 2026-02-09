@@ -5,7 +5,7 @@ import styles from '../../styles/components/ui-patterns/BulletList.module.css';
 type Variant = "dot" | "dash" | "circle" | "check";
 
 interface BulletListProps {
-    items: Array<React.ReactNode>;
+    items?: Array<React.ReactNode>;
     children?: React.ReactNode;
     variant?: Variant;
     className?: string;

@@ -1,5 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { Button } from '../ui-primitives/Button';
+import BrandIcon from '../ui-primitives/icons/BrandIcon';
+
 
 const Header: React.FC = () => {
   return (
@@ -7,7 +9,7 @@ const Header: React.FC = () => {
       <div className="Header-inner">
         <div className="Header-left">
           <NavLink to="/" className="Header-logo">
-            <img src="src/assets/5FDFF6B2-FA3D-44B7-BAF5-BF63D3C60778.PNG" alt="Logo" />
+            <BrandIcon />
           </NavLink>
         </div>
         <div className="Header-center">

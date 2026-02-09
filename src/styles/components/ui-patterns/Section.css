@@ -35,7 +35,5 @@
 }
 
 .Section .content {
-    display: grid;
-    justify-items: left;
-    
+    display: flex;
 }

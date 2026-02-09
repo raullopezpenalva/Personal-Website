@@ -6,9 +6,11 @@ interface ServiceCardProps {
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
+    const Icon = service.icon;
     return (
         <article className="service-card">
             <h3>{service.title}</h3>
+            <Icon className="service-icon" />
             <p>{service.description}</p>
         </article>
     );
