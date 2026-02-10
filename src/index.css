@@ -6,6 +6,7 @@
   /* Fonts */
   --font-title: 'Inter', system-ui, sans-serif;
   --font-text: 'Aeonik', system-ui, sans-serif;
+  --font-code: ui-monospace, SF Mono, SF Mono Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
   --lh-base: 1.5;
   --fw-base: 400;
 
@@ -77,6 +78,7 @@
   --page-max-width: 1024px;
 
   /* Font sizes */
+  --font-size-xxs: 0.5rem; /* 8px */
   --font-size-xs: 0.75rem; /* 12px */
   --font-size-sm: 0.875rem; /* 14px */
   --font-size-md: 1rem; /* 16px */
@@ -118,12 +120,19 @@
   --subsection-padding-vertical: var(--space-4);
   --subsection-padding-horizontal: var(--space-4);
 
-  /* Stack Grid gaps */
+  /* Stack Grid variables */
+  --gap-none: 0;
   --gap-xs: var(--space-2);
   --gap-sm: var(--space-3);
   --gap-md: var(--space-4);
   --gap-lg: var(--space-5);
   --gap-xl: var(--space-6);
+  --margin-none: 0;
+  --margin-xs: var(--space-2);
+  --margin-sm: var(--space-3);
+  --margin-md: var(--space-4);
+  --margin-lg: var(--space-7);
+  --margin-xl: var(--space-8);
 
   /* Text variables */
   --text-parraph-margin-normal: var(--space-4);
@@ -142,9 +151,18 @@
   --kbd-size: 18px;
 
   /* Hero section variables */
-  --hero-padding: var(--space-7) 0 var(--space-6);
+  --hero-padding: var(--space-section) 0 var(--space-section);
 
-  
+  /* Service grid variables */
+  --service-vertical-padding: var(--space-5);
+  --service-margin: var(--space-3) auto;
+  --service-grid-margin: var(--space-section) 0;
+  --service-horizontal-padding: var(--space-4);
+
+  /* Bullet list variables */
+  --bullet-width: 0.5rem;
+  --bullet-height: 0.5rem;
+  --bullet-margin: 12px 0;
 }
 
 *,

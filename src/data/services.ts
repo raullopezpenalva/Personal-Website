@@ -1,26 +1,35 @@
+import type { FC } from "react";
+import EndtoEndIcon from "../components/ui-primitives/icons/EndtoEndIcon";
+import DesignIcon from "../components/ui-primitives/icons/DesignIcon";
+import LayerIcon from "../components/ui-primitives/icons/LayerIcon";
+
 export interface Service {
   id: string;
   title: string;
   description: string;
+  icon: FC;
 }
 
 export const services: Service[] = [
   {
-    id: "web-development",
-    title: "Desarrollo Web",
+    id: "end-to-end-development",
+    title: "Visión end-to-end",
+    icon: EndtoEndIcon,
     description:
-      "Creación de sitios web modernos, responsivos y optimizados para SEO utilizando las últimas tecnologías.",
+      "Entender el flujo completo antes de tocar una línea de código",
   },
   {
-    id: "ui-ux-design",
-    title: "Diseño UI/UX",
+    id: "design-before-code",
+    title: "Diseño antes de código",
+    icon: DesignIcon, // Cambia esto por el icono correcto
     description:
-      "Diseño de interfaces atractivas y experiencias de usuario intuitivas para aplicaciones web y móviles.",
+      "La mayoria de problemas vienen de decisiones tempranas mal pensadas",
   },
   {
-    id: "ecommerce-solutions",
-    title: "Soluciones de Comercio Electrónico",
+    id: "conscious-simplicity",
+    title: "Simplicidad consciente",
+    icon: LayerIcon, // Cambia esto por el icono correcto
     description:
-      "Desarrollo e integración de plataformas de comercio electrónico personalizadas para impulsar tus ventas en línea.",
+      "Menos capas, mejor comprensión",
   },
 ];
