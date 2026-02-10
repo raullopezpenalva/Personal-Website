@@ -23,9 +23,12 @@
 }
 
 .Section header .title {
-    color: var(--fg-title);
     margin-top: 0;
     margin-bottom: var(--section-header-margin-vertical);
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.3;
+    color: var(--fg-title);
 }
 
 .Section header .subtitle {

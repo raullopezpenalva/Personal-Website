@@ -6,18 +6,26 @@ import Text from "../components/ui-primitives/Text";
 import BulletList from "../components/ui-patterns/BulletList";
 import Bullet from "../components/ui-patterns/Bullet";
 import Stack from "../components/ui-primitives/Stack";
+import headshot from "../assets/HeadShot-HQ.jpeg";
 
 const AboutPage: React.FC = () => {
     return (
         <>
             <Section 
                 id="about-who-am-i"
-                title="Quién soy"
-                subtitles="Un perfil técnico con visión de conjunto"
             >
-                <Text variant= "parragraph">
-                    Soy un perfil técnico con una fuerte base en ingeniería electrónica e informática, impulsado desde joven por la música, cine y la curiosidad por cómo funcionan los sistemas complejos.
-                </Text>
+                <Stack className="whoami-60-40" direction="row" gap="none" margin="lg">
+                    <Stack align="center" gap="md" justifyContent="center" className="whoami-left">
+                        <img src={headshot} alt="Raúl López Penalva" className="whoami-headshot" />
+                    </Stack>
+                    <Stack align="center" gap="none" direction="column" justifyContent="center" className="whoami-right">
+                        <Text variant="title" className="whoami-title">Quién soy</Text>
+                        <Text variant="subtitle" className="whoami-subtitle">Un perfil técnico con visión de conjunto</Text>
+                        <Text variant= "parragraph" className="whoami-text">
+                            Soy un perfil técnico con una fuerte base en ingeniería electrónica e informática, impulsado desde joven por la música, cine y la curiosidad por cómo funcionan los sistemas complejos.
+                        </Text>
+                    </Stack>
+                </Stack>
             </Section>
         
             <Section 
@@ -37,15 +45,7 @@ const AboutPage: React.FC = () => {
                             id="about-my-journey-studies"
                             title="Formación técnica y académica"
                         >
-                            <BulletList className="about-my-journey-studies-content"
-                                items={[
-                                    "Ingeniería Técnica en Electrónica Industrial",
-                                    "Ciclo Formativo de Grado Medio en Instalaciones Eléctricas y Automáticas",
-                                    "Ciclo Formativo de Grado Superior en Sistemas de Telecomunicaciones e Informáticos",
-                                    "Ciclo Formativo de Grado Superior en Sonido para Audiovisuales y Espectáculos (IRTVE)",
-                                    "DevOps BootCamp by Lemoncode (actualmente cursando)"
-                                ]}>
-                                <Bullet>Ingeniería Técnica en Electrónica Industrial</Bullet>
+                            <BulletList className="about-my-journey-studies-content">
                                 <Bullet>Ciclo Formativo de Grado Medio en Instalaciones Eléctricas y Automáticas</Bullet>
                                 <Bullet>Ciclo Formativo de Grado Superior en Sistemas de Telecomunicaciones e Informáticos</Bullet>
                                 <Bullet>Ciclo Formativo de Grado Superior en Sonido para Audiovisuales y Espectáculos (IRTVE)</Bullet>
@@ -56,17 +56,11 @@ const AboutPage: React.FC = () => {
                             id="about-my-journey-experience"
                             title="Experiencia profesional"
                         >
-                            <BulletList className="about-my-journey-experience-content"
-                                items={[
-                                    "Técnico de sonido para audiovisuales y espectáculos en IRTVE",
-                                    "Montaje y operación de sistemas de sonido profesionales",
-                                    "Soporte técnico en eventos en vivo y producciones audiovisuales",
-                                    "Mantenimiento y gestión de infraestructuras técnicas"
-                                ]}>
-                                <Bullet>Trabajo en entornos técnicos complejs: eventos, rodajes audiovisuales, instalaciones</Bullet>
+                            <BulletList className="about-my-journey-experience-content">
+                                <Bullet>Trabajo en entornos técnicos complejos: eventos, rodajes audiovisuales, instalaciones</Bullet>
                                 <Bullet>Experiencia con sistemas de sonido, iluminación y vídeo a gran escala</Bullet>
                                 <Bullet>Colaboración con equipos multidisciplinares en entornos de alta presión</Bullet>
-                                <Bullet>Gestión y mantenimiento de infraestructuras técnicas</Bullet>
+                                <Bullet>Gestión y mantenimiento de infraestructuras técnicas (RTVA, Andorra)</Bullet>
                             </BulletList>
                         </SubSection>
                     </Grid>
@@ -85,13 +79,7 @@ const AboutPage: React.FC = () => {
                     <Text>Desde el micrófono del cantante hasta el oído del espectador.</Text>
                     <Text>Desde la captura de una señal hasta su entrega final.</Text>
                     <Text>No solo elementos técnicos, sino también:</Text>
-                    <BulletList className="about-big-picture-bullet-list"
-                        items={[
-                            "las personas implicadas",
-                            "los flujos de trabajo",
-                            "la infraestructura ",
-                            "los puntos críticos del sistema"
-                        ]}>
+                    <BulletList className="about-big-picture-bullet-list">
                         <Bullet>las personas implicadas</Bullet>
                         <Bullet>los flujos de trabajo</Bullet>
                         <Bullet>la infraestructura </Bullet>
@@ -110,12 +98,7 @@ const AboutPage: React.FC = () => {
                     <Text>He trabajado en eventos, rodajes audiovisuales e instalaciones técnicas, muchas veces ocupando una parte del workflow total.</Text>
                     <Text>Pero incluso en esos contextos, siempre he necesitado entender todo el flujo.</Text>
                     <Text>Por ejemplo, en entornos como un informativo televisivo:</Text>
-                    <BulletList className="about-professional-growth-bullet-list"
-                        items={[
-                            "desde el redactor y el cámara que generan el contenido",
-                            "pasando por los sistemas técnicos y humanos",
-                            "hasta la emisión en directo al aire"
-                        ]}>
+                    <BulletList className="about-professional-growth-bullet-list">
                         <Bullet>desde el redactor y el cámara que generan el contenido</Bullet>
                         <Bullet>pasando por los sistemas técnicos y humanos</Bullet>
                         <Bullet>hasta la emisión en directo al aire</Bullet>
@@ -130,17 +113,15 @@ const AboutPage: React.FC = () => {
             >
                 <BulletList
                     className="about-learned-in-my-career-content"
-                    items={[
-                        "Los problemas casi nunca está donde fallan",
-                        "Optimizar una parte suele empeorar otra",
-                        "Los sistemas son dinámicos y cambian con el tiempo",
-                        "La comunicación entre personas es clave",
-                        "La documentación y estandarización evitan errores",
-                        "La mayoría de errores son de diseño, no de ejecución",
-                        "La presión revela si un sistema está bien pensado",
-                        "Entender el flujo completo ahorra más tiempo que correr"
-                    ]}
                 />
+                    <Bullet>Los problemas casi nunca está donde fallan</Bullet>
+                    <Bullet>Optimizar una parte suele empeorar otra</Bullet>
+                    <Bullet>Los sistemas son dinámicos y cambian con el tiempo</Bullet>
+                    <Bullet>La comunicación entre personas es clave</Bullet>
+                    <Bullet>La documentación y estandarización evitan errores</Bullet>
+                    <Bullet>La mayoría de errores son de diseño, no de ejecución</Bullet>
+                    <Bullet>La presión revela si un sistema está bien pensado</Bullet>
+                    <Bullet>Entender el flujo completo ahorra más tiempo que correr</Bullet>
             </Section>
 
             <Section
@@ -161,16 +142,14 @@ const AboutPage: React.FC = () => {
             >
                 <Text variant= "parragraph">
                     <Text>Hoy enfoco mi desarrollo profesional en:</Text>
-                    <BulletList
-                        items={[
-                            "sistemas e infraestructura",
-                            "automatización",
-                            "DevOps",
-                            "escalabilidad",
-                            "diseño de flujos end-to-end",
-                            "operación y fiabilidad",
-                        ]}
-                    />
+                    <BulletList className="about-transition-to-software-bullet-list">
+                        <Bullet>sistemas e infraestructura</Bullet>
+                        <Bullet>automatización</Bullet>
+                        <Bullet>DevOps</Bullet>
+                        <Bullet>escalabilidad</Bullet>
+                        <Bullet>diseño de flujos end-to-end</Bullet>
+                        <Bullet>operación y fiabilidad</Bullet>
+                    </BulletList>
                     <Text>Sigo construyendo mi camino desde esa misma lógica: entender antes de ejecutar, diseñar antes de escalar y pensar los sistemas como un todo coherente.Ese enfoque es el que guía tanto mi aprendizaje como mi evolucion profesional.</Text>
                 </Text>
             </Section>
