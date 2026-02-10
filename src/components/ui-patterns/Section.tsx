@@ -5,11 +5,14 @@ interface SectionProps {
     title?: string;
     subtitles?: string;
     children: React.ReactNode;
+    className?: string;
+    justifyContent?: "center" | "flex-start" | "flex-end" | "space-between" | "space-around" | "space-evenly";
+    flexDirection?: "row" | "column" | "row-reverse" | "column-reverse";
 }
 
-const Section: React.FC<SectionProps> = ({ id, title, subtitles, children }) => {
+const Section: React.FC<SectionProps> = ({ id, title, subtitles, children, className, justifyContent = "flex-start", flexDirection = "column" }) => {
     return (
-        <section id={id} className="Section">
+        <section id={id} className={`Section ${className ? className : ""}`}>
             <div className="Section-inner" >
                 {(title || subtitles) && (
                     <header className="header">
@@ -17,7 +20,7 @@ const Section: React.FC<SectionProps> = ({ id, title, subtitles, children }) => 
                         {subtitles && <p className="subtitle">{subtitles}</p>}
                     </header>
                 )}
-                <div className="content">
+                <div className="content" style={{ justifyContent: justifyContent, flexDirection: flexDirection }}>
                     {children}
                 </div>
             </div>

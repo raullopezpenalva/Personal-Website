@@ -2,15 +2,20 @@ import Section from "../components/ui-patterns/Section";
 import { Button } from "../components/ui-primitives/Button";
 import ServiceCard from "../components/domain/ServiceCard";
 import { services } from "../data/services";
-
+import Stack from "../components/ui-primitives/Stack";
+import GitHubIconLetter from "../components/ui-primitives/icons/GitHubIconLetter";
+import Bullet from "../components/ui-patterns/Bullet";
+import Text from "../components/ui-primitives/Text";
+import { PipelineYaml } from "../components/domain/PipelineYaml";
+import BulletList from "../components/ui-patterns/BulletList";
 
 const HomePage: React.FC = () => {
   return (
     <>
       {/* HERO */}
-      <Section id="hero">
+      <Section id="hero" className="hero-section" justifyContent="center">
         <div className="hero-inner">
-          <p className="hero-kicker">Escalablidad · DevOps · Infraestructura</p>
+          <p className="hero-kicker">Escalabilidad · DevOps · Infraestructura</p>
           <h1 className="hero-title">
             Raúl López Penalva
           </h1>
@@ -28,13 +33,14 @@ const HomePage: React.FC = () => {
         </div>
       </Section>
       
-      {/* SERVICES */}
+      {/* HOW I THINK */}
       <Section
-        id="services"
-        title="Servicios"
-        subtitles="Descubre cómo puedo ayudarte a llevar tu proyecto al siguiente nivel."
+        id="how-i-think"
+        title="Cómo pienso la ingeniería de sistemas"
+        subtitles="Mi enfoque no empieza por herramientas, sino por entender el conjunto."
+        justifyContent="space-between"
       >
-        <div className="services-grid">
+        <div className="service-grid">
           {services.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}
@@ -44,24 +50,43 @@ const HomePage: React.FC = () => {
       {/* This web is developed by me */}
       <Section
         id="about-this-web"
-        title="Sobre esta web"
-        subtitles="Desarrollada por mí mismo utilizando React y Vite."
+        title="Esta web también es un proyecto"
+        subtitles="Diseñada, desarrollada y mantenida como un proyecto de ingeniería: estructura clara, control de versiones y despliegue continuo."
+        justifyContent="center"
+        flexDirection="column"
       >
-        <p>
-          Esta página web ha sido creada por mí, Raúl López Penalva, utilizando las tecnologías React y Vite para asegurar un rendimiento óptimo y una experiencia de usuario fluida.
-        </p>
-        <Button to="/projects" variant="primary">
-          Ver mis proyectos
-        </Button>
+        <Stack className="personalweb-60-40" direction="row" gap="none" margin="lg">
+          <Stack align="center" gap="md" className="personalweb-left">
+            <Text>
+              Esta web está construida desde cero como un proyecto de ingeniería, no como una plantilla. Me sirve para practicar diseño de sistemas a pequeña escala: arquitectura de componentes, control de cambios, automatización y despliegue real.
+            </Text>
+            <BulletList className="personalweb-bullet-list">
+              <Bullet> Arquitectura por componentes y design system coherente (tipografía, spacing, color tokens)</Bullet>
+              <Bullet> Control de versiones y flujo de trabajo profesional (Git, ramas, cambios trazables)</Bullet>
+              <Bullet> Build y despliegue automatizados como parte del ciclo de vida del proyecto</Bullet>
+            </BulletList>
+            <div className="personalweb-buttons">
+              <Button to="/projects" variant="primary">
+                Ver mis proyectos
+              </Button>
+              <Button to="https://github.com/raullopezpenalva/Personal-Website" variant="secondary">
+                <GitHubIconLetter className="personalweb-github-icon" />
+              </Button>
+            </div>
+          </Stack>
+          <Stack align="stretch" gap="md" direction="row" justifyContent="center" className="personalweb-right">
+            <PipelineYaml />
+          </Stack>
+        </Stack>
       </Section>
 
       {/* CALL TO ACTION */}
-      <Section>
+      <Section id="contact" className="call-to-action-section" justifyContent="center">
         <div className="call-to-action">
-          <h2>¿Listo para llevar tu proyecto al siguiente nivel?</h2>
-          <p>Contáctame hoy mismo y hablemos sobre cómo puedo ayudarte.</p>
+          <h2>¿Hablamos de sistemas, no solo de código?</h2>
+          <p>Si tu proyecto necesita estructura, estabilidad y una visión end-to-end, podemos analizarlo juntos</p>
           <Button to="/contact" variant="primary">
-            Contáctame
+            Hablemos
           </Button>
         </div>
       </Section>

@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
                     {/* Bloque marca + tagline */}
                     <div className="footer-brand">
                         <p className="footer-name">Raul Lopez Penalva</p>
-                        <p className="footer-tagline">Tecnología · Código · Infraestructura</p>
+                        <p className="footer-tagline">Escalabilidad · DevOps · Infraestructura</p>
                     </div>
 
                     {/* Iconos sociales */}

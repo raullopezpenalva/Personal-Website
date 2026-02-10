@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
     display: grid;
-    gap: 0.8rem;
+    gap: 0;
 }
 
 .tight {
@@ -13,20 +13,20 @@
 .item {
     display: grid;
     grid-template-columns: auto 1fr;
-    column-gap: 0.7rem;
+    column-gap: 0.5rem;
     align-items: start;
 }
 
 .marker {
     width: 0.5rem;
     height: 0.5rem;
-    margin-top: 0.45rem;
+    margin: var(--bullet-margin);
     border-radius: 999px;
-    background: #5c5d5f;
+    background: var(--accent-1);
 }
 
-.test {
-    line-height: 1.6;
+.text {
+    line-height: 1.5;
 }
 
 .marker-dot {
