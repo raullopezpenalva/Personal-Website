@@ -2,6 +2,16 @@
     display: flex;
 }
 
+.stack-60-40-left {
+    flex: 0 0 60%;
+}
+
+.stack-60-40-right {
+    flex: 0 0 40%;
+}
+
+
+
 .direction-row {
     flex-direction: row;
 }

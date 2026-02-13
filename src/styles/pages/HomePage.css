@@ -67,14 +67,6 @@
 }
 
 /* Personal website section styles */
-.personalweb-left {
-    flex: 0 0 60%;
-}
-
-.personalweb-right {
-    flex: 0 0 40%;
-}
-
 .personalweb-bullet-list {
     align-self: flex-start;
     padding: 0;
