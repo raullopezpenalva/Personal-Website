@@ -14,11 +14,11 @@ const AboutPage: React.FC = () => {
             <Section 
                 id="about-who-am-i"
             >
-                <Stack className="whoami-60-40" direction="row" gap="none" margin="lg">
-                    <Stack align="center" gap="md" justifyContent="center" className="whoami-left">
+                <Stack className="stack-60-40" direction="row" gap="none" margin="lg">
+                    <Stack align="center" gap="md" justifyContent="center" className="stack-60-40-left">
                         <img src={headshot} alt="Raúl López Penalva" className="whoami-headshot" />
                     </Stack>
-                    <Stack align="center" gap="none" direction="column" justifyContent="center" className="whoami-right">
+                    <Stack align="center" gap="none" direction="column" justifyContent="center" className="stack-60-40-right">
                         <Text variant="title" className="whoami-title">Quién soy</Text>
                         <Text variant="subtitle" className="whoami-subtitle">Un perfil técnico con visión de conjunto</Text>
                         <Text variant= "parragraph" className="whoami-text">

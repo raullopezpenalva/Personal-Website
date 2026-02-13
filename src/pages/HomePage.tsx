@@ -55,8 +55,8 @@ const HomePage: React.FC = () => {
         justifyContent="center"
         flexDirection="column"
       >
-        <Stack className="personalweb-60-40" direction="row" gap="none" margin="lg">
-          <Stack align="center" gap="md" className="personalweb-left">
+        <Stack className="stack-60-40" direction="row" gap="none" margin="lg">
+          <Stack align="center" gap="md" className="stack-60-40-left">
             <Text>
               Esta web está construida desde cero como un proyecto de ingeniería, no como una plantilla. Me sirve para practicar diseño de sistemas a pequeña escala: arquitectura de componentes, control de cambios, automatización y despliegue real.
             </Text>
@@ -74,7 +74,7 @@ const HomePage: React.FC = () => {
               </Button>
             </div>
           </Stack>
-          <Stack align="stretch" gap="md" direction="row" justifyContent="center" className="personalweb-right">
+          <Stack align="stretch" gap="md" direction="row" justifyContent="center" className="stack-60-40-right">
             <PipelineYaml />
           </Stack>
         </Stack>
