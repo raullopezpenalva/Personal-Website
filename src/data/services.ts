@@ -7,7 +7,7 @@ export interface Service {
   id: string;
   title: string;
   description: string;
-  icon: FC;
+  icon: FC<{className?: string}>;
 }
 
 export const services: Service[] = [
