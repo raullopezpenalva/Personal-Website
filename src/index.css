@@ -35,13 +35,15 @@
   --accent-8: #c86135;
   --accent-9: #68cc58;
   --accent-10: #d4b144;
+  --accent-linkedin: #0072b1; /* LinkedIn icon color */
   
   /* Colors - Components */
   --btn-bg-primary: #28282c; /* primary button background*/
   --btn-bg-secondary: #e6e6e6; /* secondary button background*/
-  --btn-bg-alternative: #172117; /* alternative button background */
+  --btn-bg-alternative: var(--accent-linkedin); /* alternative button background */
   --btn-fg-secondary: #08090a; /* secondary button text*/
   --btn-fg-primary: #f1f2f2; /* primary button text*/
+  --btn-fg-alternative: #f1f2f2; /* alternative button text */
   --btn-border-primary: #3e3e44; /* Border primary button */
   --btn-bg-muted-hover: #1d1e1f; /* muted button hover background */
   --header-bottom-border: #1d1d1e; /* Header bottom border */
