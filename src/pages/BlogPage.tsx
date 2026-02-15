@@ -1,9 +1,15 @@
+import Section from "../components/ui-patterns/Section";
+import Text from "../components/ui-primitives/Text";
+
 const BlogPage: React.FC = () => {
     return (
-        <div>
-            <h1>Blog</h1>
-            <p>Welcome to my blog page.</p>
-        </div>
+        <Section
+            id="blog-coming-soon"
+        >
+            <Text variant="title" align="center">
+                Blog coming soon!
+            </Text>
+        </Section>
     );
 };
 

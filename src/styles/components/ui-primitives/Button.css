@@ -42,10 +42,11 @@
 .btn-alternative {
     background: var(--btn-bg-alternative);
     color: var(--btn-fg-alternative);
+    opacity: 0.85;
 }
 
 .btn-alternative:hover {
-    opacity: 0.8;
+    opacity: 1;
 }
 
 /* Muted button style */
