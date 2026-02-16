@@ -20,6 +20,7 @@ RUN npm run build
 FROM nginx:alpine AS production
 
 # Copy built application from the previous stage
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 COPY --from=base /app/dist /usr/share/nginx/html
 
 # Expose port 80
