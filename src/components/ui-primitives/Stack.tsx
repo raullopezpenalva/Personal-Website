@@ -6,6 +6,7 @@ type Align = "start" | "center" | "end" | "stretch";
 type Direction = "row" | "column";
 type Margin = "none" | "xs" | "sm" | "md" | "lg" | "xl";
 type JustifyContent = "flex-start" | "center" | "flex-end" | "space-between" | "space-around" | "space-evenly";
+type FlexGrow = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "10";
 
 interface StackProps {
     children: React.ReactNode;
@@ -16,8 +17,8 @@ interface StackProps {
     className?: string;
     margin?: Margin;
     justifyContent?: JustifyContent;
+    flexGrow?: FlexGrow;
 }
-
 const Stack: React.FC<StackProps> = ({
     children,
     direction = "column",
@@ -27,6 +28,7 @@ const Stack: React.FC<StackProps> = ({
     className,
     margin = "none",
     justifyContent = "center",
+    flexGrow = "0",
 }) => {
     const Comp = Component as React.ElementType;
     return (
@@ -38,6 +40,7 @@ const Stack: React.FC<StackProps> = ({
                 styles[`direction-${direction}`],
                 styles[`margin-${margin}`],
                 styles[`justify-${justifyContent}`],
+                styles[`flex-grow-${flexGrow}`],
                 className,
             ]
                 .filter(Boolean)

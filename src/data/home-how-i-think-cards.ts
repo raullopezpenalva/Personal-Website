@@ -3,14 +3,14 @@ import EndtoEndIcon from "../components/ui-primitives/icons/EndtoEndIcon";
 import DesignIcon from "../components/ui-primitives/icons/DesignIcon";
 import LayerIcon from "../components/ui-primitives/icons/LayerIcon";
 
-export interface Service {
+export interface CardArray {
   id: string;
   title: string;
   description: string;
   icon: FC<{className?: string}>;
 }
 
-export const services: Service[] = [
+export const cards: CardArray[] = [
   {
     id: "end-to-end-development",
     title: "Visión end-to-end",

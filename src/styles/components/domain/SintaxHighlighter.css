@@ -4,6 +4,9 @@
     border-radius: 16px;
     margin: 0;
     border: 1px solid var(--btn-border-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .language-yaml {
