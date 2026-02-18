@@ -15,7 +15,7 @@
 
   /* Colors - Surfaces */
   --surface-1: #151617; /* Section light shade background*/
-  --surface-2: #141516; /* sub sections background */
+  --surface-2: #151517; /* sub sections background */
   --surface-3: #313131; /* section highlight background*/
 
   /* Colors - Text */
@@ -155,11 +155,11 @@
   /* Hero section variables */
   --hero-padding: var(--space-section) 0 var(--space-section);
 
-  /* Service grid variables */
-  --service-vertical-padding: var(--space-5);
-  --service-margin: var(--space-3) auto;
-  --service-grid-margin: var(--space-section) 0;
-  --service-horizontal-padding: var(--space-4);
+  /* Card grid variables */
+  --card-vertical-padding: var(--space-5);
+  --card-margin: var(--space-3) auto;
+  --card-grid-margin: var(--space-section) 0;
+  --card-horizontal-padding: var(--space-4);
 
   /* Bullet list variables */
   --bullet-width: 0.5rem;

@@ -1,7 +1,7 @@
 import Section from "../components/ui-patterns/Section";
 import { Button } from "../components/ui-primitives/Button";
-import ServiceCard from "../components/domain/ServiceCard";
-import { services } from "../data/services";
+import Card from "../components/ui-patterns/Card";
+import { cards } from "../data/home-how-i-think-cards";
 import Stack from "../components/ui-primitives/Stack";
 import GitHubIconLetter from "../components/ui-primitives/icons/GitHubIconLetter";
 import Bullet from "../components/ui-patterns/Bullet";
@@ -40,9 +40,9 @@ const HomePage: React.FC = () => {
         subtitles="Mi enfoque no empieza por herramientas, sino por entender el conjunto."
         justifyContent="space-between"
       >
-        <div className="service-grid">
-          {services.map((service) => (
-            <ServiceCard key={service.id} service={service} />
+        <div className="card-grid">
+          {cards.map((card) => (
+            <Card key={card.id} card={card} />
           ))}
         </div>
       </Section>

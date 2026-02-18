@@ -4,7 +4,7 @@
     padding-bottom: var(--subsection-padding-vertical);
     padding-left: var(--subsection-padding-horizontal);
     padding-right: var(--subsection-padding-horizontal);
-    max-width: flex;
+    min-width: 336px;
     margin: 0 auto;
     text-align: center;
     background-color: var(--surface-2);
