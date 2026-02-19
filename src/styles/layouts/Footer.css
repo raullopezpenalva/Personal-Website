@@ -139,3 +139,15 @@
         margin-top: 1.2rem;
     }
 }
+
+@media (max-width: 599px){
+    .footer-brand {
+        flex: 1 1 100%;
+    }
+    .footer-tagline {
+        font-size: var(--font-size-sm);
+    }
+    .footer-nav {
+        align-items: center;
+    }
+}

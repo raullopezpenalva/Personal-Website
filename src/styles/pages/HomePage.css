@@ -140,4 +140,19 @@
         transform: none;
         clip-path: none;
     }
+    .hero-actions {
+        flex-direction: column;
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: var(--font-size-2xl);
+    }
+    .hero-text {
+        font-size: var(--font-size-sm);
+    }
 }

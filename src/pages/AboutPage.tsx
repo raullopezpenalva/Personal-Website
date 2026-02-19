@@ -1,6 +1,5 @@
 import type React from "react";
 import Section from "../components/ui-patterns/Section";
-import Grid from "../components/ui-primitives/Grid";
 import SubSection from "../components/ui-patterns/SubSection";
 import Text from "../components/ui-primitives/Text";
 import BulletList from "../components/ui-patterns/BulletList";
@@ -40,7 +39,7 @@ const AboutPage: React.FC = () => {
                         <Text>Con el tiempo, esa curiosidad inicial se convirtió en formación técnica y experiencia profesional. No como una acumulación de títulos o trabajos aislados, sino como una forma de entender cómo se construyen, operan y sostienen sistemas reales exigentes.</Text>
                     </Text>
 
-                    <Grid cols={2} gap="md" className="about-my-journey-grid">
+                    <Stack direction="row" justifyContent="space-between" gap="md" className="about-my-journey-grid">
                         <SubSection
                             id="about-my-journey-studies"
                             title="Formación técnica y académica"
@@ -63,7 +62,7 @@ const AboutPage: React.FC = () => {
                                 <Bullet>Gestión y mantenimiento de infraestructuras técnicas (RTVA, Andorra)</Bullet>
                             </BulletList>
                         </SubSection>
-                    </Grid>
+                    </Stack>
                     <Text variant= "parragraph">
                         A medida que avanzaba profesionalmente, entendí que lo que más me interesaba no era ejecutar una parte concreta del sistema, sino comprenderlo en su totalidad. Ver cómo cada decisión técnica, humana u organizativa impacta en el resultado final fue lo que empezó a definir mi forma de pensar.
                     </Text>
