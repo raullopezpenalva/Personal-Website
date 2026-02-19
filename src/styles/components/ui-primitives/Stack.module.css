@@ -104,3 +104,20 @@
 .justify-space-evenly {
     justify-content: space-evenly;
 }
+
+@media (max-width: 599px) {
+    .stack {
+        flex-direction: column;
+    }
+    .stack-60-40-left, .stack-60-40-right {
+        flex: 0 0 100%;
+        margin: var(--margin-md) 0;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+
+    .stack-60-40-left, .stack-60-40-right {
+        gap: var(--gap-md);
+    }
+}

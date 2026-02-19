@@ -172,6 +172,20 @@
 *::after {
   box-sizing: border-box;
 }
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+p, h1 ,h2, h3 {
+  overflow-wrap: anywhere;
+}
 
 body {
   margin: 0;
@@ -181,3 +195,7 @@ body {
   background-color: var(--bg);
   color: var(--fg);
 }
+
+@media (max-width: 599px) { /* Mobile-specific styles */ }
+@media (min-width: 600px) and (max-width: 1023px) { /* Tablet-specific styles */ }
+@media (min-width: 1024px) { /* Desktop-specific styles */ }

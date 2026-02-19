@@ -15,3 +15,14 @@
 .whoami-subtitle {
     margin: var(--margin-xs);
 }
+
+@media (max-width: 599px) {
+    .whoami-headshot {
+        width: 100%;
+        height: auto;
+    }
+
+    .whoami-title {
+        text-align: center;
+    }
+}

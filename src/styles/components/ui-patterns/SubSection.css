@@ -35,3 +35,9 @@
     color: var(--fg);
     justify-items: center;
 }
+
+@media (max-width: 599px) {
+    .Subsection {
+        min-width: 100%;
+    }
+}
