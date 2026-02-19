@@ -21,7 +21,7 @@ const PortfolioPage: React.FC = () => {
         <Stack direction="column" gap="none" justifyContent="center" align="stretch" margin="sm">
           <Text variant="title" align="center">Arquitectura aplicada</Text>
           <Text variant="subtitle" align="center">Sistemas diseñados, automatizados y operados en entornos reales</Text>
-          <Text variant="body" align="center">En esta sección presento proyectos donde aplico pensaiento sistémico en entornos reales: diseño de infraestructura, automatización y servicios en evolución. Cada proyeto está planteado como un sistema completo, no como una prieba aislada.</Text>
+          <Text variant="body" align="center">En esta sección presento proyectos donde aplico pensamiento sistémico en entornos reales: diseño de infraestructura, automatización y servicios en evolución. Cada proyecto está planteado como un sistema completo, no como una prueba aislada.</Text>
         </Stack>
       </Section>
 
@@ -34,10 +34,10 @@ const PortfolioPage: React.FC = () => {
         <Stack direction="column" gap="md" justifyContent="center" align="center" >
           <Stack className="stack-60-40" direction="row" gap="none" margin="xs" justifyContent="space-between" align="stretch">
             <Stack className="stack-60-40-left" direction="column" gap="md" justifyContent="space-evenly" align="stretch" margin="sm">
-              <Text variant="body">Diseño y mantengo una infraestructura propia donde experimento con redes, contenedores, reverse-proxy, segmentación VLAN y automatización progresiva. No es solo un laboratorio: es un entorno real que aloja servicios productivos y me permite practicar arquitectura, despliegue y observabilidad de extremo a extremo.</Text>
+              <Text variant="body">Diseño y mantengo una infraestructura propia donde experimento con redes, contenedores, reverse proxy, segmentación VLAN y automatización progresiva. No es solo un laboratorio: es un entorno real que aloja servicios productivos y me permite practicar arquitectura, despliegue y observabilidad de extremo a extremo.</Text>
               <BulletList>
-                <Bullet>Segmentación de red con VLANs (LAN, DMX, IoT, Energy, Guest)</Bullet>
-                <Bullet>Reverse-proxy Nginx y servicios Docker en red interna</Bullet>
+                <Bullet>Segmentación de red con VLAN (LAN, DMX, IoT, Energy, Guest)</Bullet>
+                <Bullet>Reverse proxy Nginx y servicios Docker en red interna</Bullet>
                 <Bullet>Monitorización y análisis de tráfico y rendimiento</Bullet>
                 <Bullet>Diseño preparado para evolución a IaC (Terraform + Ansible)</Bullet>
               </BulletList>
@@ -63,7 +63,7 @@ const PortfolioPage: React.FC = () => {
                 <Bullet>React + Vite con arquitectura modular</Bullet>
                 <Bullet>CI/CD con GitHub Actions</Bullet>
                 <Bullet>Contenerización Docker y despliegue automático</Bullet>
-                <Bullet>Preparandose para backend Spring Boot y servicios desacoplados</Bullet>
+                <Bullet>Preparándose para backend Spring Boot y servicios desacoplados</Bullet>
               </BulletList>
               <Button to="https://github.com/raullopezpenalva/Personal-Website" variant="secondary">
                 <GitHubIconLetter className="personalweb-github-icon" />
@@ -85,7 +85,7 @@ const PortfolioPage: React.FC = () => {
         <Stack direction="column" gap="md" justifyContent="center" align="center" >
           <Stack className="stack-60-40" direction="row" gap="none" margin="xs" justifyContent="space-between" align="stretch">
             <Stack className="stack-60-40-left" direction="column" gap="md" justifyContent="space-evenly" align="stretch" margin="sm">
-              <Text variant="body">Weaver es un proyecto en desarrollo que explora cómo diseñar una red social basada en comunidades físicas reales. El reto no es solo funcional, sin arquitectónico: identidad, permisos, escalabilidad, backend y despliegue controlado.</Text>
+              <Text variant="body">Weaver es un proyecto en desarrollo que explora cómo diseñar una red social basada en comunidades físicas reales. El reto no es solo funcional, sino arquitectónico: identidad, permisos, escalabilidad, backend y despliegue controlado.</Text>
               <BulletList>
                 <Bullet>Arquitectura modular con separación de servicios</Bullet>
                 <Bullet>Backend en desarrollo (Spring Boot)</Bullet>

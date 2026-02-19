@@ -12,7 +12,7 @@ const ContactPage: React.FC = () => {
             subtitles="Construyamos algo sólido"
         >
             <Stack direction="column" gap="lg" justifyContent="flex-start" align="stretch" margin="lg">
-                <Text variant="body">Estoy construyendo mi transición hacia DevOps y arquitectura de distemas. Si crees que puedo aportar en tu equipo o proyecto, estaré encantado de hablar.</Text>
+                <Text variant="body">Estoy construyendo mi transición hacia DevOps y arquitectura de sistemas. Si crees que puedo aportar en tu equipo o proyecto, estaré encantado de hablar.</Text>
                 <Stack direction="row" gap="md" justifyContent="center" align="center" margin="lg">
                     <Button variant="primary" to="mailto:raullopezpenalva@icloud.com">Enviar correo</Button>
                     <Button variant="alternative" to="https://www.linkedin.com/in/raullopezpenalva/">LinkedIn</Button>
