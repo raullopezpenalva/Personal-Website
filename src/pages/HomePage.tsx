@@ -23,7 +23,7 @@ const HomePage: React.FC = () => {
             Ingeniería técnica desde el big picture
           </p>
           <div className="hero-actions">
-            <Button to="/about" variant="primary">
+            <Button to="/vision" variant="primary">
               Visión técnica
             </Button>
             <Button to="/contact" variant="secondary">
@@ -83,7 +83,7 @@ const HomePage: React.FC = () => {
       {/* CALL TO ACTION */}
       <Section id="contact" className="call-to-action-section" justifyContent="center">
         <div className="call-to-action">
-          <h2>¿Hablamos de sistemas, no solo de código?</h2>
+          <h2>¿Hablamos de sistemas, y no solo de código?</h2>
           <p>Si tu proyecto necesita estructura, estabilidad y una visión end-to-end, podemos analizarlo juntos</p>
           <Button to="/contact" variant="primary">
             Hablemos
