@@ -75,6 +75,7 @@
         display: flex;
         gap: var(--header-nav-gap);
         align-items: center;
+        justify-content: center;
     }
     .mobilePanel {
         display: flex;
