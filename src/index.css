@@ -15,7 +15,7 @@
 
   /* Colors - Surfaces */
   --surface-1: #151617; /* Section light shade background*/
-  --surface-2: #141516; /* sub sections background */
+  --surface-2: #151517; /* sub sections background */
   --surface-3: #313131; /* section highlight background*/
 
   /* Colors - Text */
@@ -35,13 +35,15 @@
   --accent-8: #c86135;
   --accent-9: #68cc58;
   --accent-10: #d4b144;
+  --accent-linkedin: #0072b1; /* LinkedIn icon color */
   
   /* Colors - Components */
   --btn-bg-primary: #28282c; /* primary button background*/
   --btn-bg-secondary: #e6e6e6; /* secondary button background*/
-  --btn-bg-alternative: #172117; /* alternative button background */
+  --btn-bg-alternative: var(--accent-linkedin); /* alternative button background */
   --btn-fg-secondary: #08090a; /* secondary button text*/
   --btn-fg-primary: #f1f2f2; /* primary button text*/
+  --btn-fg-alternative: #f1f2f2; /* alternative button text */
   --btn-border-primary: #3e3e44; /* Border primary button */
   --btn-bg-muted-hover: #1d1e1f; /* muted button hover background */
   --header-bottom-border: #1d1d1e; /* Header bottom border */
@@ -127,6 +129,7 @@
   --gap-md: var(--space-4);
   --gap-lg: var(--space-5);
   --gap-xl: var(--space-6);
+  --gap-xxl: var(--space-8);
   --margin-none: 0;
   --margin-xs: var(--space-2);
   --margin-sm: var(--space-3);
@@ -153,11 +156,11 @@
   /* Hero section variables */
   --hero-padding: var(--space-section) 0 var(--space-section);
 
-  /* Service grid variables */
-  --service-vertical-padding: var(--space-5);
-  --service-margin: var(--space-3) auto;
-  --service-grid-margin: var(--space-section) 0;
-  --service-horizontal-padding: var(--space-4);
+  /* Card grid variables */
+  --card-vertical-padding: var(--space-5);
+  --card-margin: var(--space-3) auto;
+  --card-grid-margin: var(--space-section) 0;
+  --card-horizontal-padding: var(--space-4);
 
   /* Bullet list variables */
   --bullet-width: 0.5rem;
@@ -170,6 +173,20 @@
 *::after {
   box-sizing: border-box;
 }
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+p, h1 ,h2, h3 {
+  overflow-wrap: anywhere;
+}
 
 body {
   margin: 0;
@@ -179,3 +196,7 @@ body {
   background-color: var(--bg);
   color: var(--fg);
 }
+
+@media (max-width: 599px) { /* Mobile-specific styles */ }
+@media (min-width: 600px) and (max-width: 1023px) { /* Tablet-specific styles */ }
+@media (min-width: 1024px) { /* Desktop-specific styles */ }

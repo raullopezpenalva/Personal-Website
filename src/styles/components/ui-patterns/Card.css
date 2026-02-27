@@ -1,17 +1,17 @@
-.service-grid {
+.card-grid {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: var(--gap-xs);
-    margin: var(--service-grid-margin);
+    margin: var(--card-grid-margin);
     align-items: stretch;
     
 }
 
-.service-card {
+.card {
     background-color: var(--surface-2);
     border-radius: 30px;
-    padding: var(--service-vertical-padding) var(--service-horizontal-padding);
+    padding: var(--card-vertical-padding) var(--card-horizontal-padding);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -21,26 +21,38 @@
     height: 360px;
 }
 
-.service-card h3 {
+.card h3 {
     order: 1;
     flex-grow: 0;
-    margin: var(--service-margin) 0 var(--service-margin);
+    margin: var(--card-margin) 0 var(--card-margin);
     color: var(--fg-title);
     height: 32px;
 }
 
-.service-icon {
+.card-icon {
     order: 2;
     flex-grow: 0;
     width: 128px;
     height: 128px;
     align-self: center;
 }
-.service-card p {
+.card p {
     order: 3;
     flex-grow: 0;
     color: var(--fg-muted);
     vertical-align: bottom;
     margin: 0;
     height: 48px;
+}
+
+@media (max-width: 599px) {
+    .card-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 100%;
+        max-width: 336px;
+        margin-bottom: var(--gap-sm);
+    }
 }

@@ -1,11 +1,4 @@
 /* Who am I section styles */
-.whoami-left {
-    flex: 0 0 60%;
-}
-
-.whoami-right {
-    flex: 0 0 40%;
-}
 
 .whoami-headshot {
     width: 420px;
@@ -21,4 +14,15 @@
 }
 .whoami-subtitle {
     margin: var(--margin-xs);
+}
+
+@media (max-width: 599px) {
+    .whoami-headshot {
+        width: 100%;
+        height: auto;
+    }
+
+    .whoami-title {
+        text-align: center;
+    }
 }

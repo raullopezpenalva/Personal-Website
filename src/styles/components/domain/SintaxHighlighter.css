@@ -4,12 +4,24 @@
     border-radius: 16px;
     margin: 0;
     border: 1px solid var(--btn-border-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .language-yaml {
     font-family: var(--font-code);
     font-size: var(--font-size-xs);
     line-height: 1.4;
+    color: var(--fg-muted);
+    opacity: 0.85;
+}
+
+
+.language-markdown {
+    font-family: var(--font-code);
+    font-size: var(--font-size-xs);
+    line-height: 1.2;
     color: var(--fg-muted);
     opacity: 0.85;
 }

@@ -48,10 +48,14 @@
     margin: 0 auto;
 }
 
-.Header-nav {
+.Header-navDesktop {
     display: flex;
     gap: var(--header-nav-gap);
     align-items: center;
+}
+
+.Header-navMobile {
+    display: none;
 }
 
 /* Header-right section styles */
@@ -61,4 +65,22 @@
     justify-content: flex-end;
     align-items: center;
     
+}
+
+@media (max-width: 599px) {
+    .Header-navDesktop {
+        display: none;
+    }
+    .Header-navMobile {
+        display: flex;
+        gap: var(--header-nav-gap);
+        align-items: center;
+        justify-content: center;
+    }
+    .mobilePanel {
+        display: flex;
+        flex-direction: row;
+        gap: var(--space-3);
+        padding-block: var(--space-4);
+    }
 }

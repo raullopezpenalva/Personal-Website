@@ -1,7 +1,7 @@
 import Section from "../components/ui-patterns/Section";
 import { Button } from "../components/ui-primitives/Button";
-import ServiceCard from "../components/domain/ServiceCard";
-import { services } from "../data/services";
+import Card from "../components/ui-patterns/Card";
+import { cards } from "../data/home-how-i-think-cards";
 import Stack from "../components/ui-primitives/Stack";
 import GitHubIconLetter from "../components/ui-primitives/icons/GitHubIconLetter";
 import Bullet from "../components/ui-patterns/Bullet";
@@ -23,7 +23,7 @@ const HomePage: React.FC = () => {
             Ingeniería técnica desde el big picture
           </p>
           <div className="hero-actions">
-            <Button to="/about" variant="primary">
+            <Button to="/vision" variant="primary">
               Visión técnica
             </Button>
             <Button to="/contact" variant="secondary">
@@ -40,9 +40,9 @@ const HomePage: React.FC = () => {
         subtitles="Mi enfoque no empieza por herramientas, sino por entender el conjunto."
         justifyContent="space-between"
       >
-        <div className="service-grid">
-          {services.map((service) => (
-            <ServiceCard key={service.id} service={service} />
+        <div className="card-grid">
+          {cards.map((card) => (
+            <Card key={card.id} card={card} />
           ))}
         </div>
       </Section>
@@ -55,8 +55,8 @@ const HomePage: React.FC = () => {
         justifyContent="center"
         flexDirection="column"
       >
-        <Stack className="personalweb-60-40" direction="row" gap="none" margin="lg">
-          <Stack align="center" gap="md" className="personalweb-left">
+        <Stack className="stack-60-40" direction="row" gap="none" margin="lg">
+          <Stack align="center" gap="md" className="stack-60-40-left">
             <Text>
               Esta web está construida desde cero como un proyecto de ingeniería, no como una plantilla. Me sirve para practicar diseño de sistemas a pequeña escala: arquitectura de componentes, control de cambios, automatización y despliegue real.
             </Text>
@@ -74,7 +74,7 @@ const HomePage: React.FC = () => {
               </Button>
             </div>
           </Stack>
-          <Stack align="stretch" gap="md" direction="row" justifyContent="center" className="personalweb-right">
+          <Stack align="stretch" gap="md" direction="row" justifyContent="center" className="stack-60-40-right">
             <PipelineYaml />
           </Stack>
         </Stack>
@@ -83,7 +83,7 @@ const HomePage: React.FC = () => {
       {/* CALL TO ACTION */}
       <Section id="contact" className="call-to-action-section" justifyContent="center">
         <div className="call-to-action">
-          <h2>¿Hablamos de sistemas, no solo de código?</h2>
+          <h2>¿Hablamos de sistemas, y no solo de código?</h2>
           <p>Si tu proyecto necesita estructura, estabilidad y una visión end-to-end, podemos analizarlo juntos</p>
           <Button to="/contact" variant="primary">
             Hablemos
