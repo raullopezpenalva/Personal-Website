@@ -5,6 +5,7 @@ import AboutPage from "./pages/AboutPage.tsx";
 import VisionPage from "./pages/VisionPage.tsx";
 import PortfolioPage from "./pages/PortfolioPage.tsx";
 import BlogPage from "./pages/BlogPage.tsx";
+/*import ContactPage from "./pages/ContactPage.tsx";*/
 import ContactPage from "./pages/ContactPage.tsx";
 
 export const router = createBrowserRouter([

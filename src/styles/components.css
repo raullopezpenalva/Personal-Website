@@ -5,7 +5,8 @@
 @import "./components/ui-primitives/Text.module.css";
 @import "./components/ui-patterns/SubSection.css";
 @import "./components/icons/BrandIcon.css";
-@import "./components/domain/SintaxHighlighter.css"
+@import "./components/domain/SintaxHighlighter.css";
+@import "./components/domain/ContactForm.css";
 
 
 

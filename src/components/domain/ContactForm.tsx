@@ -87,54 +87,58 @@ export default function ContactForm() {
     };
 
 return (
-    <form onSubmit={handleSubmit}>
-        {status === "success" && (
-            <div>
-                Your message has been sent successfully!
-            </div>
-        )}
-
-        {globalError && (
-            <div>
-                {globalError}
-            </div>
-        )}
-
-        <div>
-            <label>Email</label>
+    <form className="contact-form" onSubmit={handleSubmit}>
+        
+        <div className='contact-form-email'>
+            <label className='contact-form-email-label'>Email</label>
             <input
+                className='contact-form-email-input'
                 type="email"
                 name="email"
                 value={form.email}
                 onChange={handleChange}
             />
-            {fieldErrors.email && <div>{fieldErrors.email}</div>}
+            {fieldErrors.email && <div className='contact-form-syntaxerror'>{fieldErrors.email}</div>}
         </div>
 
-        <div>
-            <label>Subject</label>
+        <div className='contact-form-subject'>
+            <label className='contact-form-subject-label'>Subject</label>
             <input
+                className='contact-form-subject-input'
                 type="text"
                 name="subject"
                 value={form.subject}
                 onChange={handleChange}
             />
-            {fieldErrors.subject && <div>{fieldErrors.subject}</div>}
+            {fieldErrors.subject && <div className='contact-form-syntaxerror'>{fieldErrors.subject}</div>}
         </div>
 
-        <div>
-            <label>Message</label>
+        <div className='contact-form-message'>
+            <label className='contact-form-message-label'>Message</label>
             <textarea
+                className='contact-form-message-input'
                 name="content"
                 value={form.content}
                 onChange={handleChange}
             />
-            {fieldErrors.content && <div>{fieldErrors.content}</div>}
+            {fieldErrors.content && <div className='contact-form-syntaxerror'>{fieldErrors.content}</div>}
         </div>
+        <div className='contact-form-buttonbox'>
+            {status === "success" && (
+                <div className='contact-form-success'>
+                    Your message has been sent successfully!
+                </div>
+            )}
 
-        <button type="submit" disabled={status === 'submitting'}>
-            {status === 'submitting' ? 'Sending...' : 'Send Message'}
-        </button>
+            {globalError && (
+                <div className='contact-form-error'>
+                    {globalError}
+                </div>
+            )}
+            <button className='contact-form-submit' type="submit" disabled={status === 'submitting'}>
+                {status === 'submitting' ? 'Sending...' : 'Send Message'}
+            </button>
+        </div>
     </form>
 );
 }
