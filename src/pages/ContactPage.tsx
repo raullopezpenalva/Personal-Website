@@ -1,4 +1,4 @@
-import Section from "../components/ui-patterns/Section";
+import ContactForm from "../components/domain/ContactForm";
 import Button from "../components/ui-primitives/Button";
 import GitHubIconLetter from "../components/ui-primitives/icons/GitHubIconLetter";
 import Stack from "../components/ui-primitives/Stack";
@@ -6,22 +6,36 @@ import Text from "../components/ui-primitives/Text";
 
 const ContactPage: React.FC = () => {
     return (
-        <Section
-            id="contact"
-            title="Contacto"
-            subtitles="Construyamos algo sólido"
-        >
-            <Stack direction="column" gap="lg" justifyContent="flex-start" align="stretch" margin="lg">
-                <Text variant="body">Estoy construyendo mi transición hacia DevOps y arquitectura de sistemas. Si crees que puedo aportar en tu equipo o proyecto, estaré encantado de hablar.</Text>
-                <Stack direction="row" gap="md" justifyContent="center" align="center" margin="lg">
-                    <Button variant="primary" to="mailto:raullopezpenalva@icloud.com">Enviar correo</Button>
-                    <Button variant="alternative" to="https://www.linkedin.com/in/raullopezpenalva/">LinkedIn</Button>
-                    <Button variant="secondary" to="https://github.com/raullopezpenalva">
-                        <GitHubIconLetter />
-                    </Button>
-                </Stack>
-            </Stack>
-        </Section>
+        <>
+            <div className="contact-layout">
+                <div className="contact-inner">
+
+                    <div className="contact-inner-left">
+
+                        <Text variant="title">Contacto</Text>
+
+                        <Text variant="body">Si buscas colaboración técnica, desarrollo backend/frontend oarquitectura de servicios, este es el punto de partida</Text>
+
+                        <Stack direction="column" gap="md" justifyContent="flex-start" align="start" margin="lg">
+                            <Button variant="alternative" to="https://www.linkedin.com/in/raullopezpenalva/">LinkedIn</Button>
+                            <Button variant="secondary" to="https://github.com/raullopezpenalva">
+                                <GitHubIconLetter />
+                            </Button>
+                        </Stack>
+
+                    </div>
+                    <div className="contact-inner-right">
+                        <div className="contact-form-header">
+                            <Text variant="caption">¿Quieres hablar?</Text>
+                        </div>
+                        <div className="contact-form-container">
+                            {<ContactForm />}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </>
     );
 };
 

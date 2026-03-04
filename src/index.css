@@ -129,6 +129,7 @@
   --gap-md: var(--space-4);
   --gap-lg: var(--space-5);
   --gap-xl: var(--space-6);
+  --gap-xxl: var(--space-8);
   --margin-none: 0;
   --margin-xs: var(--space-2);
   --margin-sm: var(--space-3);

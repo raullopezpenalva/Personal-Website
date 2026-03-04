@@ -15,19 +15,21 @@
 }
 
 .variant-lead {
-    font-size: 1.15rem;
+    font-size: var(--font-size-lg);
     line-height: 1.7;
-    color: #F4F5F8;
+    color: var(--fg-subtle);
 }
 
 .variant-muted {
-    font-size: 0.95rem;
+    font-size: var(--font-size-md);
     color: var(--fg-muted);
 }
 
 .variant-caption {
-    font-size: 0.85rem;
-    color: var(--fg-muted);
+    font-size: var(--font-size-sm);
+    color: var(--fg-subtle);
+    line-height: calc(21 / 14);
+    letter-spacing: -0.013em;
 }
 
 .variant-subtitle {
@@ -54,4 +56,10 @@
 }
 .align-right {
     text-align: right;
+}
+
+@media (max-width: 599px) {
+    .text {
+        text-align: center;
+    }
 }
