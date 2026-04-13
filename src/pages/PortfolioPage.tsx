@@ -9,37 +9,39 @@ import { Button } from "../components/ui-primitives/Button";
 import GitHubIconLetter from "../components/ui-primitives/icons/GitHubIconLetter";
 import { ProyectsPersonalwebsiteCompactMD } from "../components/domain/ProyectsPersonalwebsiteCompactMD";
 import { ProyectsWeaverCompactMD } from "../components/domain/ProyectsWeaverCompactMD";
+import { useTranslation } from 'react-i18next';
 
 
 
 const PortfolioPage: React.FC = () => {
+  const { t } = useTranslation('projects');
   return (
     <>
       <Section
         id="projects-title"
       >
         <Stack direction="column" gap="none" justifyContent="center" align="stretch" margin="sm">
-          <Text variant="title" align="center">Arquitectura aplicada</Text>
-          <Text variant="subtitle" align="center">Sistemas diseñados, automatizados y operados en entornos reales</Text>
-          <Text variant="body" align="center">En esta sección presento proyectos donde aplico pensamiento sistémico en entornos reales: diseño de infraestructura, automatización y servicios en evolución. Cada proyecto está planteado como un sistema completo, no como una prueba aislada.</Text>
+          <Text variant="title" align="center">{t('projects.projects-title.title')}</Text>
+          <Text variant="subtitle" align="center">{t('projects.projects-title.subtitle')}</Text>
+          <Text variant="body" align="center">{t('projects.projects-title.body')}</Text>
         </Stack>
       </Section>
 
 
       <Section
         id="Homelab"
-        title="Infraestructura Autónoma On-Premise"
-        subtitles="Plataforma diseñada para operar servicios digitales con control total sobre red, energía y despliegue"
+        title={t('projects.homelab.title')}
+        subtitles={t('projects.homelab.subtitle')}
       >
         <Stack direction="column" gap="md" justifyContent="center" align="center" >
           <Stack className="stack-60-40" direction="row" gap="none" margin="xs" justifyContent="space-between" align="stretch">
             <Stack className="stack-60-40-left" direction="column" gap="md" justifyContent="space-evenly" align="stretch" margin="sm">
-              <Text variant="body">Diseño y mantengo una infraestructura propia donde experimento con redes, contenedores, reverse proxy, segmentación VLAN y automatización progresiva. No es solo un laboratorio: es un entorno real que aloja servicios productivos y me permite practicar arquitectura, despliegue y observabilidad de extremo a extremo.</Text>
+              <Text variant="body">{t('projects.homelab.toptext')}</Text>
               <BulletList>
-                <Bullet>Segmentación de red con VLAN (LAN, DMX, IoT, Energy, Guest)</Bullet>
-                <Bullet>Reverse proxy Nginx y servicios Docker en red interna</Bullet>
-                <Bullet>Monitorización y análisis de tráfico y rendimiento</Bullet>
-                <Bullet>Diseño preparado para evolución a IaC (Terraform + Ansible)</Bullet>
+                <Bullet>{t('projects.homelab.bullet1')}</Bullet>
+                <Bullet>{t('projects.homelab.bullet2')}</Bullet>
+                <Bullet>{t('projects.homelab.bullet3')}</Bullet>
+                <Bullet>{t('projects.homelab.bullet4')}</Bullet>
               </BulletList>
             </Stack>
             <Stack className="stack-60-40-right" direction="column" gap="md" justifyContent="space-around" align="stretch" margin="sm">
@@ -52,18 +54,18 @@ const PortfolioPage: React.FC = () => {
 
       <Section
         id="personal-website"
-        title="Personal Website - Arquitectura como producto"
-        subtitles="Web pública diseñada como sistema evolutivo, no como plantilla estática"
+        title={t('projects.personalwebsite.title')}
+        subtitles={t('projects.personalwebsite.subtitle')}
       >
         <Stack direction="column" gap="md" justifyContent="center" align="center" >
           <Stack className="stack-60-40" direction="row" gap="none" margin="xs" justifyContent="space-between" align="stretch">
             <Stack className="stack-60-40-left" direction="column" gap="md" justifyContent="space-evenly" align="stretch" margin="sm">
-              <Text variant="body">Esta web no es solo una presentación profesional. Es un entorno donde aplico arquitectura por componentes, control de versiones y despliegue continuo. Está diseñada para evolucionar hacia backend propio, microservicios y automatización.</Text>
+              <Text variant="body">{t('projects.personalwebsite.toptext')}</Text>
               <BulletList>
-                <Bullet>React + Vite con arquitectura modular</Bullet>
-                <Bullet>CI/CD con GitHub Actions</Bullet>
-                <Bullet>Contenerización Docker y despliegue automático</Bullet>
-                <Bullet>Preparándose para backend Spring Boot y servicios desacoplados</Bullet>
+                <Bullet>{t('projects.personalwebsite.bullet1')}</Bullet>
+                <Bullet>{t('projects.personalwebsite.bullet2')}</Bullet>
+                <Bullet>{t('projects.personalwebsite.bullet3')}</Bullet>
+                <Bullet>{t('projects.personalwebsite.bullet4')}</Bullet>
               </BulletList>
               <Button to="https://github.com/raullopezpenalva/Personal-Website" variant="secondary">
                 <GitHubIconLetter className="personalweb-github-icon" />
@@ -79,22 +81,22 @@ const PortfolioPage: React.FC = () => {
 
       <Section
         id="weaver"
-        title="Weaver - Plataforma comunitaria descentralizada"
-        subtitles="Arquitectura para comunidades físicas con identidad certificada y estructura cooperativa"
+        title={t('projects.weaver.title')}
+        subtitles={t('projects.weaver.subtitle')}
       >
         <Stack direction="column" gap="md" justifyContent="center" align="center" >
           <Stack className="stack-60-40" direction="row" gap="none" margin="xs" justifyContent="space-between" align="stretch">
             <Stack className="stack-60-40-left" direction="column" gap="md" justifyContent="space-evenly" align="stretch" margin="sm">
-              <Text variant="body">Weaver es un proyecto en desarrollo que explora cómo diseñar una red social basada en comunidades físicas reales. El reto no es solo funcional, sino arquitectónico: identidad, permisos, escalabilidad, backend y despliegue controlado.</Text>
+              <Text variant="body">{t('projects.weaver.toptext')}</Text>
               <BulletList>
-                <Bullet>Arquitectura modular con separación de servicios</Bullet>
-                <Bullet>Backend en desarrollo (Spring Boot)</Bullet>
-                <Bullet>Contenedorización y despliegue con Docker (futuro K8s)</Bullet>
-                <Bullet>Diseño orientado a permisos y comunidades segmentadas</Bullet>
-                <Bullet>Preparado para crecimiento horizontal</Bullet>
+                <Bullet>{t('projects.weaver.bullet1')}</Bullet>
+                <Bullet>{t('projects.weaver.bullet2')}</Bullet>
+                <Bullet>{t('projects.weaver.bullet3')}</Bullet>
+                <Bullet>{t('projects.weaver.bullet4')}</Bullet>
+                <Bullet>{t('projects.weaver.bullet5')}</Bullet>
               </BulletList>
               <Button to="https://weaver.cat" variant="secondary">
-                <p>Visitar Weaver</p>
+                <p>{t('projects.weaver.btn')}</p>
               </Button>
             </Stack>
             <Stack className="stack-60-40-right" direction="column" gap="md" justifyContent="space-around" align="stretch" margin="sm">

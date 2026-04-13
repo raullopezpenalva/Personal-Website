@@ -8,6 +8,8 @@ import enVision from './locales/en/vision.json';
 import enProjects from './locales/en/projects.json';
 import enBlog from './locales/en/blog.json';
 import enContact from './locales/en/contact.json';
+import enCard from './locales/en/card.json';
+import enContactForm from './locales/en/contactForm.json';
 
 import esCommon from './locales/es/common.json';
 import esHome from './locales/es/home.json';
@@ -16,6 +18,8 @@ import esVision from './locales/es/vision.json';
 import esProjects from './locales/es/projects.json';
 import esBlog from './locales/es/blog.json';
 import esContact from './locales/es/contact.json';
+import esCard from './locales/es/card.json';
+import esContactForm from './locales/es/contactForm.json';
 
 export const defaultNS = 'common';
 export const supportedLanguages = ['en', 'es'] as const;
@@ -33,6 +37,8 @@ i18n
         projects: enProjects,
         blog: enBlog,
         contact: enContact,
+        card: enCard,
+        contactForm: enContactForm,
       },
       es: {
         common: esCommon,
@@ -42,12 +48,14 @@ i18n
         projects: esProjects,
         blog: esBlog,
         contact: esContact,
+        card: esCard,
+        contactForm: esContactForm,
       },
     },
-    lng: 'es',
-    fallbackLng: 'es',
+    lng: 'en',
+    fallbackLng: 'en',
     defaultNS,
-    ns: ['common', 'home', 'about', 'projects', 'contact'],
+    ns: ['common', 'home', 'about', 'vision', 'projects', 'blog', 'contact', 'card', 'contactForm'],
     interpolation: {
       escapeValue: false,
     },

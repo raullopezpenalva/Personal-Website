@@ -3,8 +3,10 @@ import Button from "../components/ui-primitives/Button";
 import GitHubIconLetter from "../components/ui-primitives/icons/GitHubIconLetter";
 import Stack from "../components/ui-primitives/Stack";
 import Text from "../components/ui-primitives/Text";
+import { useTranslation } from 'react-i18next';
 
 const ContactPage: React.FC = () => {
+    const { t } = useTranslation('contact');
     return (
         <>
             <div className="contact-layout">
@@ -12,9 +14,9 @@ const ContactPage: React.FC = () => {
 
                     <div className="contact-inner-left">
 
-                        <Text variant="title">Contacto</Text>
+                        <Text variant="title">{t('contact.title')}</Text>
 
-                        <Text variant="body">Si buscas colaboración técnica, desarrollo backend/frontend oarquitectura de servicios, este es el punto de partida</Text>
+                        <Text variant="body">{t('contact.description')}</Text>
 
                         <Stack direction="column" gap="md" justifyContent="flex-start" align="start" margin="lg">
                             <Button variant="alternative" to="https://www.linkedin.com/in/raullopezpenalva/">LinkedIn</Button>
@@ -26,7 +28,7 @@ const ContactPage: React.FC = () => {
                     </div>
                     <div className="contact-inner-right">
                         <div className="contact-form-header">
-                            <Text variant="caption">¿Quieres hablar?</Text>
+                            <Text variant="caption">{t('contact.formHeader')}</Text>
                         </div>
                         <div className="contact-form-container">
                             {<ContactForm />}

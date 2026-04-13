@@ -8,26 +8,29 @@ import Bullet from "../components/ui-patterns/Bullet";
 import Text from "../components/ui-primitives/Text";
 import { PipelineYaml } from "../components/domain/PipelineYaml";
 import BulletList from "../components/ui-patterns/BulletList";
+import { useTranslation } from 'react-i18next';
 
 const HomePage: React.FC = () => {
+  const { t } = useTranslation('home');
+  const { t: tCommon } = useTranslation('common');
   return (
     <>
       {/* HERO */}
       <Section id="hero" className="hero-section" justifyContent="center">
         <div className="hero-inner">
-          <p className="hero-kicker">Escalabilidad · DevOps · Infraestructura</p>
+          <p className="hero-kicker">{tCommon('main.tagline')}</p>
           <h1 className="hero-title">
-            Raúl López Penalva
+            {tCommon('main.name')}
           </h1>
           <p className="hero-text">
-            Ingeniería técnica desde el big picture
+            {tCommon('main.description')}
           </p>
           <div className="hero-actions">
             <Button to="/vision" variant="primary">
-              Visión técnica
+              {tCommon('btn.vision')}
             </Button>
             <Button to="/contact" variant="secondary">
-              Contacto
+              {tCommon('btn.contact')}
             </Button>
           </div>
         </div>
@@ -36,8 +39,8 @@ const HomePage: React.FC = () => {
       {/* HOW I THINK */}
       <Section
         id="how-i-think"
-        title="Cómo pienso la ingeniería de sistemas"
-        subtitles="Mi enfoque no empieza por herramientas, sino por entender el conjunto."
+        title={t('how-i-think.title')}
+        subtitles={t('how-i-think.subtitle')}
         justifyContent="space-between"
       >
         <div className="card-grid">
@@ -50,24 +53,22 @@ const HomePage: React.FC = () => {
       {/* This web is developed by me */}
       <Section
         id="about-this-web"
-        title="Esta web también es un proyecto"
-        subtitles="Diseñada, desarrollada y mantenida como un proyecto de ingeniería: estructura clara, control de versiones y despliegue continuo."
+        title={t('about-this-web.title')}
+        subtitles={t('about-this-web.subtitle')}
         justifyContent="center"
         flexDirection="column"
       >
         <Stack className="stack-60-40" direction="row" gap="none" margin="lg">
           <Stack align="center" gap="md" className="stack-60-40-left">
-            <Text>
-              Esta web está construida desde cero como un proyecto de ingeniería, no como una plantilla. Me sirve para practicar diseño de sistemas a pequeña escala: arquitectura de componentes, control de cambios, automatización y despliegue real.
-            </Text>
+            <Text>{t('about-this-web.description')}</Text>
             <BulletList className="personalweb-bullet-list">
-              <Bullet> Arquitectura por componentes y design system coherente (tipografía, spacing, color tokens)</Bullet>
-              <Bullet> Control de versiones y flujo de trabajo profesional (Git, ramas, cambios trazables)</Bullet>
-              <Bullet> Build y despliegue automatizados como parte del ciclo de vida del proyecto</Bullet>
+              <Bullet>{t('about-this-web.bullet1')}</Bullet>
+              <Bullet>{t('about-this-web.bullet2')}</Bullet>
+              <Bullet>{t('about-this-web.bullet3')}</Bullet>
             </BulletList>
             <div className="personalweb-buttons">
               <Button to="/projects" variant="primary">
-                Ver mis proyectos
+                {tCommon('btn.projects')}
               </Button>
               <Button to="https://github.com/raullopezpenalva/Personal-Website" variant="secondary">
                 <GitHubIconLetter className="personalweb-github-icon" />
@@ -83,10 +84,10 @@ const HomePage: React.FC = () => {
       {/* CALL TO ACTION */}
       <Section id="contact" className="call-to-action-section" justifyContent="center">
         <div className="call-to-action">
-          <h2>¿Hablamos de sistemas, y no solo de código?</h2>
-          <p>Si tu proyecto necesita estructura, estabilidad y una visión end-to-end, podemos analizarlo juntos</p>
+          <h2>{t('CTA.h2')}</h2>
+          <p>{t('CTA.p')}</p>
           <Button to="/contact" variant="primary">
-            Hablemos
+            {tCommon('btn.contact')}
           </Button>
         </div>
       </Section>

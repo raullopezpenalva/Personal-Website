@@ -1,0 +1,12 @@
+{
+    "email": "Email",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "sendMessage": "Enviar mensaje",
+    "sending": "Enviando...",
+    "success": "¡Tu mensaje ha sido enviado con éxito!",
+    "error1": "Ocurrió un error. Por favor, inténtalo de nuevo.",
+    "error2": "Ocurrió un error inesperado. Por favor, inténtalo de nuevo.",
+    "error3": "Error al enviar. Por favor, verifica tu conexión e inténtalo de nuevo."
+
+}
