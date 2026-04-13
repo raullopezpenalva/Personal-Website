@@ -1,18 +1,23 @@
-import { createBrowserRouter } from "react-router-dom";
-import Layout from "./components/layout/Layout.tsx";
+import { createBrowserRouter, Navigate } from "react-router-dom";
+import { LanguageRouteGuard } from './i18n/LanguageRouteGuard';
 import HomePage from "./pages/HomePage.tsx";
 import AboutPage from "./pages/AboutPage.tsx";
 import VisionPage from "./pages/VisionPage.tsx";
 import PortfolioPage from "./pages/PortfolioPage.tsx";
 import BlogPage from "./pages/BlogPage.tsx";
-/*import ContactPage from "./pages/ContactPage.tsx";*/
 import ContactPage from "./pages/ContactPage.tsx";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: <Navigate to="/en" replace />,
+  },
+
+  {
+    path: "/:lang",
+    element: <LanguageRouteGuard />,
     children: [
+      
       { index: true, element: <HomePage /> },
       { path: "about", element: <AboutPage /> },
       { path: "vision", element: <VisionPage /> },
@@ -20,5 +25,10 @@ export const router = createBrowserRouter([
       { path: "blog", element: <BlogPage /> },
       { path: "contact", element: <ContactPage /> },
     ],
+  },
+
+  {
+    path: "*",
+    element: <Navigate to="/en" replace />,
   },
 ]);

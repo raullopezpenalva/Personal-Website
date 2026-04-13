@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import { Button } from '../ui-primitives/Button';
 import BrandIcon from '../ui-primitives/icons/BrandIcon';
 import { useTranslation } from 'react-i18next';
@@ -7,24 +7,25 @@ import { useTranslation } from 'react-i18next';
 
 const Header: React.FC = () => {
   const { t } = useTranslation();
+  const { lang } = useParams<{ lang: string }>();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="Header">
       <div className="Header-inner">
         <div className="Header-left">
-          <NavLink to="/" className="Header-logo">
+          <NavLink to={`/${lang}`} className="Header-logo">
             <BrandIcon />
           </NavLink>
         </div>
         <div className="Header-center">
           {/* Desktop nav */}
           <nav className="Header-navDesktop">
-            <NavLink to="/" className="btn btn-muted">{t('nav.home')}</NavLink>
-            <NavLink to="/about" className="btn btn-muted">{t('nav.about')}</NavLink>
-            <NavLink to="/vision" className="btn btn-muted">{t('nav.vision')}</NavLink>
-            <NavLink to="/projects" className="btn btn-muted">{t('nav.projects')}</NavLink>
-            <NavLink to="/blog" className="btn btn-muted">{t('nav.blog')}</NavLink>
+            <NavLink to={`/${lang}`} className="btn btn-muted">{t('nav.home')}</NavLink>
+            <NavLink to={`/${lang}/about`} className="btn btn-muted">{t('nav.about')}</NavLink>
+            <NavLink to={`/${lang}/vision`} className="btn btn-muted">{t('nav.vision')}</NavLink>
+            <NavLink to={`/${lang}/projects`} className="btn btn-muted">{t('nav.projects')}</NavLink>
+            <NavLink to={`/${lang}/blog`} className="btn btn-muted">{t('nav.blog')}</NavLink>
           </nav>
           {/* Mobile nav button */}
           <button
@@ -40,7 +41,7 @@ const Header: React.FC = () => {
           </button>
         </div>
         <div className="Header-right">
-          <Button to="/contact" variant="secondary" className="Header-contact-btn">
+          <Button to={`/${lang}/contact`} variant="secondary" className="Header-contact-btn">
             {t('btn.contact')}
           </Button>
         </div>
@@ -48,11 +49,11 @@ const Header: React.FC = () => {
       {/* Mobile nav panel */}
       {mobileMenuOpen && (
         <nav className="Header-navMobile mobilePanel" id="mobilePanel">
-          <NavLink to="/" className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>{t('nav.home')}</NavLink>
-          <NavLink to="/about" className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>{t('nav.about')}</NavLink>
-          <NavLink to="/vision" className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>{t('nav.vision')}</NavLink>
-          <NavLink to="/projects" className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>{t('nav.projects')}</NavLink>
-          <NavLink to="/blog" className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>{t('nav.blog')}</NavLink>
+          <NavLink to={`/${lang}`} className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>{t('nav.home')}</NavLink>
+          <NavLink to={`/${lang}/about`} className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>{t('nav.about')}</NavLink>
+          <NavLink to={`/${lang}/vision`} className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>{t('nav.vision')}</NavLink>
+          <NavLink to={`/${lang}/projects`} className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>{t('nav.projects')}</NavLink>
+          <NavLink to={`/${lang}/blog`} className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>{t('nav.blog')}</NavLink>
         </nav>
       )}
     </header>
