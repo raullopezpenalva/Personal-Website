@@ -3,6 +3,7 @@ import { NavLink, useParams } from 'react-router-dom';
 import { Button } from '../ui-primitives/Button';
 import BrandIcon from '../ui-primitives/icons/BrandIcon';
 import { useTranslation } from 'react-i18next';
+import { LanguageSwitcher } from '../ui-primitives/LanguageSwitcher';
 
 
 const Header: React.FC = () => {
@@ -41,6 +42,7 @@ const Header: React.FC = () => {
           </button>
         </div>
         <div className="Header-right">
+          <LanguageSwitcher />
           <Button to={`/${lang}/contact`} variant="secondary" className="Header-contact-btn">
             {t('btn.contact')}
           </Button>

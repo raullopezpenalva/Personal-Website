@@ -1,4 +1,5 @@
 @import "./components/ui-primitives/Button.css";
+@import "./components/ui-primitives/LanguageSwitcher.css";
 @import "./components/ui-patterns/Section.css";
 @import "./components/ui-patterns/Card.css";
 @import "./components/ui-primitives/Stack.module.css";

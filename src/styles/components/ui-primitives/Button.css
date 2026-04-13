@@ -4,7 +4,7 @@
     padding: var(--btn-padding);
     border-radius: var(--btn-corner-radius);
     font-size: var(--btn-font-size);
-    font-weight: var(--font-weight-medium);;
+    font-weight: var(--font-weight-medium);
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
@@ -53,9 +53,13 @@
 .btn-muted {
     background: transparent;
     color: var(--fg);
+    border-color: transparent;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-normal);
 }
 
 .btn-muted:hover {
     background: var(--btn-bg-muted-hover);
     color: var(--fg-title);
+    
 }
