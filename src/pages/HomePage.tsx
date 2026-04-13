@@ -9,9 +9,11 @@ import Text from "../components/ui-primitives/Text";
 import { PipelineYaml } from "../components/domain/PipelineYaml";
 import BulletList from "../components/ui-patterns/BulletList";
 import { useTranslation } from 'react-i18next';
+import { useParams } from "react-router-dom";
 
 const HomePage: React.FC = () => {
   const { t } = useTranslation('home');
+  const { lang } = useParams<{ lang: string }>();
   const { t: tCommon } = useTranslation('common');
   return (
     <>
@@ -26,10 +28,10 @@ const HomePage: React.FC = () => {
             {tCommon('main.description')}
           </p>
           <div className="hero-actions">
-            <Button to="/vision" variant="primary">
+            <Button to={`/${lang}/vision`} variant="primary">
               {tCommon('btn.vision')}
             </Button>
-            <Button to="/contact" variant="secondary">
+            <Button to={`/${lang}/contact`} variant="secondary">
               {tCommon('btn.contact')}
             </Button>
           </div>
@@ -67,7 +69,7 @@ const HomePage: React.FC = () => {
               <Bullet>{t('about-this-web.bullet3')}</Bullet>
             </BulletList>
             <div className="personalweb-buttons">
-              <Button to="/projects" variant="primary">
+              <Button to={`/${lang}/projects`} variant="primary">
                 {tCommon('btn.projects')}
               </Button>
               <Button to="https://github.com/raullopezpenalva/Personal-Website" variant="secondary">
@@ -86,7 +88,7 @@ const HomePage: React.FC = () => {
         <div className="call-to-action">
           <h2>{t('CTA.h2')}</h2>
           <p>{t('CTA.p')}</p>
-          <Button to="/contact" variant="primary">
+          <Button to={`/${lang}/contact`} variant="primary">
             {tCommon('btn.contact')}
           </Button>
         </div>

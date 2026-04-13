@@ -1,3 +1,4 @@
+import { useParams } from "react-router-dom";
 import EmailIcon from "../ui-primitives/icons/EmailIcon.tsx";
 import GitHubIcon from "../ui-primitives/icons/GitHubIcon.tsx";
 import LinkedInIcon from "../ui-primitives/icons/LinkedInIcon.tsx";
@@ -5,6 +6,8 @@ import { useTranslation } from 'react-i18next';
 
 const Footer: React.FC = () => {
     const { t } = useTranslation();
+    const { lang } = useParams<{ lang: string }>();
+
     const currentYear = new Date().getFullYear();
 
     const githubUrl = "https://github.com/raullopezpenalva";
@@ -16,12 +19,12 @@ const Footer: React.FC = () => {
                     {/* Navegación vertical */}    
                     <nav className="footer-nav">
                         <p className="footer-nav-title">{t('nav.title')}</p>
-                        <a href="/">{t('nav.home')}</a>
-                        <a href="/about">{t('nav.about')}</a>
-                        <a href="/services">{t('nav.services')}</a>
-                        <a href="/projects">{t('nav.projects')}</a>
-                        <a href="/blog">{t('nav.blog')}</a>
-                        <a href="/contact">{t('btn.contact')}</a>
+                        <a href={`/${lang}`}>{t('nav.home')}</a>
+                        <a href={`/${lang}/about`}>{t('nav.about')}</a>
+                        <a href={`/${lang}/services`}>{t('nav.services')}</a>
+                        <a href={`/${lang}/projects`}>{t('nav.projects')}</a>
+                        <a href={`/${lang}/blog`}>{t('nav.blog')}</a>
+                        <a href={`/${lang}/contact`}>{t('btn.contact')}</a>
                     </nav>
                     
                     {/* Bloque marca + tagline */}
@@ -35,7 +38,7 @@ const Footer: React.FC = () => {
                         <p className="footer-social-title">{t('footer.follow')}</p>
                         <div className="footer-social-icons">
                             <a
-                                href="/contact"
+                                href={`/${lang}/contact`}
                                 arial-label={t('btn.contact')}
                                 className="footer-icon-link"
                             >
