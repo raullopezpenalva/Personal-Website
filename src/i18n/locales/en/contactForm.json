@@ -1,0 +1,11 @@
+{
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "sendMessage": "Send Message",
+    "sending": "Sending...",
+    "success": "Your message has been sent successfully!",
+    "error1": "An error occurred. Please try again.",
+    "error2": "An unexpected error occurred. Please try again.",
+    "error3": "Failed to submit. Please check your connection and try again."
+}

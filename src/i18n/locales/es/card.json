@@ -1,0 +1,8 @@
+{
+  "card.end-to-end-development.title": "Visión end-to-end",
+  "card.end-to-end-development.description": "Entender el flujo completo antes de tocar una línea de código",
+  "card.design-before-code.title": "Diseño antes que código",
+  "card.design-before-code.description": "La mayoria de problemas vienen de decisiones tempranas mal pensadas",
+  "card.conscious-simplicity.title": "Simplicidad consciente",
+  "card.conscious-simplicity.description": "Menos capas, mejor comprensión"
+}

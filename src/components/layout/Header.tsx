@@ -5,7 +5,7 @@ import BrandIcon from '../ui-primitives/icons/BrandIcon';
 import { useTranslation } from 'react-i18next';
 
 
-export function Header() {
+const Header: React.FC = () => {
   const { t } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -29,7 +29,7 @@ export function Header() {
           {/* Mobile nav button */}
           <button
             className="Header-navMobile"
-            aria-label={t('nav.openMenu')}
+            aria-label={t('btn.openMenu')}
             aria-expanded={mobileMenuOpen}
             aria-controls="mobilePanel"
             onClick={() => setMobileMenuOpen((open) => !open)}
@@ -41,7 +41,7 @@ export function Header() {
         </div>
         <div className="Header-right">
           <Button to="/contact" variant="secondary" className="Header-contact-btn">
-            {t('nav.contact')}
+            {t('btn.contact')}
           </Button>
         </div>
       </div>
@@ -58,3 +58,5 @@ export function Header() {
     </header>
   );
 };
+
+export default Header;

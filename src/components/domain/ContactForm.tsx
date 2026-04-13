@@ -1,4 +1,5 @@
 import { useState} from 'react';
+import { useTranslation } from 'react-i18next';
 
 
 type CreateContactMessageRequest = {
@@ -22,6 +23,7 @@ type ApiError = {
 };
 
 export default function ContactForm() {
+    const { t } = useTranslation('contactForm');
     const [form, setForm] = useState<CreateContactMessageRequest>({
         email: '',
         subject: '',
@@ -72,16 +74,16 @@ export default function ContactForm() {
                     });
                     setFieldErrors(errors);
                 } else {
-                    setGlobalError(error.message || 'An error occurred. Please try again.');
+                    setGlobalError(error.message || t('error1'));
                 }
                 setStatus('error');
                 return;
             }
 
-            setGlobalError('An unexpected error occurred. Please try again.');
+            setGlobalError(t('error2'));
             setStatus('error');
         } catch {
-            setGlobalError('Failed to submit. Please check your connection and try again.');
+            setGlobalError(t('error3'));
             setStatus('error');
         }
     };
@@ -90,7 +92,7 @@ return (
     <form className="contact-form" onSubmit={handleSubmit}>
         
         <div className='contact-form-email'>
-            <label className='contact-form-email-label'>Email</label>
+            <label className='contact-form-email-label'>{t('email')}</label>
             <input
                 className='contact-form-email-input'
                 type="email"
@@ -102,7 +104,7 @@ return (
         </div>
 
         <div className='contact-form-subject'>
-            <label className='contact-form-subject-label'>Subject</label>
+            <label className='contact-form-subject-label'>{t('subject')}</label>
             <input
                 className='contact-form-subject-input'
                 type="text"
@@ -114,7 +116,7 @@ return (
         </div>
 
         <div className='contact-form-message'>
-            <label className='contact-form-message-label'>Message</label>
+            <label className='contact-form-message-label'>{t('message')}</label>
             <textarea
                 className='contact-form-message-input'
                 name="content"
@@ -126,7 +128,7 @@ return (
         <div className='contact-form-buttonbox'>
             {status === "success" && (
                 <div className='contact-form-success'>
-                    Your message has been sent successfully!
+                    {t('success')}
                 </div>
             )}
 
@@ -136,7 +138,7 @@ return (
                 </div>
             )}
             <button className='contact-form-submit' type="submit" disabled={status === 'submitting'}>
-                {status === 'submitting' ? 'Sending...' : 'Send Message'}
+                {status === 'submitting' ? t('sending') : t('sendMessage')}
             </button>
         </div>
     </form>

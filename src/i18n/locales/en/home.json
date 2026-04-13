@@ -1,1 +1,12 @@
-{}
+{
+    "how-i-think.title": "How I think about systems engineering",
+    "how-i-think.subtitle": "My approach doesn't start with tools, but with understanding the big picture.",
+    "about-this-web.title": "This web is also a project",
+    "about-this-web.subtitle": "Designed, developed and maintained as an engineering project: clear structure, version control and continuous deployment.",
+    "about-this-web.description": "This web is built from scratch as an engineering project, not as a template. It serves me to practice small-scale system design: component architecture, change control, automation and real deployment.",
+    "about-this-web.bullet1": "Component architecture and coherent design system (typography, spacing, color tokens)",
+    "about-this-web.bullet2": "Version control and professional workflow (Git, branches, traceable changes)",
+    "about-this-web.bullet3": "Automated build and deployment as part of the project lifecycle",
+    "CTA.h2": "Shall we talk about systems, and not just code?",
+    "CTA.p": "If your project needs structure, stability and an end-to-end vision, we can analyze it together"
+}

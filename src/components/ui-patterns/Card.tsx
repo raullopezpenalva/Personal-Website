@@ -1,17 +1,19 @@
 import React from "react";
 import type { CardArray } from "../../data/home-how-i-think-cards";
+import { useTranslation } from 'react-i18next';
 
 interface CardProps {
     card: CardArray;
 }
 
 const Card: React.FC<CardProps> = ({ card }) => {
+    const { t } = useTranslation('card');
     const Icon = card.icon;
     return (
         <article className="card">
-            <h3>{card.title}</h3>
+            <h3>{t(`card.${card.id}.title`)}</h3>
             <Icon className="card-icon" />
-            <p>{card.description}</p>
+            <p>{t(`card.${card.id}.description`)}</p>
         </article>
     );
 };
