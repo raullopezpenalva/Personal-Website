@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import i18n, { supportedLanguages, type SupportedLanguage } from './index';
 import Layout from '../components/layout/Layout';
+import { setStoredLanguage } from './language';
 
 function isSupportedLanguage(lang: string | undefined): lang is SupportedLanguage {
   return !!lang && supportedLanguages.includes(lang as SupportedLanguage);
@@ -17,6 +18,7 @@ export function LanguageRouteGuard() {
       }
 
       document.documentElement.lang = lang;
+      setStoredLanguage(lang);
     }
   }, [lang]);
 

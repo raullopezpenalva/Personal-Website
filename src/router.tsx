@@ -6,11 +6,12 @@ import VisionPage from "./pages/VisionPage.tsx";
 import PortfolioPage from "./pages/PortfolioPage.tsx";
 import BlogPage from "./pages/BlogPage.tsx";
 import ContactPage from "./pages/ContactPage.tsx";
+import { RootLanguageRedirect } from "./i18n/RootLanguageRedirect.tsx";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navigate to="/en" replace />,
+    element: <RootLanguageRedirect/>,
   },
 
   {
@@ -29,6 +30,6 @@ export const router = createBrowserRouter([
 
   {
     path: "*",
-    element: <Navigate to="/en" replace />,
+    element: <Navigate to="/" replace />,
   },
 ]);
