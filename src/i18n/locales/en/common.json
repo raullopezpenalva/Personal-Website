@@ -1,0 +1,17 @@
+{
+  "main.name": "Raúl López Penalva",
+  "main.tagline": "Scalability · DevOps · Infrastructure",
+  "main.description": "Technical engineering from the big picture",
+  "nav.title": "Navigation",
+  "nav.home": "Home",
+  "nav.about": "About",
+  "nav.vision": "Vision",
+  "nav.projects": "Projects",
+  "nav.blog": "Blog",
+  "btn.contact": "Contact",
+  "btn.openMenu": "Open menu",
+  "btn.vision": "Vision",
+  "btn.projects": "Projects",
+  "footer.follow": "Follow me",
+  "footer.rights": "All rights reserved."
+}

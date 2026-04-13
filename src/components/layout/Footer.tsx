@@ -1,11 +1,15 @@
+import { useParams } from "react-router-dom";
 import EmailIcon from "../ui-primitives/icons/EmailIcon.tsx";
 import GitHubIcon from "../ui-primitives/icons/GitHubIcon.tsx";
 import LinkedInIcon from "../ui-primitives/icons/LinkedInIcon.tsx";
+import { useTranslation } from 'react-i18next';
 
 const Footer: React.FC = () => {
+    const { t } = useTranslation();
+    const { lang } = useParams<{ lang: string }>();
+
     const currentYear = new Date().getFullYear();
 
-    const email = "raullopezpenalva@icloud.com";
     const githubUrl = "https://github.com/raullopezpenalva";
     const linkedinUrl = "https://www.linkedin.com/in/raúl-lópez-penalva/";
     return (
@@ -14,28 +18,28 @@ const Footer: React.FC = () => {
                 <div className="footer-top">
                     {/* Navegación vertical */}    
                     <nav className="footer-nav">
-                        <p className="footer-nav-title">Navegación</p>
-                        <a href="/">Inicio</a>
-                        <a href="/about">Sobre mí</a>
-                        <a href="/services">Servicios</a>
-                        <a href="/projects">Proyectos</a>
-                        <a href="/blog">Blog</a>
-                        <a href="/contact">Contacto</a>
+                        <p className="footer-nav-title">{t('nav.title')}</p>
+                        <a href={`/${lang}`}>{t('nav.home')}</a>
+                        <a href={`/${lang}/about`}>{t('nav.about')}</a>
+                        <a href={`/${lang}/services`}>{t('nav.services')}</a>
+                        <a href={`/${lang}/projects`}>{t('nav.projects')}</a>
+                        <a href={`/${lang}/blog`}>{t('nav.blog')}</a>
+                        <a href={`/${lang}/contact`}>{t('btn.contact')}</a>
                     </nav>
                     
                     {/* Bloque marca + tagline */}
                     <div className="footer-brand">
-                        <p className="footer-name">Raul Lopez Penalva</p>
-                        <p className="footer-tagline">Escalabilidad · DevOps · Infraestructura</p>
+                        <p className="footer-name">{t('main.name')}</p>
+                        <p className="footer-tagline">{t('main.tagline')}</p>
                     </div>
 
                     {/* Iconos sociales */}
                     <div className="footer-social">
-                        <p className="footer-social-title">Sígueme</p>
+                        <p className="footer-social-title">{t('footer.follow')}</p>
                         <div className="footer-social-icons">
                             <a
-                                href={`mailto:${email}`}
-                                arial-label="Enviar email"
+                                href={`/${lang}/contact`}
+                                arial-label={t('btn.contact')}
                                 className="footer-icon-link"
                             >
                                 <EmailIcon />
@@ -64,7 +68,7 @@ const Footer: React.FC = () => {
 
                 {/* Derechos de autor */}
                 <div className="footer-bottom-copy">
-                    <p>© {currentYear} Raúl López Penalva. Todos los derechos reservados.</p>
+                    <p>© {currentYear} {t('main.name')}. {t('footer.rights')}</p>
                 </div>
             </div>
         </footer>

@@ -1,0 +1,12 @@
+{
+    "how-i-think.title": "Cómo pienso la ingeniería de sistemas",
+    "how-i-think.subtitle": "Mi enfoque no empieza por herramientas, sino por entender el conjunto.",
+    "about-this-web.title": "Esta web también es un proyecto",
+    "about-this-web.subtitle": "Diseñada, desarrollada y mantenida como un proyecto de ingeniería: estructura clara, control de versiones y despliegue continuo.",
+    "about-this-web.description": "Esta web está construida desde cero como un proyecto de ingeniería, no como una plantilla. Me sirve para practicar diseño de sistemas a pequeña escala: arquitectura de componentes, control de cambios, automatización y despliegue real.",
+    "about-this-web.bullet1": "Arquitectura de componentes y sistema de diseño coherente (tipografía, espaciado, tokens de color)",
+    "about-this-web.bullet2": "Control de versiones y flujo de trabajo profesional (Git, ramas, cambios trazables)",
+    "about-this-web.bullet3": "Build y despliegue automatizados como parte del ciclo de vida del proyecto",
+    "CTA.h2": "¿Hablamos de sistemas, y no solo de código?",
+    "CTA.p": "Si tu proyecto necesita estructura, estabilidad y una visión end-to-end, podemos analizarlo juntos"
+}
