@@ -1,0 +1,87 @@
+{
+  "services-title": {
+    "title": "Servicios",
+    "subtitle": "Sonido, redes AV e infraestructura técnica para eventos en vivo y entornos de producción",
+    "body": "Servicios técnicos enfocados en hacer que todo el sistema funcione: desde mezcla y enrutamiento de señales hasta redes, planificación y operación en campo."
+  },
+  "services": {
+    "title": "Servicios",
+    "subtitle": "Soporte técnico para eventos, producción audiovisual y sistemas AV donde sonido, red e infraestructura tienen que funcionar juntos.",
+    "items": {
+      "soundEngineering": {
+        "title": "Sound Engineering",
+        "description": "Mezcla y soporte técnico de sonido para eventos en directo, conciertos y producción audiovisual.",
+        "points": ["FOH", "Monitores", "Pruebas de sonido", "Ruteo de señal"]
+      },
+      "soundSystemEngineering": {
+        "title": "Sound System Engineering",
+        "description": "Verificación, medición y optimización de sistemas de sonido para mejorar cobertura, coherencia y fiabilidad.",
+        "points": [
+          "Medición",
+          "Alineamiento",
+          "Subs / fills / delays",
+          "Cobertura"
+        ]
+      },
+      "avNetworking": {
+        "title": "AV Networking",
+        "description": "Diseño, despliegue y diagnóstico de redes IP para audio, vídeo, control, streaming y producción técnica.",
+        "points": ["Dante", "NDI", "Switching", "VLANs"]
+      },
+      "technicalPlanning": {
+        "title": "Technical Planning",
+        "description": "Planificación, documentación y coordinación técnica para reducir improvisación antes y durante el evento.",
+        "points": ["Riders", "Checklists", "Planos / patch", "Coordinación"]
+      }
+    }
+  },
+  "soundEngineering": {
+    "title": "Sound Engineering",
+    "subtitle": "Mezcla y soporte técnico de sonido para eventos en directo, conciertos y producción audiovisual.",
+    "body1": "Servicio orientado a operar el sonido del evento con criterio técnico, musical y de sistema. No se trata solo de mezclar una señal, sino de entender el flujo completo: escenario, patch, consola, PA, monitores, artistas, producción y público.",
+    "body2": "El trabajo empieza antes del show: revisión de rider, input list, stage plot, necesidades de patch y posibles puntos críticos. Durante el montaje y la prueba de sonido, el objetivo es ordenar el sistema, verificar señales y crear una base estable para que el evento fluya con seguridad.",
+    "body3": "Durante el directo, la prioridad es mantener una mezcla clara, controlada y adaptada al espacio, resolviendo incidencias sin romper el ritmo del evento y manteniendo una comunicación fluida con producción, escenario y artistas.",
+    "value": "El valor principal es aportar fiabilidad: una operación de sonido preparada, comunicada y capaz de responder cuando aparece la presión real.",
+    "bullet1": "Mezcla FOH, soporte de monitores, pruebas de sonido y operación durante el show.",
+    "bullet2": "Revisión de rider, input list, stage plot, patch y necesidades técnicas previas.",
+    "bullet3": "Resolución de problemas de señal, coordinación con producción y comunicación clara con artistas y equipo técnico."
+  },
+  "soundSystemEngineering": {
+    "title": "Sound System Engineering",
+    "subtitle": "Verificación, medición y optimización de sistemas de sonido para mejorar cobertura, coherencia y fiabilidad.",
+    "body1": "Servicio orientado a entender el sistema de sonido como una infraestructura completa: PA, subs, fills, delays, procesado, cobertura, espacio y necesidades reales del evento.",
+    "body2": "El objetivo no es solo que el sistema suene fuerte, sino que funcione de forma coherente en el espacio. Esto implica revisar la ubicación del sistema, comprobar el ruteo, verificar polaridad, analizar la cobertura y ajustar elementos críticos cuando el alcance del proyecto lo permite.",
+    "body3": "Este trabajo conecta criterio auditivo, medición, documentación y toma de decisiones técnicas. Permite dar mejor soporte al FOH, reducir problemas de cobertura y mejorar la consistencia sonora para el público.",
+    "bullet1": "Verificación de PA, subs, fills, delays, procesado y ruteo del sistema.",
+    "bullet2": "Medición, alineamiento y ajuste básico para mejorar coherencia y cobertura.",
+    "bullet3": "Documentación técnica, detección de puntos críticos y soporte al equipo de sonido.",
+    "value": "El valor principal es aportar criterio objetivo al sistema: menos improvisación, decisiones técnicas más claras y una experiencia sonora más consistente."
+  },
+  "avNetworking": {
+    "title": "AV Networking",
+    "subtitle": "Diseño, despliegue y diagnóstico de redes IP para audio, vídeo, control, streaming y producción técnica.",
+    "body1": "Servicio orientado a crear redes AV estables y comprensibles para entornos donde audio, vídeo, control, streaming y producción dependen de una infraestructura IP fiable.",
+    "body2": "En un evento actual, la red ya no es un accesorio: puede transportar Dante, NDI, control de consolas, iluminación, intercom, cámaras, ordenadores, tablets y sistemas de producción. Por eso es importante definir topología, direccionamiento, switches, VLANs si procede y documentación antes de que aparezcan los problemas.",
+    "body3": "El objetivo es reducir conflictos IP, cortes de conectividad, redes improvisadas y diagnósticos a ciegas. Trabajo desde una mentalidad práctica de campo: entender qué sistemas necesitan hablar entre sí, cómo están conectados y dónde puede fallar la cadena.",
+    "bullet1": "Diseño básico de red, direccionamiento IP, switching, VLANs y WiFi técnico.",
+    "bullet2": "Soporte para Dante, NDI, control, streaming y sistemas AV sobre red.",
+    "bullet3": "Troubleshooting, documentación de topología, detección de conflictos y soporte durante el evento.",
+    "value": "El valor principal es aportar estabilidad y claridad: una red técnica mejor diseñada, más fácil de diagnosticar y menos dependiente de la improvisación."
+  },
+  "technicalProduction": {
+    "title": "Technical Production",
+    "subtitle": "Planificación, documentación y coordinación técnica para eventos, espacios y producción audiovisual.",
+    "body1": "Servicio orientado a ordenar la parte técnica de un evento antes y durante su ejecución. El objetivo es convertir necesidades dispersas, riders, proveedores, horarios y limitaciones reales en un plan técnico claro y operable.",
+    "body2": "La producción técnica no consiste solo en estar presente el día del evento, sino en anticipar problemas: revisar necesidades de sonido, vídeo, iluminación, red, energía, montaje, accesos, tiempos de prueba y responsabilidades de cada parte.",
+    "body3": "Este servicio puede aplicarse como apoyo previo, coordinación técnica, supervisión de proveedores o acompañamiento durante el montaje y la operación. El alcance se define siempre de forma clara para evitar asumir responsabilidades sobre sistemas que no han sido planificados o validados previamente.",
+    "bullet1": "Revisión de riders, necesidades técnicas, horarios, proveedores y puntos críticos del evento.",
+    "bullet2": "Documentación técnica: checklists, planos, patch, necesidades de red, flujo de señales y responsabilidades.",
+    "bullet3": "Coordinación con producción, artistas, proveedores y equipos técnicos para reducir improvisación.",
+    "value": "El valor principal es aportar orden y criterio antes de que aparezca la presión: menos improvisación, responsabilidades más claras y una ejecución técnica más controlada."
+  },
+  "CTA": {
+    "kicker": "Hablemos del sistema",
+    "h2": "¿Necesitas soporte técnico para un evento, espacio o sistema de producción?",
+    "p": "Cuéntame qué estás preparando, desplegando o intentando resolver. Puedo ayudarte con sonido, redes AV, planificación técnica e infraestructura."
+  }
+}

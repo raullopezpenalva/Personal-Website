@@ -5,15 +5,14 @@
   "nav.title": "Navegación",
   "nav.home": "Inicio",
   "nav.about": "Sobre mí",
-  "nav.vision": "Visión",
+  "nav.services": "Servicios",
   "nav.projects": "Proyectos",
   "nav.blog": "Blog",
   "btn.contact": "Contacto",
   "btn.openMenu": "Abrir menú",
   "btn.about": "Sobre mí",
-  "btn.vision": "Visión técnica",
-  "btn.projects": "Proyectos",
   "btn.services": "Servicios",
+  "btn.projects": "Proyectos",
   "footer.follow": "Sígueme",
   "footer.rights": "Todos los derechos reservados."
 }

@@ -6,6 +6,7 @@
         var(--bg),
         var(--surface-1)
     );
+    scroll-margin-top: 96px;
 }
 
 .Section-inner {

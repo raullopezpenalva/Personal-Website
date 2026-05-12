@@ -16,8 +16,17 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    transition:
+        transform 180ms ease,
+        border-color 180ms ease,
+        background-color 180ms ease;
     /* width: 336px;
     height: 360px; */
+}
+
+.service-preview-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-1);
 }
 
 .service-preview-card__image-wrapper {
@@ -31,6 +40,12 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 220ms ease, filter 220ms ease;
+}
+
+.service-preview-card:hover .service-preview-card__image {
+    transform: scale(1.04);
+    filter: brightness(1.08);
 }
 
 .service-preview-card__content {

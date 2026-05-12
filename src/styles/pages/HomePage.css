@@ -79,35 +79,6 @@
     gap: var(--gap-xs);
 }
 
-/* Hybrid profile section styles */
-.hybrid-profile-image-placeholder {
-    width: 100%;
-    height: 540px;
-    border: 1px solid var(--surface-3);
-    overflow: hidden;
-    border-radius: 30px;
-}
-
-/* .hybrid-profile-image-placeholder::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to bottom,
-        transparent 0%,
-        var(--surface-3) 50%,
-        transparent 100%
-    );
-    pointer-events: none;
-} */
-
-.hybrid-profile-image {
-    width: 100%;
-    height: 100%;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
-}
-
 /* featured case studies section styles */
 .featured-case-studies-grid {
     width: 100%;

@@ -52,6 +52,7 @@ const HomePage: React.FC = () => {
               key={service.id}
               image={service.image}
               translationKey={service.translationKey}
+              to={`/${lang}${service.href}`}
             />
           ))}
         </div>
@@ -65,7 +66,7 @@ const HomePage: React.FC = () => {
         justifyContent="center"
         flexDirection="column"
       >
-        <Stack className="stack-60-40" direction="row" gap="none" margin="lg">
+        <Stack className="stack-60-40" direction="row" gap="xs" margin="lg">
           <Stack align="center" justifyContent="space-between" gap="md" className="stack-60-40-left">
             <Text>{t("hybrid-profile.text1")}</Text>
             <Text>{t("hybrid-profile.text2")}</Text>
@@ -94,8 +95,8 @@ const HomePage: React.FC = () => {
             justifyContent="center"
             className="stack-60-40-right"
           >
-            <div className="hybrid-profile-image-placeholder">
-              <img className="hybrid-profile-image" src="src/assets/images/hybrid-profile/back-d-b.webp" alt="Hybrid profile illustration" />
+            <div className="image-placeholder-40-60">
+              <img className="image-40-60" src="src/assets/images/hybrid-profile/back-d-b.webp" alt="Hybrid profile illustration" />
           
           </div>
           </Stack>

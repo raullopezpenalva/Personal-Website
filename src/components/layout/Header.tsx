@@ -24,7 +24,7 @@ const Header: React.FC = () => {
           <nav className="Header-navDesktop">
             <NavLink to={`/${lang}`} className="btn btn-muted">{t('nav.home')}</NavLink>
             <NavLink to={`/${lang}/about`} className="btn btn-muted">{t('nav.about')}</NavLink>
-            <NavLink to={`/${lang}/vision`} className="btn btn-muted">{t('nav.vision')}</NavLink>
+            <NavLink to={`/${lang}/services`} className="btn btn-muted">{t('nav.services')}</NavLink>
             <NavLink to={`/${lang}/projects`} className="btn btn-muted">{t('nav.projects')}</NavLink>
             <NavLink to={`/${lang}/blog`} className="btn btn-muted">{t('nav.blog')}</NavLink>
           </nav>
@@ -53,7 +53,7 @@ const Header: React.FC = () => {
         <nav className="Header-navMobile mobilePanel" id="mobilePanel">
           <NavLink to={`/${lang}`} className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>{t('nav.home')}</NavLink>
           <NavLink to={`/${lang}/about`} className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>{t('nav.about')}</NavLink>
-          <NavLink to={`/${lang}/vision`} className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>{t('nav.vision')}</NavLink>
+          <NavLink to={`/${lang}/services`} className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>{t('nav.services')}</NavLink>
           <NavLink to={`/${lang}/projects`} className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>{t('nav.projects')}</NavLink>
           <NavLink to={`/${lang}/blog`} className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>{t('nav.blog')}</NavLink>
         </nav>

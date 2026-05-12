@@ -5,15 +5,14 @@
   "nav.title": "Navigation",
   "nav.home": "Home",
   "nav.about": "About",
-  "nav.vision": "Vision",
+  "nav.services": "Services",
   "nav.projects": "Projects",
   "nav.blog": "Blog",
   "btn.contact": "Contact",
   "btn.openMenu": "Open menu",
   "btn.about": "About",
-  "btn.vision": "Vision",
-  "btn.projects": "Projects",
   "btn.services": "Services",
+  "btn.projects": "Projects",
   "footer.follow": "Follow me",
   "footer.rights": "All rights reserved."
 }
