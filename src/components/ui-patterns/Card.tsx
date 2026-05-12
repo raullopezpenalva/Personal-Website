@@ -1,5 +1,5 @@
 import React from "react";
-import type { CardArray } from "../../data/home-how-i-think-cards";
+import type { CardArray } from "../../data/home-services-preview";
 import { useTranslation } from 'react-i18next';
 
 interface CardProps {

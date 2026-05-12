@@ -1,7 +1,7 @@
 {
   "main.name": "Raúl López Penalva",
-  "main.tagline": "Scalability · DevOps · Infrastructure",
-  "main.description": "Technical engineering from the big picture",
+  "main.tagline": "Sound Engineering · AV Networking · Technical Infrastructure",
+  "main.description": "Connecting sound, infrastructure and real-world production through a systems mindset",
   "nav.title": "Navigation",
   "nav.home": "Home",
   "nav.about": "About",
@@ -10,8 +10,10 @@
   "nav.blog": "Blog",
   "btn.contact": "Contact",
   "btn.openMenu": "Open menu",
+  "btn.about": "About",
   "btn.vision": "Vision",
   "btn.projects": "Projects",
+  "btn.services": "Services",
   "footer.follow": "Follow me",
   "footer.rights": "All rights reserved."
 }

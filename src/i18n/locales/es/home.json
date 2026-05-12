@@ -1,12 +1,103 @@
 {
-    "how-i-think.title": "Cómo pienso la ingeniería de sistemas",
-    "how-i-think.subtitle": "Mi enfoque no empieza por herramientas, sino por entender el conjunto.",
     "about-this-web.title": "Esta web también es un proyecto",
     "about-this-web.subtitle": "Diseñada, desarrollada y mantenida como un proyecto de ingeniería: estructura clara, control de versiones y despliegue continuo.",
     "about-this-web.description": "Esta web está construida desde cero como un proyecto de ingeniería, no como una plantilla. Me sirve para practicar diseño de sistemas a pequeña escala: arquitectura de componentes, control de cambios, automatización y despliegue real.",
     "about-this-web.bullet1": "Arquitectura de componentes y sistema de diseño coherente (tipografía, espaciado, tokens de color)",
     "about-this-web.bullet2": "Control de versiones y flujo de trabajo profesional (Git, ramas, cambios trazables)",
     "about-this-web.bullet3": "Build y despliegue automatizados como parte del ciclo de vida del proyecto",
-    "CTA.h2": "¿Hablamos de sistemas, y no solo de código?",
-    "CTA.p": "Si tu proyecto necesita estructura, estabilidad y una visión end-to-end, podemos analizarlo juntos"
+    "services": {
+        "title": "Servicios",
+        "subtitle": "Soporte técnico para eventos, producción audiovisual y sistemas AV donde sonido, red e infraestructura tienen que funcionar juntos.",
+        "items": {
+            "soundEngineering": {
+                "title": "Sound Engineering",
+                "description": "Mezcla y soporte técnico de sonido para eventos en directo, conciertos y producción audiovisual.",
+                "points": [
+                "FOH",
+                "Monitores",
+                "Pruebas de sonido",
+                "Ruteo de señal"
+                ]
+            },
+            "soundSystemEngineering": {
+                "title": "Sound System Engineering",
+                "description": "Verificación, medición y optimización de sistemas de sonido para mejorar cobertura, coherencia y fiabilidad.",
+                "points": [
+                "Medición",
+                "Alineamiento",
+                "Subs / fills / delays",
+                "Cobertura"
+                ]
+            },
+            "avNetworking": {
+                "title": "AV Networking",
+                "description": "Diseño, despliegue y diagnóstico de redes IP para audio, vídeo, control, streaming y producción técnica.",
+                "points": [
+                "Dante",
+                "NDI",
+                "Switching",
+                "VLANs"
+                ]
+            },
+            "technicalPlanning": {
+                "title": "Technical Planning",
+                "description": "Planificación, documentación y coordinación técnica para reducir improvisación antes y durante el evento.",
+                "points": [
+                "Riders",
+                "Checklists",
+                "Planos / patch",
+                "Coordinación"
+                ]
+            }
+        }
+    },
+  "hybrid-profile": {
+    "title": "Un perfil técnico híbrido",
+    "subtitle": "Experiencia de campo, criterio de sonido y mentalidad de infraestructura.",
+    "text1": "Vengo del terreno: sonido directo, producción audiovisual, ruteo de señales, resolución de problemas y coordinación técnica.",
+    "text2": "Con el tiempo, esa experiencia se ha ido conectando con redes IP, sistemas AV, automatización, documentación e infraestructura.",
+    "text3": "Mi enfoque consiste en entender el evento como un sistema técnico completo: sonido, red, señal, personas, documentación y operación trabajando en la misma dirección.",
+    "bullet1": "Experiencia real en eventos, sonido y producción audiovisual.",
+    "bullet2": "Mentalidad de redes, sistemas e infraestructura.",
+    "bullet3": "Capacidad para documentar, diagnosticar y mejorar entornos técnicos reales.",
+    "panel": {
+      "kicker": "Mentalidad de sistemas",
+      "title": "El evento como sistema técnico completo",
+      "text": "Sonido, red, señal, personas, documentación y operación forman parte del mismo flujo. Cuando una parte falla, el sistema completo lo nota.",
+      "item1": "Sonido",
+      "item2": "Red",
+      "item3": "Señal",
+      "item4": "Operación"
+    }
+  },
+  "featuredCaseStudies": {
+    "title": "Case studies destacados",
+    "subtitle": "Proyectos y experiencias que conectan sonido, redes, software e infraestructura en entornos reales.",
+    "items": {
+      "technicalPlanningEvents": {
+        "category": "AV / Event Production",
+        "title": "Planificación técnica para eventos",
+        "description": "Revisión de necesidades técnicas, coordinación con proveedores, documentación y análisis de riesgos para eventos y producción audiovisual.",
+        "value": "Muestra experiencia real en producción técnica y capacidad para ordenar proyectos antes del montaje."
+      },
+      "networkScout": {
+        "category": "AV Networking / Tools",
+        "title": "Diagnóstico portátil de redes",
+        "description": "Herramienta de diagnóstico y reporte de red pensada para entornos técnicos no gestionados, pruebas de campo y troubleshooting.",
+        "value": "Une redes, Linux, automatización y necesidades reales de campo en una herramienta práctica."
+      },
+      "personalWebsiteInfrastructure": {
+        "category": "Technical Infrastructure",
+        "title": "Infraestructura self-hosted de la web personal",
+        "description": "Frontend React, servicios backend, Docker, NGINX, CI/CD y despliegue en infraestructura propia como plataforma real de portfolio.",
+        "value": "Demuestra capacidad para construir, desplegar y mantener sistemas propios en producción."
+      }
+    },
+    "cardButton": "Ver proyecto"
+  },
+  "CTA": {
+    "kicker": "Hablemos del sistema",
+    "h2": "¿Necesitas soporte técnico para un evento, espacio o sistema de producción?",
+    "p": "Cuéntame qué estás preparando, desplegando o intentando resolver. Puedo ayudarte con sonido, redes AV, planificación técnica e infraestructura."
+  }
 }
