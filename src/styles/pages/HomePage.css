@@ -42,7 +42,7 @@
 
 .hero-text {
     text-transform: uppercase;
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-md);
     letter-spacing: var(--letter-spacing-wider);
     color: var(--fg);
     margin: var(--space-stack) 0;
@@ -77,6 +77,92 @@
     display: flex;
     justify-content: center;
     gap: var(--gap-xs);
+}
+
+/* Hybrid profile section styles */
+.hybrid-profile-image-placeholder {
+    width: 100%;
+    height: 540px;
+    border: 1px solid var(--surface-3);
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+/* .hybrid-profile-image-placeholder::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        var(--surface-3) 50%,
+        transparent 100%
+    );
+    pointer-events: none;
+} */
+
+.hybrid-profile-image {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+/* featured case studies section styles */
+.featured-case-studies-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    margin: var(--card-grid-margin);
+}
+
+.featured-case-study-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100%;
+    background-color: var(--surface-2);
+    border-radius: 30px;
+    border: 1px solid var(--surface-3);
+    padding: var(--card-vertical-padding) var(--card-horizontal-padding);
+}
+
+.featured-case-study-card__category {
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    opacity: 0.7;
+}
+
+.featured-case-study-card h3 {
+    margin-bottom: 0.75rem;
+}
+
+.featured-case-study-card__description {
+    margin-bottom: 1rem;
+}
+
+.featured-case-study-card__value {
+    margin-bottom: 1.5rem;
+    opacity: 0.85;
+}
+
+.featured-case-study-card a {
+    margin-top: auto;
+}
+
+@media (max-width: 1024px) {
+    .featured-case-studies-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .featured-case-studies-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 
