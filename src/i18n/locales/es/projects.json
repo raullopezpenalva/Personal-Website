@@ -1,28 +1,177 @@
 {
-    "projects.projects-title.title": "Arquitectura aplicada",
-    "projects.projects-title.subtitle": "Sistemas diseñados, automatizados y operados en entornos reales",
-    "projects.projects-title.body": "En esta sección presento proyectos donde aplico pensamiento sistémico en entornos reales: diseño de infraestructura, automatización y servicios en evolución. Cada proyecto está planteado como un sistema completo, no como una prueba aislada.",
-    "projects.homelab.title": "Infraestructura Autónoma On-Premise",
-    "projects.homelab.subtitle": "Plataforma diseñada para operar servicios digitales con control total sobre red, energía y despliegue",
-    "projects.homelab.toptext": "Diseño y mantengo una infraestructura propia donde experimento con redes, contenedores, reverse proxy, segmentación VLAN y automatización progresiva. No es solo un laboratorio: es un entorno real que aloja servicios productivos y me permite practicar arquitectura, despliegue y observabilidad de extremo a extremo.",
-    "projects.homelab.bullet1": "Segmentación de red con VLAN (LAN, DMX, IoT, Energy, Guest)",
-    "projects.homelab.bullet2": "Reverse proxy Nginx y servicios Docker en red interna",
-    "projects.homelab.bullet3": "Monitorización y análisis de tráfico y rendimiento",
-    "projects.homelab.bullet4": "Diseño preparado para evolución a IaC (Terraform + Ansible)",
-    "projects.personalwebsite.title": "Personal Website - Arquitectura como producto",
-    "projects.personalwebsite.subtitle": "Web pública diseñada como sistema evolutivo, no como plantilla estática",
-    "projects.personalwebsite.toptext": "Esta web no es solo una presentación profesional. Es un entorno donde aplico arquitectura por componentes, control de versiones y despliegue continuo. Está diseñada para evolucionar hacia backend propio, microservicios y automatización.",
-    "projects.personalwebsite.bullet1": "React + Vite con arquitectura modular",
-    "projects.personalwebsite.bullet2": "CI/CD con GitHub Actions",
-    "projects.personalwebsite.bullet3": "Contenerización Docker y despliegue automático",
-    "projects.personalwebsite.bullet4": "Backend Spring Boot y servicios desacoplados",
-    "projects.weaver.title": "Weaver - Plataforma comunitaria descentralizada",
-    "projects.weaver.subtitle": "Arquitectura para comunidades físicas con identidad certificada y estructura cooperativa",
-    "projects.weaver.toptext": "Weaver es un proyecto en desarrollo que explora cómo diseñar una red social basada en comunidades físicas reales. El reto no es solo funcional, sino arquitectónico: identidad, permisos, escalabilidad, backend y despliegue controlado.",
-    "projects.weaver.bullet1": "Arquitectura modular con separación de servicios",
-    "projects.weaver.bullet2": "Backend en desarrollo (Spring Boot)",
-    "projects.weaver.bullet3": "Contenerización y despliegue con Docker (futuro K8s)",
-    "projects.weaver.bullet4": "Diseño orientado a permisos y comunidades segmentadas",
-    "projects.weaver.bullet5": "Preparado para crecimiento horizontal",
-    "projects.weaver.btn": "Visitar Weaver"
+  "hero": {
+    "title": "Proyectos",
+    "subtitle": "Case studies profesionales que conectan sonido, AV, eventos, infraestructura y software.",
+    "body": "Una selección de experiencias y proyectos agrupados por capacidades reales: sonido directo, giras, audio audiovisual, AV corporativo, infraestructura self-hosted y desarrollo de herramientas propias."
+  },
+  "filters": {
+    "all": "Todos",
+    "sound": "Sonido",
+    "avEvents": "AV / Eventos",
+    "audiovisual": "Audiovisual",
+    "corporateAv": "Corporate AV",
+    "infrastructure": "Infraestructura",
+    "software": "Software"
+  },
+  "card": {
+    "cta": "Ver case study"
+  },
+  "detail": {
+    "backToProjects": "Volver a proyectos",
+    "caseStudy": "Case study",
+    "context": "Contexto",
+    "challenge": "Reto",
+    "role": "Rol asumido",
+    "approach": "Enfoque técnico",
+    "tools": "Herramientas / sistemas",
+    "result": "Resultado",
+    "demonstrates": "Qué demuestra",
+    "gallery": "Galería",
+    "ctaTitle": "¿Quieres hablar de un proyecto técnico?",
+    "ctaText": "Si necesitas soporte en sonido, AV, redes o infraestructura, podemos revisar el contexto y definir el alcance."
+  },
+  "items": {
+    "soundEngineeringLiveEvents": {
+        "category": "Sound Engineering / Live Events",
+        "title": "Sound Engineering para eventos y espectáculos",
+        "summary": "Experiencia en mezcla FOH, monitores, pruebas de sonido, coordinación técnica y operación de eventos en entornos reales de producción.",
+        "detail": {
+          "context": "Este case study agrupa mi experiencia como técnico de sonido en eventos, espectáculos, festivales, conciertos, bolos sueltos y trabajos dentro de empresas audiovisuales. Incluye mezcla FOH, monitores, pruebas de sonido, ruteo de señal, operación de consolas, soporte a producción técnica y adaptación a espacios muy diferentes.",
+          "challenge": "El reto principal en sonido directo es operar bajo presión real: tiempos de montaje ajustados, riders incompletos o cambiantes, necesidades de artistas, limitaciones del espacio, equipos distintos en cada evento e incidencias de señal durante montaje, prueba o show.",
+          "role": "He asumido roles como FOH Sound Engineer, Monitor Engineer, Stage Technician, Technical Production Support y operador técnico de eventos, adaptándome al alcance real de cada producción.",
+          "approach": "Mi enfoque se basa en revisar necesidades técnicas antes del evento, entender el flujo de señal, verificar patch y ruteo, organizar la prueba de sonido, mantener comunicación clara con artistas y producción, operar el show con criterio técnico y musical y resolver incidencias sin romper el ritmo del evento.",
+          "result": "La experiencia acumulada en este bloque demuestra capacidad para trabajar en eventos reales con diferentes formatos, artistas, clientes, espacios y equipos técnicos. No se trata solo de mezclar, sino de mantener operativo el sistema completo desde el montaje hasta el final del show.",
+          "demonstrates": "Capacidad para trabajar bajo presión, criterio de sonido en entornos reales, comprensión del flujo completo de señal, comunicación con producción y artistas, y fiabilidad durante montaje, prueba y show.",
+          "tools": [
+            "Consolas digitales",
+            "Sistemas PA",
+            "Monitores",
+            "Microfonía",
+            "Riders",
+            "Input lists",
+            "Stage plots"
+          ]
+        }
+    },
+    "touringSoundOminira": {
+        "category": "Sound Engineering / Touring",
+        "title": "Soporte técnico de sonido en gira con Ominira",
+        "summary": "Soporte técnico de sonido en más de 50 conciertos con una banda, adaptando el show a diferentes espacios, equipos y condiciones reales de gira.",
+        "detail": {
+          "context": "Este case study recoge el trabajo realizado con el grupo musical Ominira en más de 50 conciertos, con giras por Italia y el norte de España. Trabajar con una banda de forma continuada permite entender mejor el show, las necesidades de los músicos, la dinámica de escenario y los puntos críticos que aparecen en distintos espacios.",
+          "challenge": "El reto fue mantener una experiencia técnica y sonora coherente en contextos muy variables: diferentes salas, sistemas de sonido, equipos locales, tiempos de prueba cambiantes, condiciones técnicas irregulares y necesidades específicas de la banda.",
+          "role": "Mi rol se centró en el soporte técnico de sonido para la banda, actuando como técnico de directo y apoyo técnico en gira, coordinando necesidades de sonido, pruebas, adaptación al espacio y comunicación con músicos y técnicos locales.",
+          "approach": "El enfoque consistía en entender las necesidades recurrentes de la banda, adaptar el show a cada espacio, coordinarse con técnicos locales, preparar pruebas de sonido eficientes, resolver problemas de señal o monitorización y asegurar continuidad técnica durante la gira.",
+          "result": "La experiencia con Ominira demuestra continuidad profesional, confianza con una banda y capacidad para trabajar en gira adaptando el show a espacios, equipos y condiciones diferentes.",
+          "demonstrates": "Continuidad profesional, relación técnica con artistas, adaptación a venues diferentes, capacidad de resolver problemas en gira, comprensión del show desde dentro y fiabilidad en contextos cambiantes.",
+          "tools": [
+            "Consolas de directo",
+            "Sistemas PA locales",
+            "Monitores",
+            "Microfonía",
+            "Riders",
+            "Input lists",
+            "Adaptación a equipamiento de sala"
+          ]
+        }
+    },
+    "locationSoundAudioPostproduction": {
+        "category": "Location Sound / Audio Postproduction",
+        "title": "Sonido directo y postproducción de audio para audiovisual",
+        "summary": "Captación de sonido en rodaje, microfonía, edición de diálogos, limpieza, diseño sonoro y mezcla para proyectos audiovisuales y contenido corporativo.",
+        "detail": {
+          "context": "Este case study agrupa trabajos de sonido en rodaje, microfonía, boom, edición de diálogos, limpieza de audio, diseño sonoro, mezcla y normalizado para proyectos audiovisuales. Incluye participación en rodajes, cortometrajes, película, cápsulas publicitarias, spots y contenido corporativo.",
+          "challenge": "El sonido audiovisual exige capturar diálogo claro en localizaciones reales, minimizar ruido de fondo, gestionar microfonía lavalier, operar boom, captar ambientes, mantener continuidad sonora y preparar el material para postproducción.",
+          "role": "He trabajado como microfonista, boom operator, editor de diálogos, técnico de postproducción de audio y editor de sonido, participando tanto en la captación en set como en fases posteriores de edición y mezcla.",
+          "approach": "El enfoque se basa en comprender el flujo completo de audio audiovisual: captación en set, elección de microfonía, claridad de diálogo, control de ruido, organización de material, edición de diálogos, limpieza, diseño sonoro, mezcla, normalización y entrega final.",
+          "result": "Este bloque demuestra que mi experiencia de sonido no se limita al directo. También incluye captación, edición y postproducción dentro de proyectos audiovisuales y corporativos.",
+          "demonstrates": "Comprensión del flujo completo de audio audiovisual, capacidad de captación en rodaje, criterio para editar y limpiar diálogos, conexión entre sonido directo y postproducción, y adaptación a proyectos audiovisuales reales.",
+          "tools": [
+            "Grabadores de campo",
+            "Boom",
+            "Micrófonos shotgun",
+            "Lavalier",
+            "Sistemas inalámbricos",
+            "DAW",
+            "Herramientas de edición y limpieza de audio"
+          ]
+        }
+    },
+    "corporateAvHybridEvents": {
+        "category": "Corporate AV / Hybrid Events",
+        "title": "AV corporativo, conferencias y eventos híbridos",
+        "summary": "Soporte técnico AV para conferencias, ruedas de prensa, eventos híbridos, streaming, grabación y videoconferencia en entornos corporativos e institucionales.",
+        "detail": {
+          "context": "Este case study agrupa experiencia en soporte técnico AV para conferencias, ruedas de prensa, eventos institucionales, streaming, grabación, videoconferencia y eventos híbridos. Incluye contextos como EUIPO, Consell General de Andorra, entidades bancarias, Grandvalira, Caldea, Morabanc, Hotel Hermitage Soldeu y otros entornos corporativos.",
+          "challenge": "El AV corporativo exige fiabilidad, comunicación clara y capacidad para resolver incidencias sin interrumpir el evento. A diferencia de un concierto, muchas veces el foco está en que la comunicación funcione: ponentes, traducción, videoconferencia, grabación, streaming, presentaciones, cámaras, audio y plataformas remotas.",
+          "role": "He trabajado como Conference Technician, Corporate AV Technician, Hybrid Event Technician, Streaming Support, Sound Operator y soporte técnico durante eventos en vivo, conferencias y entornos institucionales.",
+          "approach": "Mi enfoque se basa en preparar sistemas antes del evento, verificar audio, vídeo y red, probar plataformas de videoconferencia, coordinarme con producción o responsables del evento, dar soporte a ponentes, operar sonido o streaming cuando aplica y resolver incidencias durante el evento con calma y precisión.",
+          "result": "Este bloque demuestra experiencia en entornos corporativos e institucionales donde la estabilidad técnica, la comunicación y la resolución rápida de problemas son esenciales.",
+          "demonstrates": "Capacidad para trabajar en entornos profesionales exigentes, experiencia en videoconferencia y eventos híbridos, operación de sonido en contexto corporativo, comunicación con ponentes y clientes, resolución rápida de incidencias y comprensión de flujos AV complejos.",
+          "tools": [
+            "Zoom",
+            "Microsoft Teams",
+            "Sistemas de videoconferencia",
+            "Streaming",
+            "Grabación",
+            "Mesas de mezcla",
+            "Microfonía",
+            "Cámaras",
+            "Redes AV"
+          ]
+        }
+    },
+    "homelabSelfHostedInfrastructure": {
+        "category": "Technical Infrastructure",
+        "title": "Homelab e infraestructura self-hosted",
+        "summary": "Infraestructura propia basada en servidores Linux, Docker, NGINX, red UniFi, servicios self-hosted y despliegues reales para validar flujos de operación técnica.",
+        "detail": {
+          "context": "Este case study agrupa mi infraestructura propia usada como laboratorio técnico y entorno real de despliegue. Incluye servidores Linux, Docker, NGINX reverse proxy, servicios self-hosted, red UniFi, VLANs, DNS interno, Wiki.js, despliegues de la web personal, servicios backend y documentación técnica.",
+          "challenge": "El reto consiste en diseñar una infraestructura estable y mantenible: separar servicios y entornos, operar servidores Linux, desplegar servicios con Docker, configurar reverse proxy, gestionar dominios y certificados, documentar configuraciones y preparar una evolución hacia infraestructuras más profesionales.",
+          "role": "Asumo el rol de operador de infraestructura propia: administración de servidores Linux, gestión de servicios self-hosted, diseño de red, documentación, despliegue de servicios y práctica DevOps aplicada.",
+          "approach": "El enfoque se basa en aprender operando sistemas reales, documentar configuraciones, crear una estructura clara de servicios, usar contenedores, automatizar despliegues cuando es posible, separar redes y responsabilidades, y aplicar buenas prácticas de infraestructura a un entorno propio.",
+          "result": "El homelab permite validar conocimientos de infraestructura, redes, sistemas y operación con servicios reales, no solo en ejercicios aislados. Sirve como base de aprendizaje, pruebas y despliegue de servicios propios.",
+          "demonstrates": "Capacidad para diseñar y operar infraestructura propia, conocimiento práctico de Linux, Docker y redes, mentalidad de documentación y mejora continua, interés por sistemas mantenibles y conexión entre red, servidores, servicios y operación.",
+          "tools": [
+            "Ubuntu Server",
+            "Docker",
+            "Docker Compose",
+            "NGINX",
+            "UniFi",
+            "VLANs",
+            "DNS interno",
+            "Wiki.js",
+            "Linux CLI"
+          ]
+        }
+    },
+    "personalWebsiteSoftwareProjects": {
+        "category": "Software / Infrastructure",
+        "title": "Web personal y proyectos software",
+        "summary": "Desarrollo de una plataforma personal con frontend, backends, contenedores, CI/CD, reverse proxy y servicios propios desplegados en infraestructura real.",
+        "detail": {
+          "context": "Este case study agrupa los proyectos software propios desarrollados para portfolio, automatización y operación técnica. Incluye la web personal, contact-service, newsletter-service, frontend React/Vite, backends Spring Boot, PostgreSQL, Docker, GitHub Actions, GHCR, NGINX, notificaciones Telegram y documentación técnica.",
+          "challenge": "El reto fue construir una plataforma profesional real: web bilingüe, integración frontend-backend, servicios desplegados en producción, automatización de builds y releases, backends modulares, persistencia con PostgreSQL, notificaciones, documentación y coherencia entre portfolio, servicios y proyectos.",
+          "role": "Asumo varios roles: frontend developer, backend developer, DevOps practitioner, technical writer, operador de infraestructura y responsable de producto propio.",
+          "approach": "El enfoque se basa en desarrollar frontend con React y Vite, crear servicios backend con Spring Boot, usar PostgreSQL para persistencia, empaquetar con Docker, desplegar detrás de NGINX, automatizar con GitHub Actions, publicar imágenes en GHCR y documentar arquitectura y decisiones técnicas.",
+          "result": "El resultado es una plataforma propia que no funciona solo como web de presentación, sino como sistema técnico real: frontend, servicios backend, despliegue, automatización, documentación y operación sobre infraestructura propia.",
+          "demonstrates": "Capacidad de desarrollo frontend y backend, comprensión de arquitectura modular, uso de contenedores y CI/CD, despliegue real en infraestructura propia, documentación técnica, automatización de flujos y conexión entre software, infraestructura y operación.",
+          "tools": [
+            "React",
+            "Vite",
+            "TypeScript",
+            "Spring Boot",
+            "Java",
+            "PostgreSQL",
+            "Docker",
+            "GitHub Actions",
+            "GHCR",
+            "NGINX",
+            "OpenAPI / Swagger"
+          ]
+        }
+    }
+    }
 }
+
+
