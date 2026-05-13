@@ -4,7 +4,7 @@ import { initReactI18next } from 'react-i18next';
 import enCommon from './locales/en/common.json';
 import enHome from './locales/en/home.json';
 import enAbout from './locales/en/about.json';
-import enVision from './locales/en/vision.json';
+import enServices from './locales/en/services.json';
 import enProjects from './locales/en/projects.json';
 import enBlog from './locales/en/blog.json';
 import enContact from './locales/en/contact.json';
@@ -14,7 +14,7 @@ import enContactForm from './locales/en/contactForm.json';
 import esCommon from './locales/es/common.json';
 import esHome from './locales/es/home.json';
 import esAbout from './locales/es/about.json';
-import esVision from './locales/es/vision.json';
+import esServices from './locales/es/services.json';
 import esProjects from './locales/es/projects.json';
 import esBlog from './locales/es/blog.json';
 import esContact from './locales/es/contact.json';
@@ -33,7 +33,7 @@ i18n
         common: enCommon,
         home: enHome,
         about: enAbout,
-        vision: enVision,
+        services: enServices,
         projects: enProjects,
         blog: enBlog,
         contact: enContact,
@@ -44,7 +44,7 @@ i18n
         common: esCommon,
         home: esHome,
         about: esAbout,
-        vision: esVision,
+        services: esServices,
         projects: esProjects,
         blog: esBlog,
         contact: esContact,
@@ -55,7 +55,7 @@ i18n
     lng: 'en',
     fallbackLng: 'en',
     defaultNS,
-    ns: ['common', 'home', 'about', 'vision', 'projects', 'blog', 'contact', 'card', 'contactForm'],
+    ns: ['common', 'home', 'about', 'services', 'projects', 'blog', 'contact', 'card', 'contactForm'],
     interpolation: {
       escapeValue: false,
     },

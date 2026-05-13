@@ -1,0 +1,87 @@
+{
+  "services-title": {
+    "title": "Services",
+    "subtitle": "Sound, AV networking and technical infrastructure for live events and production environments",
+    "body": "Technical services focused on making the whole system work: from mixing and signal routing to networking, planning and field operation."
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Technical support for events, audiovisual production, and AV systems where sound, network, and infrastructure need to work together.",
+    "items": {
+      "soundEngineering": {
+        "title": "Sound Engineering",
+        "description": "Mixing and technical sound support for live events, concerts, and audiovisual production.",
+        "points": ["FOH", "Monitors", "Sound checks", "Signal routing"]
+      },
+      "soundSystemEngineering": {
+        "title": "Sound System Engineering",
+        "description": "Verification, measurement, and optimization of sound systems to improve coverage, coherence, and reliability.",
+        "points": [
+          "Design",
+          "Measurement",
+          "Alignment",
+          "Subs / fills / delays"
+        ]
+      },
+      "avNetworking": {
+        "title": "AV Networking",
+        "description": "Design, deployment, and troubleshooting of IP networks for audio, video, control, streaming, and technical production.",
+        "points": ["Dante", "NDI", "Switching", "VLANs"]
+      },
+      "technicalPlanning": {
+        "title": "Technical Planning",
+        "description": "Planning, documentation, and technical coordination to reduce improvisation before and during the event.",
+        "points": ["Riders", "Checklists", "CADs / patch", "Coordination"]
+      }
+    }
+  },
+  "soundEngineering": {
+    "title": "Sound Engineering",
+    "subtitle": "Sound mixing and technical audio support for live events, concerts and audiovisual production.",
+    "body1": "A service focused on operating the sound of an event with technical, musical and system-level criteria. It is not only about mixing signals, but about understanding the complete flow: stage, patch, console, PA, monitors, artists, production and audience.",
+    "body2": "The work starts before the show: rider review, input list, stage plot, patch requirements and possible critical points. During setup and soundcheck, the goal is to organize the system, verify signals and create a stable base for the event to run safely.",
+    "body3": "During the live show, the priority is to keep the mix clear, controlled and adapted to the space, solving issues without breaking the rhythm of the event and maintaining fluid communication with production, stage and artists.",
+    "value": "The main value is reliability: a prepared and well-communicated sound operation that can respond when real pressure appears.",
+    "bullet1": "FOH mixing, monitor support, soundcheck and live show operation.",
+    "bullet2": "Rider, input list, stage plot, patch and technical requirements review.",
+    "bullet3": "Signal troubleshooting, production coordination and clear communication with artists and technical teams."
+  },
+  "soundSystemEngineering": {
+    "title": "Sound System Engineering",
+    "subtitle": "Verification, measurement and optimization of sound systems to improve coverage, coherence and reliability.",
+    "body1": "A service focused on understanding the sound system as a complete infrastructure: PA, subs, fills, delays, processing, coverage, venue conditions and the real needs of the event.",
+    "body2": "The goal is not only to make the system loud, but to make it work coherently across the space. This involves reviewing system placement, checking routing, verifying polarity, analyzing coverage and adjusting critical elements when the project scope allows it.",
+    "body3": "This work connects listening criteria, measurement, documentation and technical decision-making. It provides better support for FOH, reduces coverage issues and improves sonic consistency for the audience.",
+    "bullet1": "Verification of PA, subs, fills, delays, processing and system routing.",
+    "bullet2": "Measurement, alignment and basic tuning to improve coherence and coverage.",
+    "bullet3": "Technical documentation, detection of critical points and support for the sound team.",
+    "value": "The main value is bringing objective criteria to the system: less improvisation, clearer technical decisions and a more consistent sound experience."
+  },
+  "avNetworking": {
+    "title": "AV Networking",
+    "subtitle": "Design, deployment and troubleshooting of IP networks for audio, video, control, streaming and technical production.",
+    "body1": "A service focused on building stable and understandable AV networks for environments where audio, video, control, streaming and production depend on reliable IP infrastructure.",
+    "body2": "In modern events, the network is no longer an accessory: it can carry Dante, NDI, console control, lighting, intercom, cameras, computers, tablets and production systems. That is why topology, addressing, switches, VLANs when needed and documentation should be defined before problems appear.",
+    "body3": "The goal is to reduce IP conflicts, connectivity drops, improvised networks and blind troubleshooting. I work from a practical field mindset: understanding which systems need to communicate, how they are connected and where the chain can fail.",
+    "bullet1": "Basic network design, IP addressing, switching, VLANs and technical WiFi.",
+    "bullet2": "Support for Dante, NDI, control, streaming and networked AV systems.",
+    "bullet3": "Troubleshooting, topology documentation, conflict detection and event support.",
+    "value": "The main value is bringing stability and clarity: a better designed technical network that is easier to diagnose and less dependent on improvisation."
+  },
+  "technicalProduction": {
+    "title": "Technical Production",
+    "subtitle": "Technical planning, documentation and coordination for events, venues and audiovisual production.",
+    "body1": "A service focused on organizing the technical side of an event before and during execution. The goal is to turn scattered requirements, riders, providers, schedules and real-world limitations into a clear and operable technical plan.",
+    "body2": "Technical production is not only about being present on event day, but about anticipating problems: reviewing sound, video, lighting, networking, power, setup, access, soundcheck times and responsibilities between teams.",
+    "body3": "This service can be applied as pre-production support, technical coordination, provider supervision or on-site support during setup and operation. The scope is always clearly defined to avoid assuming responsibility over systems that have not been previously planned or validated.",
+    "bullet1": "Review of riders, technical requirements, schedules, providers and critical points of the event.",
+    "bullet2": "Technical documentation: checklists, plans, patch, network needs, signal flow and responsibilities.",
+    "bullet3": "Coordination with production, artists, providers and technical teams to reduce improvisation.",
+    "value": "The main value is bringing order and criteria before real pressure appears: less improvisation, clearer responsibilities and a more controlled technical execution."
+  },
+  "CTA": {
+    "kicker": "Let’s talk about the system",
+    "h2": "Need technical support for an event, venue or production system?",
+    "p": "Tell me what you are preparing, deploying or trying to solve. I can help with sound, AV networking, technical planning and infrastructure."
+  }
+}

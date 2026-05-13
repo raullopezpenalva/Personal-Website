@@ -1,0 +1,97 @@
+.services-preview-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--gap-xs);
+    margin: var(--card-grid-margin);
+}
+
+.service-preview-card {
+    background-color: var(--surface-2);
+    border-radius: 30px;
+    border: 1px solid var(--surface-3);
+    padding: var(--card-vertical-padding) var(--card-horizontal-padding);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition:
+        transform 180ms ease,
+        border-color 180ms ease,
+        background-color 180ms ease;
+    /* width: 336px;
+    height: 360px; */
+}
+
+.service-preview-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-1);
+}
+
+.service-preview-card__image-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.service-preview-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 220ms ease, filter 220ms ease;
+}
+
+.service-preview-card:hover .service-preview-card__image {
+    transform: scale(1.04);
+    filter: brightness(1.08);
+}
+
+.service-preview-card__content {
+    display: flex;
+    flex-direction: column;
+    padding: var(--card-vertical-padding) var(--card-horizontal-padding);
+    gap: var(--gap-xs);
+}
+
+.service-preview-card__content h3 {
+    order: 1;
+    flex-grow: 0;
+    margin: var(--card-margin) 0 var(--card-margin);
+    color: var(--fg-title);
+    height: var(--card-h3-height);
+}
+
+.service-preview-card__content p {
+    order: 3;
+    flex-grow: 0;
+    color: var(--fg-muted);
+    vertical-align: bottom;
+    margin: 0;
+}
+
+.service-preview-card__points {
+    order: 4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.service-preview-card__points li {
+    padding: 0.35rem 0.7rem;
+    /* border-radius: 999px;
+    background: var(--color-surface-alt); */
+    font-size: var(--font-size-xs);
+    color: var(--accent-2);
+}
+
+@media (max-width: 768px) {
+    .services-preview-grid {
+        grid-template-columns: 1fr;
+    }
+}

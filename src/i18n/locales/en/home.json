@@ -1,12 +1,90 @@
 {
-    "how-i-think.title": "How I think about systems engineering",
-    "how-i-think.subtitle": "My approach doesn't start with tools, but with understanding the big picture.",
-    "about-this-web.title": "This web is also a project",
-    "about-this-web.subtitle": "Designed, developed and maintained as an engineering project: clear structure, version control and continuous deployment.",
-    "about-this-web.description": "This web is built from scratch as an engineering project, not as a template. It serves me to practice small-scale system design: component architecture, change control, automation and real deployment.",
-    "about-this-web.bullet1": "Component architecture and coherent design system (typography, spacing, color tokens)",
-    "about-this-web.bullet2": "Version control and professional workflow (Git, branches, traceable changes)",
-    "about-this-web.bullet3": "Automated build and deployment as part of the project lifecycle",
-    "CTA.h2": "Shall we talk about systems, and not just code?",
-    "CTA.p": "If your project needs structure, stability and an end-to-end vision, we can analyze it together"
+  "how-i-think.title": "How I think about systems engineering",
+  "how-i-think.subtitle": "My approach doesn't start with tools, but with understanding the big picture.",
+  "about-this-web.title": "This web is also a project",
+  "about-this-web.subtitle": "Designed, developed and maintained as an engineering project: clear structure, version control and continuous deployment.",
+  "about-this-web.description": "This web is built from scratch as an engineering project, not as a template. It serves me to practice small-scale system design: component architecture, change control, automation and real deployment.",
+  "about-this-web.bullet1": "Component architecture and coherent design system (typography, spacing, color tokens)",
+  "about-this-web.bullet2": "Version control and professional workflow (Git, branches, traceable changes)",
+  "about-this-web.bullet3": "Automated build and deployment as part of the project lifecycle",
+  "services": {
+    "title": "Services",
+    "subtitle": "Technical support for events, audiovisual production, and AV systems where sound, network, and infrastructure need to work together.",
+    "items": {
+      "soundEngineering": {
+        "title": "Sound Engineering",
+        "description": "Mixing and technical sound support for live events, concerts, and audiovisual production.",
+        "points": ["FOH", "Monitors", "Sound checks", "Signal routing"]
+      },
+      "soundSystemEngineering": {
+        "title": "Sound System Engineering",
+        "description": "Verification, measurement, and optimization of sound systems to improve coverage, coherence, and reliability.",
+        "points": [
+          "Design",
+          "Measurement",
+          "Alignment",
+          "Subs / fills / delays"
+        ]
+      },
+      "avNetworking": {
+        "title": "AV Networking",
+        "description": "Design, deployment, and troubleshooting of IP networks for audio, video, control, streaming, and technical production.",
+        "points": ["Dante", "NDI", "Switching", "VLANs"]
+      },
+      "technicalPlanning": {
+        "title": "Technical Planning",
+        "description": "Planning, documentation, and technical coordination to reduce improvisation before and during the event.",
+        "points": ["Riders", "Checklists", "CADs / patch", "Coordination"]
+      }
+    }
+  },
+  "hybrid-profile": {
+    "title": "A hybrid technical profile",
+    "subtitle": "Field experience, sound criteria and infrastructure mindset.",
+    "text1": "I come from the field: live sound, audiovisual production, signal flow, troubleshooting and technical coordination.",
+    "text2": "Over time, that experience has connected with IP networking, AV systems, automation, documentation and infrastructure.",
+    "text3": "My approach is to understand the event as a complete technical system: sound, network, signal flow, people, documentation and operation working in the same direction.",
+    "bullet1": "Real-world experience in events, sound and audiovisual production.",
+    "bullet2": "Networking, systems and infrastructure mindset.",
+    "bullet3": "Ability to document, diagnose and improve real technical environments.",
+    "panel": {
+      "kicker": "Systems mindset",
+      "title": "The event as a complete technical system",
+      "text": "Sound, network, signal flow, people, documentation and operation are part of the same workflow. When one part fails, the whole system feels it.",
+      "item1": "Sound",
+      "item2": "Network",
+      "item3": "Signal",
+      "item4": "Operation"
+    }
+  },
+  "featuredCaseStudies": {
+    "title": "Featured case studies",
+    "subtitle": "Projects and experiences connecting sound, networks, software and infrastructure in real environments.",
+    "items": {
+      "technicalPlanningEvents": {
+        "category": "AV / Event Production",
+        "title": "Technical planning for events",
+        "description": "Technical requirements review, provider coordination, documentation and risk analysis for events and audiovisual production.",
+        "value": "Shows real technical production experience and the ability to structure projects before deployment."
+      },
+      "networkScout": {
+        "category": "AV Networking / Tools",
+        "title": "Portable network diagnostics",
+        "description": "Network diagnostics and reporting tool designed for unmanaged technical environments, field testing and troubleshooting.",
+        "value": "Connects networking, Linux, automation and real field needs into a practical tool."
+      },
+      "personalWebsiteInfrastructure": {
+        "category": "Technical Infrastructure",
+        "title": "Self-hosted personal website infrastructure",
+        "description": "React frontend, backend services, Docker, NGINX, CI/CD and self-hosted deployment as a real portfolio platform.",
+        "value": "Shows the ability to build, deploy and maintain self-hosted production systems."
+      }
+    },
+    "cardButton": "View project"
+  },
+  "CTA": {
+    "kicker": "Let’s talk about the system",
+    "h2": "Need technical support for an event, venue or production system?",
+    "p": "Tell me what you are preparing, deploying or trying to solve. I can help with sound, AV networking, technical planning and infrastructure."
+  }
 }

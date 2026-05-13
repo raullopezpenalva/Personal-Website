@@ -1,15 +1,16 @@
 import Section from "../components/ui-patterns/Section";
 import { Button } from "../components/ui-primitives/Button";
-import Card from "../components/ui-patterns/Card";
-import { cards } from "../data/home-how-i-think-cards";
+import { homeServicesPreview } from "../data/home-services-preview";
+import ServicePreviewCard from "../components/domain/ServicePreviewCard";
 import Stack from "../components/ui-primitives/Stack";
-import GitHubIconLetter from "../components/ui-primitives/icons/GitHubIconLetter";
+// import GitHubIconLetter from "../components/ui-primitives/icons/GitHubIconLetter";
 import Bullet from "../components/ui-patterns/Bullet";
 import Text from "../components/ui-primitives/Text";
-import { PipelineYaml } from "../components/domain/PipelineYaml";
 import BulletList from "../components/ui-patterns/BulletList";
 import { useTranslation } from 'react-i18next';
 import { useParams } from "react-router-dom";
+import FeaturedCaseStudyCard from "../components/domain/FeaturedCaseStudyCard";
+import { homeFeaturedCaseStudies } from "../data/home-featured-case-studies";
 
 const HomePage: React.FC = () => {
   const { t } = useTranslation('home');
@@ -28,8 +29,8 @@ const HomePage: React.FC = () => {
             {tCommon('main.description')}
           </p>
           <div className="hero-actions">
-            <Button to={`/${lang}/vision`} variant="primary">
-              {tCommon('btn.vision')}
+            <Button to={`/${lang}/services`} variant="primary">
+              {tCommon('btn.services')}
             </Button>
             <Button to={`/${lang}/contact`} variant="secondary">
               {tCommon('btn.contact')}
@@ -38,22 +39,92 @@ const HomePage: React.FC = () => {
         </div>
       </Section>
       
-      {/* HOW I THINK */}
+      {/* SERVICE PREVIEW */}
       <Section
-        id="how-i-think"
-        title={t('how-i-think.title')}
-        subtitles={t('how-i-think.subtitle')}
+        id="service-preview"
+        title={t('services.title')}
+        subtitles={t('services.subtitle')}
         justifyContent="space-between"
       >
-        <div className="card-grid">
-          {cards.map((card) => (
-            <Card key={card.id} card={card} />
+        <div className="services-preview-grid">
+          {homeServicesPreview.map((service) => (
+            <ServicePreviewCard
+              key={service.id}
+              image={service.image}
+              translationKey={service.translationKey}
+              to={`/${lang}${service.href}`}
+            />
           ))}
         </div>
       </Section>
       
-      {/* This web is developed by me */}
+      {/* HYBRID PROFILE */}
       <Section
+        id="hybrid-profile"
+        title={t("hybrid-profile.title")}
+        subtitles={t("hybrid-profile.subtitle")}
+        justifyContent="center"
+        flexDirection="column"
+      >
+        <Stack className="stack-60-40" direction="row" gap="xs" margin="lg">
+          <Stack align="center" justifyContent="space-between" gap="md" className="stack-60-40-left">
+            <Text>{t("hybrid-profile.text1")}</Text>
+            <Text>{t("hybrid-profile.text2")}</Text>
+            <Text>{t("hybrid-profile.text3")}</Text>
+
+            <BulletList className="personalweb-bullet-list">
+              <Bullet>{t("hybrid-profile.bullet1")}</Bullet>
+              <Bullet>{t("hybrid-profile.bullet2")}</Bullet>
+              <Bullet>{t("hybrid-profile.bullet3")}</Bullet>
+            </BulletList>
+
+            <div className="personalweb-buttons">
+              <Button to={`/${lang}/about`} variant="primary">
+                {tCommon("btn.about")}
+              </Button>
+              <Button to={`/${lang}/projects`} variant="secondary">
+                {tCommon("btn.projects")}
+              </Button>
+            </div>
+          </Stack>
+
+          <Stack
+            align="stretch"
+            gap="md"
+            direction="row"
+            justifyContent="center"
+            className="stack-60-40-right"
+          >
+            <div className="image-placeholder-40-60">
+              <img className="image-40-60" src="src/assets/images/hybrid-profile/back-d-b.webp" alt="Hybrid profile illustration" />
+          
+          </div>
+          </Stack>
+        </Stack>
+      </Section>
+
+      {/* FEATURES CASE STUDIES */}
+      <Section
+        id="featured-case-studies"
+        title={t("featuredCaseStudies.title")}
+        subtitles={t("featuredCaseStudies.subtitle")}
+        justifyContent="space-between"
+      >
+        <div className="featured-case-studies-grid">
+          {homeFeaturedCaseStudies.map((caseStudy) => (
+            <FeaturedCaseStudyCard
+              key={caseStudy.id}
+              translationKey={caseStudy.translationKey}
+              to={`/${lang}${caseStudy.href}`}
+            />
+          ))}
+        </div>
+      </Section>
+
+
+
+      {/* This web is developed by me */}
+      {/* <Section
         id="about-this-web"
         title={t('about-this-web.title')}
         subtitles={t('about-this-web.subtitle')}
@@ -81,11 +152,12 @@ const HomePage: React.FC = () => {
             <PipelineYaml />
           </Stack>
         </Stack>
-      </Section>
+      </Section> */}
 
       {/* CALL TO ACTION */}
       <Section id="contact" className="call-to-action-section" justifyContent="center">
         <div className="call-to-action">
+          <p className="call-to-action__kicker">{t("CTA.kicker")}</p>
           <h2>{t('CTA.h2')}</h2>
           <p>{t('CTA.p')}</p>
           <Button to={`/${lang}/contact`} variant="primary">

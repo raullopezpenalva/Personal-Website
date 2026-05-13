@@ -10,6 +10,13 @@
     flex: 0 0 40%;
 }
 
+.stack-40-60-left {
+    flex: 0 0 40%;
+}
+
+.stack-40-60-right {
+    flex: 0 0 60%;
+}
 
 
 .direction-row {
@@ -105,6 +112,21 @@
     justify-content: space-evenly;
 }
 
+.image-placeholder-40-60 {
+    width: 100%;
+    height: 540px;
+    border: 1px solid var(--surface-3);
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.image-40-60 {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
 @media (max-width: 599px) {
     .stack {
         flex-direction: column;
@@ -113,11 +135,18 @@
         flex: 0 0 100%;
         margin: var(--margin-md) 0;
     }
+    .stack-40-60-left, .stack-40-60-right {
+        flex: 0 0 100%;
+        margin: var(--margin-md) 0;
+    }
 }
 
 @media (min-width: 600px) and (max-width: 1023px) {
 
     .stack-60-40-left, .stack-60-40-right {
+        gap: var(--gap-md);
+    }
+    .stack-40-60-left, .stack-40-60-right {
         gap: var(--gap-md);
     }
 }

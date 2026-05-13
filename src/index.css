@@ -161,6 +161,9 @@
   --card-margin: var(--space-3) auto;
   --card-grid-margin: var(--space-section) 0;
   --card-horizontal-padding: var(--space-4);
+  --card-h3-height: 32px;
+  --card-tag-padding: var(--space-1) var(--space-2);
+  --card-tag-radius: var(--space-2);
 
   /* Bullet list variables */
   --bullet-width: 0.5rem;
