@@ -76,10 +76,10 @@
     object-position: center center;
 }
 
-.case-study-hero__image.case-study-hero__image--ominira {
+/* .case-study-hero__image.case-study-hero__image--ominira {
     object-fit: fill;
     object-position: center 45%;
-}
+} */
 
 .case-study-hero__image.case-study-hero__image--location-sound {
     object-position: center top;
