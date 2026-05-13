@@ -60,7 +60,7 @@
     flex-grow: 0;
     margin: var(--card-margin) 0 var(--card-margin);
     color: var(--fg-title);
-    height: 32px;
+    height: var(--card-h3-height);
 }
 
 .service-preview-card__content p {

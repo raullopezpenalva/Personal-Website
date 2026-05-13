@@ -7,6 +7,7 @@ import BlogPage from "./pages/BlogPage.tsx";
 import ContactPage from "./pages/ContactPage.tsx";
 import { RootLanguageRedirect } from "./i18n/RootLanguageRedirect.tsx";
 import ServicesPage from "./pages/ServicesPage.tsx";
+import CaseStudyPage from "./pages/CaseStudyPage.tsx";
 
 export const router = createBrowserRouter([
   {
@@ -23,6 +24,7 @@ export const router = createBrowserRouter([
       { path: "about", element: <AboutPage /> },
       { path: "services", element: <ServicesPage /> },
       { path: "projects", element: <PortfolioPage /> },
+      { path: "projects/:slug", element: <CaseStudyPage /> },
       { path: "blog", element: <BlogPage /> },
       { path: "contact", element: <ContactPage /> },
     ],
