@@ -24,6 +24,21 @@
     height: 360px; */
 }
 
+.service-preview-card-link {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
+.service-preview-card-link:visited,
+.service-preview-card-link:hover,
+.service-preview-card-link:active,
+.service-preview-card-link:focus {
+    color: inherit;
+    text-decoration: none;
+}
+
 .service-preview-card:hover {
     transform: translateY(-6px);
     border-color: var(--accent-1);

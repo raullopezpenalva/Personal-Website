@@ -2,10 +2,10 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 const ScrollToHash: React.FC = () => {
-  const { hash } = useLocation();
+  const { hash, pathname } = useLocation();
 
   useEffect(() => {
-    if (!hash) return;
+    if (hash) {
 
     const elementId = hash.replace("#", "");
 
@@ -18,10 +18,18 @@ const ScrollToHash: React.FC = () => {
           block: "start",
         });
       }
-    }, 100);
+    }, 250);
 
     return () => window.clearTimeout(timeoutId);
-  }, [hash]);
+  }
+
+  window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "auto",
+    });
+
+  }, [pathname, hash]);
 
   return null;
 };

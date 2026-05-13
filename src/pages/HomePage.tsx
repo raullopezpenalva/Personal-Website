@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next';
 import { useParams } from "react-router-dom";
 import FeaturedCaseStudyCard from "../components/domain/FeaturedCaseStudyCard";
 import { homeFeaturedCaseStudies } from "../data/home-featured-case-studies";
+import HybridProfilePhoto from "../assets/images/hybrid-profile/back-d-b.webp";
 
 const HomePage: React.FC = () => {
   const { t } = useTranslation('home');
@@ -96,7 +97,7 @@ const HomePage: React.FC = () => {
             className="stack-60-40-right"
           >
             <div className="image-placeholder-40-60">
-              <img className="image-40-60" src="src/assets/images/hybrid-profile/back-d-b.webp" alt="Hybrid profile illustration" />
+              <img className="image-40-60" src={HybridProfilePhoto} alt="Hybrid profile illustration" />
           
           </div>
           </Stack>
