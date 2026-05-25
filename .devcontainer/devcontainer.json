@@ -1,0 +1,46 @@
+{
+	"name": "personal-website-dev",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+	"remoteUser": "node",
+	"forwardPorts": [
+		5173,
+		4173
+	],
+	"portsAttributes": {
+		"5173": {
+			"label": "Vite Dev Server",
+			"onAutoForward": "notify"
+		},
+		"4173": {
+			"label": "Vite Preview",
+			"onAutoForward": "silent"
+		}
+	},
+	"postCreateCommand": "npm install",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "bash",
+				"editor.formatOnSave": true,
+				"editor.defaultFormatter": "esbenp.prettier-vscode",
+				"eslint.validate": [
+					"javascript",
+					"javascriptreact",
+					"typescript",
+					"typescriptreact"
+				],
+				"typescript.tsdk": "node_modules/typescript/lib"
+			},
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"vitest.explorer",
+				"ms-azuretools.vscode-docker",
+				"bradlc.vscode-tailwindcss"
+			]
+		}
+	}
+}
