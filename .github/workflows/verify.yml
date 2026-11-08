@@ -1,0 +1,70 @@
+name: Verify frontend and runtime image
+on:
+  workflow_call:
+    inputs:
+      export_image:
+        type: boolean
+        default: false
+    outputs:
+      image_artifact_id:
+        description: Exact identity of the tested runtime image artifact
+        value: ${{ jobs.runtime.outputs.image_artifact_id }}
+permissions:
+  contents: read
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run test:run
+      - run: npm run build
+  runtime:
+    needs: frontend
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      image_artifact_id: ${{ steps.upload_image.outputs.artifact-id }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Build the labelled Linux amd64 runtime once
+        env:
+          IMAGE_SOURCE: https://github.com/${{ github.repository }}
+          IMAGE_REVISION: ${{ github.sha }}
+        run: |
+          docker build --platform linux/amd64 \
+            --label "org.opencontainers.image.source=$IMAGE_SOURCE" \
+            --label "org.opencontainers.image.revision=$IMAGE_REVISION" \
+            -t personal-website:ci-smoke .
+      - name: Verify the isolated static runtime and publication helpers
+        run: |
+          bash scripts/verify-runtime.sh personal-website:ci-smoke
+          python3 -m unittest discover -s scripts/tests -v
+      - name: Capture the tested runtime identity
+        env:
+          IMAGE_REVISION: ${{ github.sha }}
+        run: |
+          python3 scripts/image-publication.py capture --image personal-website:ci-smoke \
+            --repository ghcr.io/raullopezpenalva/personal-website --revision "$IMAGE_REVISION" \
+            --user '' --verified verified-image.json
+      - name: Export the tested image without rebuilding
+        if: inputs.export_image
+        run: docker save personal-website:ci-smoke | gzip > runtime-image.tar.gz
+      - name: Retain the exact tested image and metadata
+        id: upload_image
+        if: inputs.export_image
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-runtime-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            runtime-image.tar.gz
+            verified-image.json
+          if-no-files-found: error
+          retention-days: 1
+          compression-level: 0
