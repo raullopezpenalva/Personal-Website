@@ -1,31 +1,37 @@
 name: CI main test
-
 on:
   pull_request:
-    branches: [ main ]
-
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
 jobs:
   test:
+    uses: ./.github/workflows/verify.yml
+    with:
+      export_image: ${{ github.event_name == 'workflow_dispatch' }}
+  image-transfer:
+    name: Verified image transfer check
+    if: github.event_name == 'workflow_dispatch'
+    needs: test
     runs-on: ubuntu-latest
-
+    timeout-minutes: 10
     steps:
-        - name: Checkout repository
-          uses: actions/checkout@v6
-
-        - name: Setup Node.js
-          uses: actions/setup-node@v6
-          with:
-            node-version: '22'
-            cache: 'npm'
-
-        - name: Install dependencies
-          run: npm ci
-
-        - name: Lint code
-          run: npm run lint
-
-        - name: Run tests
-          run: npm run test:run
-        
-        - name: Build project
-          run: npm run build
+      - uses: actions/checkout@v6
+      - name: Require the verification artifact identity
+        env:
+          IMAGE_ARTIFACT_ID: ${{ needs.test.outputs.image_artifact_id }}
+        run: '[[ "$IMAGE_ARTIFACT_ID" =~ ^[0-9]+$ ]]'
+      - uses: actions/download-artifact@v4
+        with:
+          artifact-ids: ${{ needs.test.outputs.image_artifact_id }}
+          merge-multiple: true
+          path: verified-image
+      - name: Verify the transferred image without publishing
+        env:
+          SOURCE_REVISION: ${{ github.sha }}
+        run: |
+          gzip --decompress --stdout verified-image/runtime-image.tar.gz | docker load
+          python3 scripts/image-publication.py verify --image personal-website:ci-smoke \
+            --repository ghcr.io/raullopezpenalva/personal-website --revision "$SOURCE_REVISION" \
+            --user '' --verified verified-image/verified-image.json

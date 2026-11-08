@@ -7,3 +7,16 @@ node_modules
 LICENSE
 README.md
 README-default.md
+.git
+.devcontainer
+**/*.env
+**/.env*
+**/*.pem
+**/*.key
+**/*.log
+.npmrc
+coverage
+
+scripts/
+docs/
+**/__pycache__/

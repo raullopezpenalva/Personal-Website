@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local publication-helper bytecode
+__pycache__/
+*.py[cod]

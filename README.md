@@ -199,3 +199,9 @@ The structure is stable, while content and design are iterated over time.
 ## 📄 License
 
 MIT License
+
+## Image publication and deployment
+
+[Verified images and digest handoff to homelab](docs/image-publication.md): CI
+publishes the tested Linux/amd64 image and its digest receipt. Homelab selects
+and deploys a release; this repository does not access production servers.
