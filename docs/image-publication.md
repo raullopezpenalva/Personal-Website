@@ -63,3 +63,7 @@ reimplement a separate Compose deployment in this repository.
 
 Local images with the all-zero revision used during workflow preparation are
 fixtures, never deployment candidates or production publication receipts.
+
+To test the image-archive handoff before merging or publishing, manually run
+**CI main test** on the reviewed branch. It exports, downloads and verifies the
+image by artifact ID without registry login or packages write permission.
