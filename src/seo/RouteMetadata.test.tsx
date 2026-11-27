@@ -44,7 +44,7 @@ describe("real application routes", () => {
 
     await act(() => router.navigate("/es/projects/homelab-self-hosted-infrastructure?utm_source=test#tools"));
     await waitFor(() => expect(document.title).toBe("Homelab e infraestructura self-hosted | Raúl López Penalva"));
-    await userEvent.click(screen.getByRole("button", { name: "EN", exact: true }));
+    await userEvent.click(screen.getByRole("button", { name: /^EN$/ }));
     await waitFor(() => {
       expect(document.title).toBe("Homelab and Self-hosted Infrastructure | Raúl López Penalva");
       expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Homelab and Self-hosted Infrastructure");
