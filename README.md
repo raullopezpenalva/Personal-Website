@@ -174,6 +174,7 @@ See [Image publication and homelab promotion](docs/image-publication.md) for the
 
 | Document | Purpose |
 | --- | --- |
+| [SEO audit — #69](docs/seo-audit.md) | Findings, ES/EN metadata policy and implementation backlog (not yet implemented) |
 | [Image publication and homelab promotion](docs/image-publication.md) | Current image delivery and deployment ownership contract |
 | [Homepage content — v2.0.0](docs/content/homepage-content-v2.0.0.md) | Home messaging and structure |
 | [About page content — v2.0.0](docs/content/about-page-content-v2.0.0.md) | Hybrid professional profile narrative |
