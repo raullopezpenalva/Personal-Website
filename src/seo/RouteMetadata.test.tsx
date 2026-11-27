@@ -17,6 +17,33 @@ const indexablePaths = seoPages.filter((page) => page.indexable)
   .flatMap((page) => ["es", "en"].map((language) => `/${language}${page.path}`));
 
 describe("real application routes", () => {
+  it.each([
+    ["/es/missing?ref=test#section", "es"],
+    ["/en/projects/missing", "en"],
+    ["/es/projects/missing", "es"],
+    ["/fr/about", "en"],
+  ])("keeps %s on a useful nonindexable NotFound view", async (path, language) => {
+    localStorage.setItem("lang", "es");
+    const router = createMemoryRouter(routes, { initialEntries: [path] });
+    render(<StrictMode><RouterProvider router={router} /></StrictMode>);
+    await waitFor(() => {
+      expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(language === "es" ? "Página no encontrada" : "Page not found");
+      expect(document.documentElement.lang).toBe(language);
+      expect(document.head.querySelector('meta[name="robots"]')?.getAttribute("content")).toBe("noindex, follow");
+    });
+    expect(router.state.location.pathname).toBe(path.split(/[?#]/)[0]);
+    expect(document.head.querySelector('link[rel="canonical"]')).toBeNull();
+    expect(document.head.querySelector('link[rel="alternate"]')).toBeNull();
+    await userEvent.click(screen.getByRole("link", {
+      name: language === "es" ? "Volver al inicio" : "Back to home",
+    }));
+    await waitFor(() => {
+      expect(document.head.querySelector('link[rel="canonical"]')?.getAttribute("href")).toBe(SITE_ORIGIN + "/" + language);
+      expect(document.head.querySelector('meta[name="robots"]')?.getAttribute("content")).toBe("index, follow");
+    });
+    router.dispose();
+  });
+
   it.each(indexablePaths)("sets metadata and one semantic h1 on direct access to %s", async (path) => {
     const router = createMemoryRouter(routes, { initialEntries: [path] });
     render(<StrictMode><RouterProvider router={router} /></StrictMode>);

@@ -11,7 +11,8 @@ docker exec "$container" nginx -t
 for attempt in 1 2 3 4 5; do
   if docker exec "$container" sh -ec \
     'wget -qO- http://127.0.0.1/ | grep -q "<div id=\"root\"></div>"'; then
-    printf 'Static runtime smoke passed without publishing ports.\n'
+    python3 scripts/verify-seo-runtime.py "$container"
+    printf 'Static runtime and SEO checks passed without publishing ports.\n'
     exit 0
   fi
   sleep 1

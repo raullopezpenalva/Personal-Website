@@ -17,6 +17,5 @@ README-default.md
 .npmrc
 coverage
 
-scripts/
 docs/
 **/__pycache__/
