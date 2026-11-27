@@ -132,6 +132,7 @@ def run(container):
 
     for path in [
         "/es/seo-missing", "/en/projects/seo-missing", "/fr/about", "/es/projects/seo-missing",
+        "/es/seo-missing/", "/es/projects/seo-missing/", "/fr/about/",
         "/assets/seo-missing.js", "/images/seo-missing.webp",
         "/_pages/es.html", "/_errors/es.html", "/_seo/routes.json",
         "/es.html", "/es/about.html",

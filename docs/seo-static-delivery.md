@@ -28,7 +28,7 @@ This generates the initial head and language, not the normal page body. Content 
 NGINX resolves extensionless routes to generated files; there is no fallback to Home for arbitrary paths. Internal files are not public .html aliases.
 
 - Valid routes and Blog: 200 with the correct HTML head and lang.
-- Trailing slash: relative 308 to the extensionless path without it, preserving query strings.
+- Trailing slash on an existing route: relative 308 to the extensionless path without it, preserving query strings.
 - `/index.html`: relative 308 to `/`, preserving query strings.
 - Missing routes/slugs and unsupported languages: 404 with localized noindex and no canonical or alternates.
 - Missing assets, robots or sitemap: actual 404, never Home.
