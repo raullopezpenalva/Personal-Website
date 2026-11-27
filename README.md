@@ -85,7 +85,7 @@ Case study metadata, slugs, tags and image references live in [case-studies.ts](
 | [src/assets/](src/assets/) | Images and other imported assets |
 | [src/index.css](src/index.css), [src/styles/](src/styles/) | Global, layout, page and component styles |
 | [src/App.test.tsx](src/App.test.tsx), [src/tests/](src/tests/) | Frontend smoke test and test setup |
-| [nginx/default.conf](nginx/default.conf), [Dockerfile](Dockerfile) | Static runtime, SPA fallback and container build |
+| [nginx/default.conf](nginx/default.conf), [Dockerfile](Dockerfile) | Generated route delivery, HTTP 404 handling and container build |
 | [scripts/](scripts/) | Runtime smoke check and image publication helpers |
 | [.github/workflows/](.github/workflows/) | Verification and image publication |
 | [docs/](docs/) | Delivery contract and versioned content/design documentation |
