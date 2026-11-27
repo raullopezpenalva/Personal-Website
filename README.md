@@ -1,207 +1,191 @@
-
 # Personal Website
 
-**Live:** coming soon
+**Live:** [raullopezpenalva.com](https://raullopezpenalva.com)
 
-This repository contains the source code for my personal website, built as static application using React and Vite.
+Professional website and portfolio focused on **Sound Engineering · AV Networking · Technical Systems** for live events and production environments.
 
-The website serves as a professional portfolio and a space to present my background, experience, and technical perspective.
+The website presents my services, hybrid technical background and professional case studies. Its implementation also demonstrates frontend development, backend integration, container delivery and operation on self-hosted infrastructure.
 
-Beyond being a portfolio, this project is also an exercise in clean frontend architecture, component-driven design, and modern deployment workflows.
+The frontend is a React single-page application built into static files with Vite and served by NGINX. Contact requests are sent to the separate `contact-service` backend; persistence and business logic belong to that service.
 
-## 🎯 Purpose
+## Current capabilities
 
-The purpose of this project is to serve as a clear and honest representation of my professional profile through a simple, well-structured personal website.
+- Home with service previews, hybrid profile, featured case studies and contact CTA.
+- About page describing the connection between audiovisual work, networking and systems.
+- Services page covering Sound Engineering, Sound System Engineering, AV Networking and Technical Production.
+- Data-driven portfolio with reusable cards, detail pages and photo galleries.
+- Spanish and English routes, shared UI translations, language switching and a preference stored in `localStorage`.
+- Contact form with submission state, success feedback, field validation errors returned by the API and general error handling.
 
-Rather than focusing on visual complexity or unnecessary features, the website is intentionally designed to prioritize clarity, readability, and long-term maintainability.
+The portfolio currently contains six case studies:
 
-From a technical perspective, this project is used as a controlled environment to apply and refine frontend fundamentals such as component composition, layout systems, design consistency, and clean project structure, as well as to experiment with modern build and deployment workflows.
+1. Sound Engineering for Live Events and Shows.
+2. Touring Sound Support with Ominira.
+3. Location Sound and Audio Postproduction for AV.
+4. Corporate AV, Conferences and Hybrid Events.
+5. Homelab and Self-hosted Infrastructure.
+6. Personal Website and Software Projects.
 
-The scope of the project is deliberately limited to a static website, allowing full focus on design decisions, code quality, and infrastructure practices without the overhead of backend complexity.
+### Pending work
 
-## 🛠 Technology Stack
+These items are tracked in the backlog and are not implemented features:
 
-This project is built using a small and intentionally selected technology stack, chosen to keep the website fast, maintainable, and easy to evolve over time.
+- [Static blog MVP — #26](https://github.com/raullopezpenalva/Personal-Website/issues/26): the Blog route currently shows a coming-soon placeholder.
+- [Certifications section — #65](https://github.com/raullopezpenalva/Personal-Website/issues/65).
+- [SEO audit for ES/EN routes — #69](https://github.com/raullopezpenalva/Personal-Website/issues/69).
+- [Possible blog API integration — #30](https://github.com/raullopezpenalva/Personal-Website/issues/30): a future evaluation, separate from the static MVP.
 
-- **React**  
-  Used for building a component-driven UI with clear separation of concerns and reusable layout and content components.
+## Technology
 
-- **Vite**  
-  Provides a fast development environment and optimized production builds with minimal configuration overhead.
+| Area | Implementation |
+| --- | --- |
+| Frontend | React 19, TypeScript, Vite 7 |
+| Routing | React Router 7 |
+| Internationalization | i18next and react-i18next |
+| Styling | Custom CSS and CSS Modules |
+| Quality checks | ESLint, Vitest, React Testing Library, jsdom |
+| Runtime | Docker image serving static files through NGINX |
+| Delivery | GitHub Actions and GitHub Container Registry (GHCR) |
 
-- **TypeScript**  
-  Adds type safety and improves code clarity, refactoring confidence, and long-term maintainability.
+Dependency ranges and development commands are defined in [package.json](package.json); resolved versions are recorded in [package-lock.json](package-lock.json).
 
-- **CSS (custom, utility-free)**  
-  Styling is handled using plain CSS with a focus on layout primitives, spacing consistency, and predictable visual behavior, avoiding heavy frameworks or utility-first abstractions.
+## Routes and content
 
-- **Git & GitHub**  
-  Used for version control, code review, and as the foundation for the deployment workflow.
+The [router](src/router.tsx) defines the following routes under both `/es` and `/en`:
 
-## 🗂 Project Structure
+| Path | Page |
+| --- | --- |
+| `/:lang` | Home |
+| `/:lang/about` | About |
+| `/:lang/services` | Services |
+| `/:lang/projects` | Portfolio |
+| `/:lang/projects/:slug` | Case study detail |
+| `/:lang/contact` | Contact |
+| `/:lang/blog` | Blog placeholder |
 
-The codebase is organized to keep concerns separated and make the UI easy to evolve over time. The structure follows a component-driven approach, distinguishing between layout components, UI primitives, higher-level patterns, and domain-specific components.
+The root path `/` redirects using the stored language preference, then the browser language, with English as the fallback.
 
-### Root
+Case study metadata, slugs, tags and image references live in [case-studies.ts](src/data/case-studies.ts). Portfolio cards and detail pages render this data; localized copy lives in the ES/EN translation files. Adding a case study involves updating the data, translations and image assets.
 
-- `index.html`, `vite.config.ts`, `tsconfig*.json`  
-  Project entry and tooling configuration (Vite + TypeScript).
+## Project structure
 
-- `eslint.config.js`  
-  Linting configuration for consistent code quality.
+| Location | Responsibility |
+| --- | --- |
+| [src/main.tsx](src/main.tsx), [src/router.tsx](src/router.tsx) | Application entry point and routes |
+| [src/pages/](src/pages/) | Home, About, Services, portfolio, case study, Contact and Blog views |
+| [src/components/layout/](src/components/layout/) | Shared page layout, header, footer and container |
+| [src/components/ui-primitives/](src/components/ui-primitives/) | Text, buttons, stacks and icons |
+| [src/components/ui-patterns/](src/components/ui-patterns/) | Sections, subsections and bullet lists |
+| [src/components/domain/](src/components/domain/) | Service previews, case study cards and galleries, contact form |
+| [src/components/routing/](src/components/routing/) | Scroll and hash navigation support |
+| [src/data/](src/data/) | Portfolio and Home content metadata |
+| [src/i18n/](src/i18n/) | Language routing, persistence and ES/EN translation namespaces |
+| [src/assets/](src/assets/) | Images and other imported assets |
+| [src/index.css](src/index.css), [src/styles/](src/styles/) | Global, layout, page and component styles |
+| [src/App.test.tsx](src/App.test.tsx), [src/tests/](src/tests/) | Frontend smoke test and test setup |
+| [nginx/default.conf](nginx/default.conf), [Dockerfile](Dockerfile) | Static runtime, SPA fallback and container build |
+| [scripts/](scripts/) | Runtime smoke check and image publication helpers |
+| [.github/workflows/](.github/workflows/) | Verification and image publication |
+| [docs/](docs/) | Delivery contract and versioned content/design documentation |
 
-- `public/`  
-  Static public assets.
+## Local development
 
-### Source (`src/`)
+Use **Node.js 22** and **npm**, matching CI and the Docker build. A [VS Code devcontainer](.devcontainer/devcontainer.json) with Node.js 22 is also available; it forwards Vite ports 5173 and 4173 and runs `npm install` on creation.
 
-- `main.tsx`  
-  Application entry point. Routing is initialized from here using React Router.
+From the repository root:
 
-- `router.tsx`  
-  Centralized route definitions and page mapping.
-
-- `pages/`  
-  Route-level components (pages). Each file represents a top-level view:
-  `HomePage`, `AboutPage`, `PortfolioPage`, `VisionPage`, `BlogPage`, `ContactPage`.
-
-- `components/`  
-  Reusable UI components, grouped by responsibility:
-
-  - `components/layout/`  
-    App shell and layout building blocks (`Layout`, `Header`, `Footer`, `Container`).
-
-  - `components/ui-primitives/`  
-    Low-level building blocks used everywhere (`Text`, `Stack`, `Grid`, `Button`, `icons/`).
-    These components are intentionally minimal and composable.
-
-  - `components/ui-patterns/`  
-    Higher-level composition patterns built from primitives (`Section`, `SubSection`, `BulletList`, `Bullet`).
-    They encode consistent layout and content patterns across pages.
-
-  - `components/domain/`  
-    Components tied to content/domain concepts (e.g. `ServiceCard`), kept separate from generic UI.
-
-- `data/`  
-  Static content/data structures used by the UI (e.g. `services.ts`).
-
-### Styling (`src/styles/`)
-
-Styles are organized to mirror the component structure and keep styling predictable:
-
-- `layout.css`, `pages.css`, `components.css`  
-  High-level style entry points.
-
-- `layouts/`  
-  Layout-specific styles (`Header.css`, `Footer.css`, `Container.css`).
-
-- `pages/`  
-  Page-specific styles (e.g. `HomePage.css`).
-
-- `components/`  
-  Component-category style folders mirroring `components/` (domain/icons/ui-patterns/ui-primitives).
-
-### Testing (`src/tests/`)
-
-- `tests/setup.ts` and `App.test.tsx`  
-  Test setup and example tests to validate key behavior.
-
-## 🚀 Local Development
-
-### Requirements
-- **Node.js** (recommended: LTS)
-- **npm**
-
-### Install dependencies
 ```bash
-npm install
-```
-
-### Start the development server
-```bash
+npm ci
 npm run dev
 ```
 
-### Build for production
+Open the URL printed by Vite, normally [http://localhost:5173](http://localhost:5173).
+
+### Contact backend
+
+The form sends JSON to `POST /api/v1/contact/messages` with `email`, `subject` and `content`.
+
+During development, [vite.config.ts](vite.config.ts) proxies `/api` to `http://localhost:8089`. Run the backend separately at that address, or adapt the local proxy target to your development environment. The frontend can be explored without the backend, but submitting the form requires the API.
+
+In production, homelab's reverse proxy must route the API path to `contact-service`. The frontend container's NGINX configuration serves static files and does not configure that backend route. The Vite development proxy is not part of the production build.
+
+### Commands
+
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Type-check and build production files into `dist/` |
+| `npm run preview` | Preview the production build locally, after building |
+| `npm run lint` | Run ESLint |
+| `npm run lint:fix` | Apply available ESLint fixes |
+| `npm test` | Run Vitest in watch mode |
+| `npm run test:run` | Run frontend tests once |
+| `npm run test:ci` | Run frontend tests with coverage |
+
+The current frontend test is a basic rendering smoke test, not comprehensive page or integration coverage.
+
+Publication helper tests can also be run locally with Python 3:
+
 ```bash
-npm run build
+python3 -m unittest discover -s scripts/tests -v
 ```
 
-### Preview the production build locally
+With Docker available, build a local test image and check its static runtime:
+
 ```bash
-npm run preview
+docker build --platform linux/amd64 -t personal-website:local .
+bash scripts/verify-runtime.sh personal-website:local
 ```
 
-### Linting
-```bash
-npm run lint
-```
+The Docker build runs frontend tests and builds the application. The runtime smoke check validates NGINX and the served HTML in an isolated container; it does not exercise the backend or production infrastructure. Local test images are not publication receipts or deployment candidates.
 
-#### Fix lint issues automatically:
-```bash
-npm run lint:fix
-```
+## CI and image publication
 
-### Test
+[verify.yml](.github/workflows/verify.yml) is the reusable verification workflow. It runs `npm ci`, lint, frontend tests and the production build, then builds a labelled Linux/amd64 runtime image and runs the isolated runtime and publication helper checks.
 
-#### Run tests in watch mode:
-```bash
-npm test
-```
+| Workflow | Trigger | Outcome |
+| --- | --- | --- |
+| [CI dev test](.github/workflows/CI-dev-test.yml) | Push to `dev`; PR targeting `dev` | Verification |
+| [CI main test](.github/workflows/CI-main-test.yml) | PR targeting `main` | Verification |
+| CI main test | Manual invocation | Verification and image artifact transfer check, without registry publication |
+| [Verify and publish image for homelab](.github/workflows/CI-package.yml) | Push to `main`; published release; manual invocation on `main` | Verification followed by publication of the exact tested image |
 
-#### Run tests once:
-```bash
-npm run test:run
-```
+Release source commits must belong to `main` history. Pull request verification does not publish images.
 
-#### Run CI-style tests with coverage:
-```bash
-npm run test:ci
-```
+The publication job downloads the tested image artifact by its immutable artifact ID and verifies its identity before registry login; it does not rebuild the image. Only this job receives package write permission.
 
-## 🔁 CI/CD & Deployment
+Images are published to `ghcr.io/raullopezpenalva/personal-website` with:
 
-This repository contains only the website source code and its delivery pipeline.
+- `sha-<full-commit-sha>` as the commit tag.
+- The release tag as an additional alias for a published semantic-version release.
+- A registry digest recorded in the `image-publication.json` artifact and workflow summary.
 
-### CI (Quality Gates)
+The workflow does not update `latest`. Tags can move; homelab uses the digest reference (`ghcr.io/...@sha256:...`) as the immutable deployment identity. Publication receipts are retained for 90 days.
 
-GitHub Actions is used to validate changes through automated checks:
+### Deployment boundary
 
-- **Pull Requests → `dev`**
-  - Runs linting and tests to validate changes early.
-  - Ensures contributions remain consistent with the project's coding standards.
+This repository owns the frontend source, verification, container build and image publication. **Homelab owns production configuration, secrets, image selection, validation, promotion and deployment.**
 
-- **Pull Requests → `main`**
-  - Runs the full validation pipeline (lint + tests).
-  - Produces a production build and publishes a versioned container image to **GitHub Container Registry (GHCR)**.
+Publishing an image does not deploy it or change production traffic. The producer workflow does not access production servers. The deployed frontend container serves the static build with an SPA fallback, while the infrastructure reverse proxy handles the public domain, TLS and backend routing.
 
-- **Merges → `main`**
-  - Produces a production build and publishes a versioned container image to **GitHub Container Registry (GHCR)**.
+See [Image publication and homelab promotion](docs/image-publication.md) for the delivery contract, receipt fields and operational checks.
 
-### Deployment (Self-hosted)
+## Documentation
 
-Deployment to my self-hosted infrastructure is managed from a separate, private **infrastructure repository**.
+| Document | Purpose |
+| --- | --- |
+| [Image publication and homelab promotion](docs/image-publication.md) | Current image delivery and deployment ownership contract |
+| [Homepage content — v2.0.0](docs/content/homepage-content-v2.0.0.md) | Home messaging and structure |
+| [About page content — v2.0.0](docs/content/about-page-content-v2.0.0.md) | Hybrid professional profile narrative |
+| [Services definition — v2.0.0](docs/content/services-definition-v2.0.0.md) | Professional offering and positioning |
+| [Case study categories — v2.0.0](docs/content/case-studies-categories-v2.0.0.md) | Portfolio categories and balance |
+| [Projects / case studies definition — v2.0.0](docs/content/projects-case-studies-definition-v2.0.0.md) | Portfolio content, cards and detail structure |
+| [DevOps visibility strategy — v2.0.0](docs/content/devops-visibility-strategy-v2.0.0.md) | Role of infrastructure and software within the AV positioning |
 
-The deployment flow is:
+The `docs/content/*v2.0.0.md` files preserve the design and content decisions for that release. They may contain proposals and alternatives; they are not a claim that every described item is implemented. Current behavior is defined by the source and workflows.
 
-1. This repository publishes a container image containing the static build output. The container image packages the `dist/` output and serves it using Nginx.
-2. The infrastructure repository pins the desired image version (tag/SHA) and deploys it to the server.
-3. A dedicated reverse proxy routes the public domain to the running `personal-website` container.
+See [open issues](https://github.com/raullopezpenalva/Personal-Website/issues) for pending work and [releases](https://github.com/raullopezpenalva/Personal-Website/releases) for published versions.
 
-This separation keeps infrastructure details and secrets out of the public codebase while maintaining a fully automated delivery workflow.
+## License
 
-
-## 🚧 Project Status
-
-Actively maintained.  
-The structure is stable, while content and design are iterated over time.
-
-## 📄 License
-
-MIT License
-
-## Image publication and deployment
-
-[Verified images and digest handoff to homelab](docs/image-publication.md): CI
-publishes the tested Linux/amd64 image and its digest receipt. Homelab selects
-and deploys a release; this repository does not access production servers.
+[MIT](LICENSE).
