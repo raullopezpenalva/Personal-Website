@@ -1,0 +1,33 @@
+{
+  "imageAlt": "Portrait of Raúl López Penalva",
+  "notFound": {
+    "title": "Page not found",
+    "description": "The requested page is not available."
+  },
+  "pages": {
+    "home": {
+      "title": "Sound Engineering, AV Networking & Technical Systems",
+      "description": "Raúl López Penalva: sound engineering, AV networking and technical systems for events and production. Professional services, experience and independent projects."
+    },
+    "about": {
+      "title": "About me",
+      "description": "Explore Raúl López Penalva's background in live sound, audiovisual production, IP networking and technical infrastructure through a systems mindset."
+    },
+    "services": {
+      "title": "Sound, AV Networking & Technical Production Services",
+      "description": "Support for live sound, PA system tuning, AV networks and technical planning for events, venues and production environments."
+    },
+    "projects": {
+      "title": "Projects & Case Studies",
+      "description": "Sound, touring, location audio, corporate AV, self-hosted infrastructure and software projects by Raúl López Penalva."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contact Raúl López Penalva to discuss sound, AV networking, technical planning and infrastructure needs for your project."
+    },
+    "blog": {
+      "title": "Blog coming soon",
+      "description": "Raúl López Penalva's technical blog is in preparation."
+    }
+  }
+}

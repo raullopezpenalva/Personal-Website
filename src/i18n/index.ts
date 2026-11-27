@@ -22,8 +22,7 @@ import esCard from './locales/es/card.json';
 import esContactForm from './locales/es/contactForm.json';
 
 export const defaultNS = 'common';
-export const supportedLanguages = ['en', 'es'] as const;
-export type SupportedLanguage = (typeof supportedLanguages)[number];
+export { supportedLanguages, type SupportedLanguage } from "./languages";
 
 i18n
   .use(initReactI18next)

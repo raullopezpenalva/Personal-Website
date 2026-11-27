@@ -1,3 +1,4 @@
+import { caseStudyRoutes } from "./case-study-routes";
 import homelabCover from "../assets/images/case-studies/homelab/cover.webp";
 import softwareCover from "../assets/images/case-studies/software/cover.webp";
 
@@ -89,10 +90,8 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
-    id: "sound-engineering-live-events",
-    slug: "sound-engineering-live-events",
+    ...caseStudyRoutes.soundEngineeringLiveEvents,
     category: "sound",
-    translationKey: "items.soundEngineeringLiveEvents",
     coverImage: soundEngineeringCover,
     galleryImages: [
         soundEngineering01,
@@ -116,10 +115,8 @@ export const caseStudies: CaseStudy[] = [
     tags: ["FOH", "Monitors", "Live Events", "Soundcheck"],
   },
   {
-    id: "ominira",
-    slug: "touring-sound-ominira",
+    ...caseStudyRoutes.touringSoundOminira,
     category: "sound",
-    translationKey: "items.touringSoundOminira",
     coverImage: ominiraCover,
     galleryImages: [
         ominira01,
@@ -130,10 +127,8 @@ export const caseStudies: CaseStudy[] = [
     tags: ["Touring", "Band Technician", "Live Sound"],
   },
   {
-    id: "location-sound-audio-postproduction",
-    slug: "location-sound-audio-postproduction",
+    ...caseStudyRoutes.locationSoundAudioPostproduction,
     category: "audiovisual",
-    translationKey: "items.locationSoundAudioPostproduction",
     coverImage: locationSoundCover,
     galleryImages: [
         locationSound01,
@@ -157,10 +152,8 @@ export const caseStudies: CaseStudy[] = [
     tags: ["Location Sound", "Dialogue Editing", "Postproduction"],
   },
   {
-    id: "corporate-av-hybrid-events",
-    slug: "corporate-av-hybrid-events",
+    ...caseStudyRoutes.corporateAvHybridEvents,
     category: "corporate-av",
-    translationKey: "items.corporateAvHybridEvents",
     coverImage: corporateAvCover,
     galleryImages: [
         corporateAV01,
@@ -189,19 +182,15 @@ export const caseStudies: CaseStudy[] = [
     tags: ["Corporate AV", "Conferences", "Hybrid Events", "Streaming"],
   },
   {
-    id: "homelab-self-hosted-infrastructure",
-    slug: "homelab-self-hosted-infrastructure",
+    ...caseStudyRoutes.homelabSelfHostedInfrastructure,
     category: "infrastructure",
-    translationKey: "items.homelabSelfHostedInfrastructure",
     coverImage: homelabCover,
     galleryImages: [],
     tags: ["Linux", "Docker", "NGINX", "UniFi"],
   },
   {
-    id: "personal-website-software-projects",
-    slug: "personal-website-software-projects",
+    ...caseStudyRoutes.personalWebsiteSoftwareProjects,
     category: "software",
-    translationKey: "items.personalWebsiteSoftwareProjects",
     coverImage: softwareCover,
     galleryImages: [],
     tags: ["React", "Spring Boot", "CI/CD", "PostgreSQL"],

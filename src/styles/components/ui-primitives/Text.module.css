@@ -41,6 +41,8 @@
 
 
 .variant-title {
+    /* Preserve the previous paragraph title spacing when using semantic h1. */
+    margin-block: 1em;
     font-size: var(--font-size-3xl);
     font-weight: var(--font-weight-bold);
     line-height: 1.3;

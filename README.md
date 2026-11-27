@@ -16,6 +16,7 @@ The frontend is a React single-page application built into static files with Vit
 - Data-driven portfolio with reusable cards, detail pages and photo galleries.
 - Spanish and English routes, shared UI translations, language switching and a preference stored in `localStorage`.
 - Contact form with submission state, success feedback, field validation errors returned by the API and general error handling.
+- Client-side page metadata in ES/EN: titles, descriptions, canonicals, reciprocal language alternates and Open Graph, with a nonindexable Blog placeholder.
 
 The portfolio currently contains six case studies:
 
@@ -32,7 +33,7 @@ These items are tracked in the backlog and are not implemented features:
 
 - [Static blog MVP — #26](https://github.com/raullopezpenalva/Personal-Website/issues/26): the Blog route currently shows a coming-soon placeholder.
 - [Certifications section — #65](https://github.com/raullopezpenalva/Personal-Website/issues/65).
-- [SEO audit for ES/EN routes — #69](https://github.com/raullopezpenalva/Personal-Website/issues/69).
+- [Initial HTML metadata, sitemap, robots and HTTP 404 handling — #72](https://github.com/raullopezpenalva/Personal-Website/issues/72).
 - [Possible blog API integration — #30](https://github.com/raullopezpenalva/Personal-Website/issues/30): a future evaluation, separate from the static MVP.
 
 ## Technology
@@ -174,7 +175,8 @@ See [Image publication and homelab promotion](docs/image-publication.md) for the
 
 | Document | Purpose |
 | --- | --- |
-| [SEO audit — #69](docs/seo-audit.md) | Findings, ES/EN metadata policy and implementation backlog (not yet implemented) |
+| [Route metadata — #71](docs/seo-metadata.md) | Client-side SEO ownership, route data and integration contract for initial HTML |
+| [SEO audit — #69](docs/seo-audit.md) | Audit baseline, ES/EN policy and follow-up backlog |
 | [Image publication and homelab promotion](docs/image-publication.md) | Current image delivery and deployment ownership contract |
 | [Homepage content — v2.0.0](docs/content/homepage-content-v2.0.0.md) | Home messaging and structure |
 | [About page content — v2.0.0](docs/content/about-page-content-v2.0.0.md) | Hybrid professional profile narrative |

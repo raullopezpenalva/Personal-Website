@@ -17,7 +17,6 @@ export function LanguageRouteGuard() {
         void i18n.changeLanguage(lang);
       }
 
-      document.documentElement.lang = lang;
       setStoredLanguage(lang);
     }
   }, [lang]);

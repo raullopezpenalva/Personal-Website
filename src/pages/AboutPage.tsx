@@ -36,7 +36,7 @@ const AboutPage: React.FC = () => {
             justifyContent="center"
             className="stack-60-40-right"
           >
-            <Text variant="title" className="whoami-title">
+            <Text as="h1" variant="title" className="whoami-title">
               {t("whoAmI.title")}
             </Text>
 

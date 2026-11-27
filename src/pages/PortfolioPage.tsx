@@ -14,7 +14,7 @@ const ProjectsPage: React.FC = () => {
     <>
       <Section id="projects-hero" justifyContent="center">
         <Stack direction="column" gap="sm" align="center" margin="lg">
-          <Text variant="title" align="center">
+          <Text as="h1" variant="title" align="center">
             {t("hero.title")}
           </Text>
           <Text variant="subtitle" align="center">

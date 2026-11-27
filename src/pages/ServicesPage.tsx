@@ -26,7 +26,7 @@ const ServicesPage: React.FC = () => {
             id="services-hero"
         >
             <Stack direction="column" gap="none" justifyContent="center" align="stretch" margin="sm">
-            <Text variant="title" align="center">{t('services-title.title')}</Text>
+            <Text as="h1" variant="title" align="center">{t('services-title.title')}</Text>
             <Text variant="subtitle" align="center">{t('services-title.subtitle')}</Text>
             <Text variant="body" align="center">{t('services-title.body')}</Text>
             </Stack>
