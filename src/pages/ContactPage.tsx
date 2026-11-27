@@ -14,7 +14,7 @@ const ContactPage: React.FC = () => {
 
                     <div className="contact-inner-left">
 
-                        <Text variant="title">{t('contact.title')}</Text>
+                        <Text as="h1" variant="title">{t('contact.title')}</Text>
 
                         <Text variant="body">{t('contact.description')}</Text>
 

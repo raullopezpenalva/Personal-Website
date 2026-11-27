@@ -75,7 +75,7 @@ const CaseStudyPage: React.FC = () => {
                 {t(`${key}.category`)}
               </p>
 
-              <Text variant="title" className="case-study-hero__title">
+              <Text as="h1" variant="title" className="case-study-hero__title">
                 {t(`${key}.title`)}
               </Text>
 

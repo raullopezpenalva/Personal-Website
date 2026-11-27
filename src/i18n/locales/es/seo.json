@@ -1,0 +1,33 @@
+{
+  "imageAlt": "Retrato de Raúl López Penalva",
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "La página solicitada no está disponible."
+  },
+  "pages": {
+    "home": {
+      "title": "Sonido, redes AV y sistemas técnicos",
+      "description": "Raúl López Penalva: sonido, redes audiovisuales y sistemas técnicos para eventos y producción. Servicios profesionales, experiencia y proyectos propios."
+    },
+    "about": {
+      "title": "Sobre mí",
+      "description": "Conoce la trayectoria de Raúl López Penalva: sonido directo, producción audiovisual, redes IP e infraestructura técnica conectadas por una mentalidad de sistemas."
+    },
+    "services": {
+      "title": "Servicios de sonido, redes AV y producción técnica",
+      "description": "Soporte en sonido directo, ajuste de sistemas PA, redes AV y planificación técnica para eventos, espacios y entornos de producción."
+    },
+    "projects": {
+      "title": "Proyectos y case studies",
+      "description": "Experiencias y proyectos de sonido, giras, rodajes, AV corporativo, infraestructura self-hosted y desarrollo de software de Raúl López Penalva."
+    },
+    "contact": {
+      "title": "Contacto",
+      "description": "Contacta con Raúl López Penalva para revisar necesidades de sonido, redes AV, planificación técnica e infraestructura para tu proyecto."
+    },
+    "blog": {
+      "title": "Blog próximamente",
+      "description": "El blog técnico de Raúl López Penalva está en preparación."
+    }
+  }
+}
