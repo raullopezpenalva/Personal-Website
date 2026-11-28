@@ -7,7 +7,8 @@
   background: var(--bg);
 }
 .Header-inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
   gap: var(--space-5);
   position: relative;
@@ -49,6 +50,7 @@
   display: flex;
   gap: var(--space-3);
   align-items: center;
+  justify-self: end;
 }
 .Header-navMobile {
   display: none;
@@ -64,6 +66,11 @@
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 1023px) {
+  .Header-navDesktop .btn {
+    padding-inline: 8px;
+  }
+}
 @media (max-width: 899px) {
   .Header-navDesktop {
     display: none;
@@ -72,6 +79,9 @@
     display: inline-flex;
   }
   .Header-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     gap: var(--space-3);
   }
   .Header-right {

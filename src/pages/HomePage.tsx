@@ -22,27 +22,19 @@ const HomePage: React.FC = () => {
     <>
       {/* HERO */}
       <Section id="hero" className="hero-section" justifyContent="center">
-        <div className="hero-inner">
-          <div className="hero-copy">
-            <p className="hero-kicker">{tCommon("main.tagline")}</p>
-            <h1 className="hero-title">{tCommon("main.name")}</h1>
-            <p className="hero-text">{tCommon("main.description")}</p>
-            <div className="hero-actions">
-              <Button to={`/${lang}/services`} variant="primary">
-                {tCommon("btn.services")}
-              </Button>
-              <Button to={`/${lang}/contact`} variant="secondary">
-                {tCommon("btn.contact")}
-              </Button>
-            </div>
+        <img className="hero-photo" src={HeroPhoto} alt="" fetchPriority="high" />
+        <div className="hero-copy">
+          <p className="hero-kicker">{tCommon("main.tagline")}</p>
+          <h1 className="hero-title">{tCommon("main.name")}</h1>
+          <p className="hero-text">{tCommon("main.description")}</p>
+          <div className="hero-actions">
+            <Button to={`/${lang}/services`} variant="primary">
+              {tCommon("btn.services")}
+            </Button>
+            <Button to={`/${lang}/contact`} variant="secondary">
+              {tCommon("btn.contact")}
+            </Button>
           </div>
-          <figure className="hero-photo">
-            <img
-              src={HeroPhoto}
-              alt={t("services.items.soundEngineering.title")}
-              fetchPriority="high"
-            />
-          </figure>
         </div>
       </Section>
 

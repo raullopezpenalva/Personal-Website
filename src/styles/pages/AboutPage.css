@@ -1,39 +1,62 @@
+.about-page > .Section > .Section-inner {
+  max-width: 68rem;
+}
+.about-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  width: 100%;
+}
 .whoami-headshot {
   width: 100%;
-  max-width: 380px;
+  max-width: 24rem;
+  justify-self: end;
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: var(--radius-panel);
   border: 1px solid var(--border-color);
 }
-.whoami-title {
+.about-intro .whoami-title {
   margin: 0;
   font-size: clamp(2.25rem, 4vw, 3rem);
   letter-spacing: -0.035em;
 }
-.whoami-subtitle {
+.about-intro .whoami-subtitle {
   margin-block: var(--space-4);
 }
-#about-who-am-i .stack-60-40-right {
-  align-items: flex-start;
+.about-page > .Section + .Section > .Section-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr);
+  align-items: start;
+  gap: clamp(2rem, 5vw, 4.5rem);
 }
-#about-who-am-i .stack-60-40 {
-  grid-template-columns: 0.85fr 1.15fr;
+.about-page > .Section + .Section > .Section-inner > header {
+  margin: 0;
 }
-.Section[id^="about-"] .content > div > p {
+.about-page .content > div > p {
   max-width: var(--text-measure);
+  margin: 0;
 }
 .about-my-journey-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
 }
 @media (max-width: 899px) {
-  #about-who-am-i .stack-60-40 {
-    grid-template-columns: 1fr;
+  .about-page > .Section + .Section > .Section-inner {
+    max-width: 46rem;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-4);
   }
 }
 @media (max-width: 719px) {
+  .about-intro,
   .about-my-journey-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .whoami-headshot {
+    max-width: 20rem;
+    justify-self: center;
   }
 }

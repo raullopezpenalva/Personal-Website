@@ -1,11 +1,36 @@
-.hero-inner {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+.Section.hero-section {
+  position: relative;
+  isolation: isolate;
+  display: flex;
   align-items: center;
-  gap: clamp(2rem, 5vw, 4rem);
+  min-block-size: clamp(34rem, 50vw, 46rem);
+}
+.hero-section::before,
+.hero-section .hero-photo {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.hero-section::before {
+  content: "";
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgb(8 9 10 / 32%),
+    rgb(8 9 10 / 82%) 35% 72%,
+    rgb(8 9 10 / 52%) 100%
+  );
+}
+.hero-section .hero-photo {
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 48%;
+  filter: grayscale(1);
 }
 .hero-copy {
-  min-width: 0;
+  text-align: center;
 }
 .hero-kicker,
 .call-to-action__kicker {
@@ -18,19 +43,17 @@
 }
 .hero-title {
   color: var(--fg-title);
-  font-size: clamp(3rem, 5.5vw, 4.75rem);
+  font-size: clamp(1.625rem, 8.25vw, 4.75rem);
   font-weight: var(--font-weight-semibold);
   letter-spacing: -0.055em;
   line-height: 1.04;
   margin: 0 0 var(--space-5);
-  max-width: 10ch;
-  overflow-wrap: normal;
 }
 .hero-text {
   color: var(--fg);
   font-size: clamp(1.125rem, 1.6vw, 1.375rem);
   line-height: 1.6;
-  margin: 0;
+  margin: 0 auto;
   max-width: 40ch;
 }
 .hero-actions,
@@ -40,17 +63,8 @@
   gap: var(--space-3);
   margin-top: var(--space-6);
 }
-.hero-photo {
-  margin: 0;
-  overflow: hidden;
-  border-radius: var(--radius-panel);
-  border: 1px solid var(--border-color);
-}
-.hero-photo img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center;
+.hero-actions {
+  justify-content: center;
 }
 .Section .profile-layout {
   display: grid;
@@ -140,30 +154,13 @@
   margin: 0 0 var(--space-6);
 }
 @media (max-width: 899px) {
-  .hero-inner,
   .Section .profile-layout {
     grid-template-columns: 1fr;
-  }
-  .hero-title {
-    max-width: none;
-  }
-  .hero-photo img {
-    aspect-ratio: 16 / 9;
-    object-position: center 45%;
   }
   .profile-photo img {
     aspect-ratio: 3 / 2;
   }
   .featured-case-studies-grid {
     grid-template-columns: 1fr;
-  }
-}
-@media (max-width: 479px) {
-  .hero-title {
-    font-size: 3rem;
-    max-width: 10ch;
-  }
-  .hero-photo img {
-    aspect-ratio: 4 / 3;
   }
 }

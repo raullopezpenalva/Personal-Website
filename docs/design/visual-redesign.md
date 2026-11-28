@@ -4,7 +4,7 @@ Fecha: 28/11/2026 · Seguimiento: [#77](https://github.com/raullopezpenalva/Pers
 
 ## Estado y objetivo
 
-Propuesta y demo local para revisión visual. El usuario ha aprobado explorar el diseño; la integración final queda pendiente de evaluar la demo. No es una release ni una aprobación de despliegue.
+Diseño aprobado por Raúl tras la revisión de la demo local. La entrega de #77 tiene como destino la rama de integración `dev`. La release y la promoción mediante homelab se deciden por separado.
 
 Base: `main`, commit `5f79438d7cd3485ae6c0d714234802a42982987d`. Rama: `codex/77-visual-redesign-demo`.
 
@@ -26,7 +26,7 @@ Se ha revisado su sistema de estilos actual en `apps/frontend/src/index.css` y l
 
 La adaptación conserva la paleta de Personal Website. No importa la paleta turquesa exacta de TPA, su sidebar, tablas, formularios densos ni navegación de workspace. No se añaden dependencias compartidas entre repositorios ni se modifica TPA.
 
-## Dirección propuesta
+## Diseño aprobado
 
 Una web de un profesional técnico con fotografías reales y una composición editorial. La estructura transmite precisión mediante alineaciones, proporciones y consistencia; la fotografía aporta el contexto de trabajo.
 
@@ -51,13 +51,13 @@ Los grises se ajustan para mejorar lectura dentro de la misma familia cromática
 
 ### Header y footer
 
-Header horizontal, logo existente, enlaces con indicador de página activa, selector ES/EN y Contacto. En pantallas menores de 900 px aparece el menú móvil; panel vertical dentro del viewport, cierre al navegar y con Escape, foco visible. El enlace Inicio solo está activo en Home.
+Header horizontal con el logo a la izquierda, los enlaces de navegación centrados y el selector ES/EN y Contacto a la derecha. Entre 900 y 1023 px los enlaces reducen su padding horizontal para mantener la separación de los controles laterales. Por debajo de 900 px, el panel móvil permite navegar, cerrar con Escape y recuperar el foco visible. El enlace Inicio solo está activo en Home.
 
 Footer con columnas alineadas y una base de copyright discreta. Se conservan enlaces y contenidos; no se incorpora información nueva.
 
 ### Home
 
-1. **Hero:** dos columnas aproximadamente 55/45. Kicker actual, nombre grande, claim actual en caja normal y ancho de lectura limitado, dos CTA actuales. Fotografía existente de Sound Engineering como contrapunto; no se añade otro bloque de contenido. En móvil, texto seguido de imagen.
+1. **Hero:** fotografía existente de Sound Engineering en blanco y negro a todo el ancho, con un degradado oscuro detrás del contenido. Kicker, nombre, claim y los dos CTA centrados. El nombre ajusta su tamaño para mantenerse en una línea en los anchos revisados.
 2. **Servicios:** encabezado con título y descripción; retícula 2 × 2. Imágenes sin marco interior excesivo, textos alineados a la izquierda y puntos como pequeñas etiquetas neutrales. Todas las tarjetas conservan su enlace a Services.
 3. **Perfil híbrido:** texto a la izquierda y fotografía existente a la derecha, con gap real entre columnas. Se conservan tres párrafos, bullets y botones. En móvil se apila siguiendo el orden de lectura.
 4. **Destacados:** tres columnas amplias en escritorio, una en tablet/móvil. Categoría cian, título, descripción y bloque final de valor separado por una línea. Se conservan como artículos informativos; no se inventan páginas para los destacados que carecen de caso propio.
@@ -79,7 +79,7 @@ Herramientas y galería utilizan el mismo espaciado y radios. El CTA final compa
 
 ### About, Services y Contact
 
-- About: retrato existente en un marco rectangular suave, título y biografía alineados; secciones largas con lectura limitada; formación y experiencia en columnas adaptativas.
+- About: título y biografía a la izquierda y retrato a la derecha a partir de 720 px. Las secciones siguientes comparten un bloque centrado que, a partir de 900 px, coloca los títulos a la izquierda y el texto a la derecha. En móvil se apilan la biografía, el retrato y las secciones. Formación y experiencia se muestran en columnas desde 720 px.
 - Services: encabezado de página alineado, mismas tarjetas de Home y bloques alternos de texto/foto con columnas que respetan el gap.
 - Contact: introducción y formulario en dos columnas, una en móvil. Panel de formulario diferenciado, controles cómodos y foco visible. No se modifica validación, envío, API ni mensajes.
 - Blog y 404: heredan tipografía, espaciado y controles; no se desarrolla el blog ni se cambia el comportamiento de error.
@@ -88,10 +88,10 @@ Herramientas y galería utilizan el mismo espaciado y radios. El CTA final compa
 
 | Viewport | Composición |
 | --- | --- |
-| 1440 px | Contenedor de 1200 px, hero dividido, Projects a dos columnas, destacados a tres |
-| 768 px | Menú móvil, hero y perfiles apilados, Projects y servicios a dos columnas cuando caben |
-| 390 px | Una columna, gutters de 20 px, botones de al menos 44 px y párrafos alineados a la izquierda |
-| 320 px / zoom | Reflujo sin scroll horizontal, panel de navegación con alto limitado y scroll propio |
+| 1440 px | Contenedor de hasta 1200 px, hero fotográfico a todo el ancho, Projects a dos columnas y destacados a tres |
+| 768 px | Menú móvil, About con bio y retrato en paralelo, Projects y servicios a dos columnas cuando caben |
+| 390 px | Una columna, gutters de 20 px, botones de al menos 44 px y hero centrado |
+| 320 px | Reflujo sin scroll horizontal, panel de navegación con alto limitado y scroll propio |
 
 Mantener un h1 por página, jerarquía semántica, orden DOM de lectura, alternativas de imagen y navegación por teclado. Ningún contenido depende del hover. Las transiciones se desactivan con `prefers-reduced-motion`. El foco no se elimina de inputs ni enlaces.
 
@@ -99,23 +99,21 @@ Mantener un h1 por página, jerarquía semántica, orden DOM de lectura, alterna
 
 - Utilizar componentes, CSS y CSS Modules existentes; los tokens siguen siendo propiedad de `src/index.css`.
 - Modificar el CSS propietario de cada componente, evitando una hoja global de overrides que se convierta en una segunda implementación.
-- Cambios de estructura limitados al hero y clases semánticas de página; conservar i18n, datos, slugs, routing y contrato SEO.
+- Cambios de estructura para la presentación en Home, About y la navegación. Se conservan i18n, datos, slugs, routing y el contrato SEO.
 - Sin UI framework, librería de animación, imágenes nuevas ni datos de TPA.
 - Fuera de alcance: nuevos casos, copy, #28, #26, #65, backend y despliegue.
 
-## Evaluación de la demo
+## Decisiones de la revisión
 
-Revisar Home, Projects y al menos un detalle primero. Confirmar que la fotografía, proporciones, tamaño del nombre, radios y acento transmiten la identidad deseada. Después revisar consistencia en Services, About y Contact, ambos idiomas y móvil.
-
-La demo puede evolucionar a partir del feedback. No cerrar #77 hasta revisar el resultado y acordar si se integra o necesita ajustes.
+La revisión empezó en Home, Projects y el detalle de Sound Engineering. El feedback se aplicó al hero de Home, al centrado de la navegación de escritorio y a la composición de About. Raúl dio por concluida la revisión visual y autorizó integrar el resultado en `dev`.
 
 ## Ejecutar localmente
 
-Node.js 22.18+ y npm. Desde la raíz del repositorio:
+Node.js 22.18+ y npm. Desde la raíz del repositorio dentro del [devcontainer](../agents/environment.md):
 
 ```bash
 npm ci
-npm run dev -- --host 127.0.0.1
+npm run dev
 ```
 
 Abrir `http://localhost:5173/es` o `/en`. El backend no es necesario para revisar el diseño. Envío real de contacto requiere el servicio configurado en el proxy de Vite.
@@ -140,6 +138,6 @@ Validación realizada el 28/11/2026 sobre la demo local:
 
 Se corrigió el overflow del header a 320 px y el espacio de las columnas de texto/foto. Las comprobaciones del build conservan los avisos existentes sobre imports JSON; los tests emiten el aviso conocido de `window.scrollTo` en jsdom sin fallar.
 
-Límites: no se ha enviado el formulario a un backend real, ejecutado un contenedor NGINX ni validado producción. El reflujo a 320 px no sustituye una prueba manual de zoom de navegador. No se ha cambiado la preferencia de movimiento del sistema ni realizado una auditoría completa de accesibilidad. Quedan pendientes la valoración visual del usuario y cualquier ajuste que se acuerde antes de integrar.
+En la revisión final se volvió a comprobar en navegador el hero centrado de Home, la navegación de escritorio y su salto al menú móvil, y el reflujo de About. Las comprobaciones cubrieron ES y EN entre 320 y 1440 px, incluidos los cambios de columnas y del menú. El hero mantuvo el nombre en una sola línea.
 
-La demo se deja accesible en `http://localhost:5173/es` y `/en` mientras permanezca activo el servidor local. Para futuras ediciones, reiniciar Vite si el entorno no detecta cambios de archivos.
+Las comprobaciones locales de la demo cubren el frontend. El zoom real del navegador, la activación de la preferencia de movimiento reducido, el envío al backend y la validación pública quedan fuera de esa evidencia. Las comprobaciones de NGINX se registran en la CI del PR.
