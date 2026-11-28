@@ -1,6 +1,6 @@
 # Adoption of the agent working method
 
-Date: 2026-11-28. Status: adopted repository method for
+Date: 2026-11-28. Original adoption:
 [issue #78](https://github.com/raullopezpenalva/Personal-Website/issues/78).
 This document records the rationale; executable instructions live in
 [AGENTS.md](../../AGENTS.md) and its linked guides.
@@ -49,3 +49,23 @@ be reported as completed without actual write access.
 Follow the linked issue/PR for completion evidence and actual merge/CI state.
 Do not treat these environment observations as a permanent property of future
 agent sessions.
+
+## Integration branch restored — 2026-11-28
+
+The repository history shows issue branches merging into `dev` before the
+release PR to `main`. The multilingual work followed that pattern in
+[#44](https://github.com/raullopezpenalva/Personal-Website/pull/44) through
+[#49](https://github.com/raullopezpenalva/Personal-Website/pull/49), followed by
+the [v1.3.0 release PR #50](https://github.com/raullopezpenalva/Personal-Website/pull/50).
+The portfolio work did the same in
+[#58](https://github.com/raullopezpenalva/Personal-Website/pull/58) through
+[#61](https://github.com/raullopezpenalva/Personal-Website/pull/61), followed by
+the [v2.0.0 release PR #62](https://github.com/raullopezpenalva/Personal-Website/pull/62).
+
+After v2.0.0, later fixes, image publication, SEO and the original agent guides
+landed directly on `main`. When the maintainer restored the integration flow
+in [#81](https://github.com/raullopezpenalva/Personal-Website/issues/81), Git
+confirmed that `dev` had no unique commits and was 26 commits behind `main`.
+The fast-forward from `f67abd7` to `29fe558` brought those accepted changes into
+`dev` before the redesign PR. Future issue PRs target `dev`, and an authorized
+release is prepared as a separate `dev` → `main` PR.

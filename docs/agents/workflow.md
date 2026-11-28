@@ -28,10 +28,14 @@ criteria, exclusions, dependencies and validation expectations. Use the
 [task template](../../.github/ISSUE_TEMPLATE/agent-task.yml).
 
 Fetch current remote references. For new work, create
-`codex/<issue-number>-<short-description>` from current `origin/main`.
+`codex/<issue-number>-<short-description>` from current `origin/dev`.
 Continue an existing PR on its own branch. Do not stack unrelated work or merge
-an experimental design branch as part of another task. The existing `dev`
-branch is optional integration history, not a required extra hop to main.
+an experimental design branch as part of another task.
+
+Keep `dev` aligned with fixes already accepted into `main`. If `dev` is a strict
+ancestor of `main`, an authorized fast-forward can restore the baseline without
+rewriting history. If both branches contain unique commits, review and verify
+a separate `main` → `dev` synchronization PR before merging it.
 
 Check relevant accepted ADRs, design status, nearby code and tests. Keep one
 coherent responsibility per change. Use the established stack and avoid
@@ -57,10 +61,12 @@ using clear English messages with a suitable conventional prefix such as
 `docs:`, `fix:`, `feat:` or `chore:`. Do not force-push or rewrite shared history
 as routine cleanup.
 
-Push the task branch and open a PR to `main` using the
+Push the task branch and explicitly target `dev` (for example,
+`gh pr create --base dev`) using the
 [PR template](../../.github/pull_request_template.md). Describe the problem,
-resulting behavior, validation evidence and material limitations. Use
-`Closes #N` only when the delivered scope satisfies the issue.
+resulting behavior, validation evidence and material limitations. Use `Refs #N`
+in PRs targeting `dev`. GitHub's automatic issue closure applies to PRs
+targeting the default branch, `main`.
 
 Inspect the actual PR checks and resolve failures caused by the change. Keep
 local verification, hosted CI and production validation distinct.
@@ -72,10 +78,24 @@ given, proceed after the diff is reviewed and required checks pass; do not add
 another confirmation gate. Recheck the exact PR head and target before merging.
 Do not merge unrelated PRs, enable auto-merge, deploy, tag or release.
 
-After an authorized merge, verify main contains the change and check the issue
-state. Synchronize the existing local checkout with a fast-forward only when it
-is clean, on the appropriate branch and writable. Never overwrite local work
-to make synchronization succeed. Report permission or divergence blockers.
+After an authorized merge, verify that the target branch contains the change.
+Close the linked issue when its accepted outcome is complete and record the PR
+and any remaining validation separately. Synchronize the existing local
+checkout with a fast-forward only when it is clean, on the appropriate branch
+and writable. Never overwrite local work to make synchronization succeed.
+Report permission or divergence blockers.
+
+## Release to main
+
+When the maintainer requests a release, prepare a separate `dev` → `main` PR.
+Review the complete release diff and wait for the main PR checks. Merge it only
+with explicit authorization for that release. A push to `main` runs the
+[image publication workflow](../image-publication.md). Creating a tag or
+publishing a GitHub release requires applicable authorization. Homelab uses the
+verified image digest for separately authorized production promotion and
+deployment.
+
+## Report the result
 
 Close with the issue/PR links, outcome, verification, remaining limits and actual
 checkout/branch used. For a local demo, state its checkout and URL. Do not say
