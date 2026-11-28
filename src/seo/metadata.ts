@@ -85,8 +85,13 @@ export function resolveMetadata(pathname: string, pages: readonly SeoPage[] = se
   };
 }
 
+export function getNotFoundContent(pathname: string) {
+  const language: SupportedLanguage = pathname.split("/")[1] === "es" ? "es" : "en";
+  return { language, ...copy[language].notFound };
+}
+
 export function getUnavailableMetadata(pathname: string): PageMetadata {
-  const language = pathname.split("/")[1] === "es" ? "es" : "en";
+  const { language } = getNotFoundContent(pathname);
   return {
     language,
     title: `${copy[language].notFound.title} | ${SITE_NAME}`,

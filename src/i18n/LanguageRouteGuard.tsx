@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
-import { Navigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import i18n, { supportedLanguages, type SupportedLanguage } from './index';
 import Layout from '../components/layout/Layout';
+import NotFoundPage from '../pages/NotFoundPage';
 import { setStoredLanguage } from './language';
 
 function isSupportedLanguage(lang: string | undefined): lang is SupportedLanguage {
@@ -22,7 +23,7 @@ export function LanguageRouteGuard() {
   }, [lang]);
 
   if (!isSupportedLanguage(lang)) {
-    return <Navigate to="/en" replace />;
+    return <NotFoundPage />;
   }
 
   return <Layout />;

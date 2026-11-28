@@ -1,5 +1,6 @@
 import type React from "react";
-import { Link, Navigate, useParams } from "react-router-dom";
+import NotFoundPage from "./NotFoundPage";
+import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Section from "../components/ui-patterns/Section";
 import Stack from "../components/ui-primitives/Stack";
@@ -18,7 +19,7 @@ const CaseStudyPage: React.FC = () => {
   const caseStudy = caseStudies.find((item) => item.slug === slug);
 
   if (!caseStudy) {
-    return <Navigate to={`/${lang}/projects`} replace />;
+    return <NotFoundPage />;
   }
 
   const key = caseStudy.translationKey;

@@ -1,5 +1,6 @@
-import { createBrowserRouter, Navigate, Outlet, type RouteObject } from "react-router-dom";
+import { createBrowserRouter, Outlet, type RouteObject } from "react-router-dom";
 import RouteMetadata from "./seo/RouteMetadata";
+import NotFoundPage from "./pages/NotFoundPage";
 import { LanguageRouteGuard } from "./i18n/LanguageRouteGuard";
 import HomePage from "./pages/HomePage.tsx";
 import AboutPage from "./pages/AboutPage.tsx";
@@ -26,9 +27,10 @@ export const routes: RouteObject[] = [
           { path: "projects/:slug", element: <CaseStudyPage /> },
           { path: "blog", element: <BlogPage /> },
           { path: "contact", element: <ContactPage /> },
+          { path: "*", element: <NotFoundPage /> },
         ],
       },
-      { path: "*", element: <Navigate to="/" replace /> },
+      { path: "*", element: <NotFoundPage /> },
     ],
   },
 ];

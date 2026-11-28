@@ -16,7 +16,8 @@ The frontend is a React single-page application built into static files with Vit
 - Data-driven portfolio with reusable cards, detail pages and photo galleries.
 - Spanish and English routes, shared UI translations, language switching and a preference stored in `localStorage`.
 - Contact form with submission state, success feedback, field validation errors returned by the API and general error handling.
-- Client-side page metadata in ES/EN: titles, descriptions, canonicals, reciprocal language alternates and Open Graph, with a nonindexable Blog placeholder.
+- Initial HTML and client-side metadata in ES/EN: titles, descriptions, canonicals, reciprocal language alternates and Open Graph, with a nonindexable Blog placeholder.
+- Generated sitemap and robots, extensionless route delivery and localized NotFound pages with real HTTP 404 responses in the NGINX image.
 
 The portfolio currently contains six case studies:
 
@@ -33,7 +34,7 @@ These items are tracked in the backlog and are not implemented features:
 
 - [Static blog MVP — #26](https://github.com/raullopezpenalva/Personal-Website/issues/26): the Blog route currently shows a coming-soon placeholder.
 - [Certifications section — #65](https://github.com/raullopezpenalva/Personal-Website/issues/65).
-- [Initial HTML metadata, sitemap, robots and HTTP 404 handling — #72](https://github.com/raullopezpenalva/Personal-Website/issues/72).
+- [Public HTTP, preview and homelab integration validation — #73](https://github.com/raullopezpenalva/Personal-Website/issues/73).
 - [Possible blog API integration — #30](https://github.com/raullopezpenalva/Personal-Website/issues/30): a future evaluation, separate from the static MVP.
 
 ## Technology
@@ -84,14 +85,14 @@ Case study metadata, slugs, tags and image references live in [case-studies.ts](
 | [src/assets/](src/assets/) | Images and other imported assets |
 | [src/index.css](src/index.css), [src/styles/](src/styles/) | Global, layout, page and component styles |
 | [src/App.test.tsx](src/App.test.tsx), [src/tests/](src/tests/) | Frontend smoke test and test setup |
-| [nginx/default.conf](nginx/default.conf), [Dockerfile](Dockerfile) | Static runtime, SPA fallback and container build |
+| [nginx/default.conf](nginx/default.conf), [Dockerfile](Dockerfile) | Generated route delivery, HTTP 404 handling and container build |
 | [scripts/](scripts/) | Runtime smoke check and image publication helpers |
 | [.github/workflows/](.github/workflows/) | Verification and image publication |
 | [docs/](docs/) | Delivery contract and versioned content/design documentation |
 
 ## Local development
 
-Use **Node.js 22** and **npm**, matching CI and the Docker build. A [VS Code devcontainer](.devcontainer/devcontainer.json) with Node.js 22 is also available; it forwards Vite ports 5173 and 4173 and runs `npm install` on creation.
+Use **Node.js 22.18+** and **npm**, matching CI and the Docker build. A [VS Code devcontainer](.devcontainer/devcontainer.json) with Node.js 22 is also available; it forwards Vite ports 5173 and 4173 and runs `npm install` on creation.
 
 From the repository root:
 
@@ -115,7 +116,8 @@ In production, homelab's reverse proxy must route the API path to `contact-servi
 | Command | Purpose |
 | --- | --- |
 | `npm run dev` | Start the development server |
-| `npm run build` | Type-check and build production files into `dist/` |
+| `npm run build` | Type-check, build Vite files and generate static route metadata/sitemap into `dist/` |
+| `npm run build:seo` | Regenerate static SEO files after a Vite build |
 | `npm run preview` | Preview the production build locally, after building |
 | `npm run lint` | Run ESLint |
 | `npm run lint:fix` | Apply available ESLint fixes |
@@ -167,7 +169,7 @@ The workflow does not update `latest`. Tags can move; homelab uses the digest re
 
 This repository owns the frontend source, verification, container build and image publication. **Homelab owns production configuration, secrets, image selection, validation, promotion and deployment.**
 
-Publishing an image does not deploy it or change production traffic. The producer workflow does not access production servers. The deployed frontend container serves the static build with an SPA fallback, while the infrastructure reverse proxy handles the public domain, TLS and backend routing.
+Publishing an image does not deploy it or change production traffic. The producer workflow does not access production servers. The deployed frontend container serves generated route documents and assets, with real 404 responses for missing paths. The infrastructure reverse proxy handles the public domain, TLS and backend routing.
 
 See [Image publication and homelab promotion](docs/image-publication.md) for the delivery contract, receipt fields and operational checks.
 
@@ -175,6 +177,8 @@ See [Image publication and homelab promotion](docs/image-publication.md) for the
 
 | Document | Purpose |
 | --- | --- |
+| [Static SEO delivery — #72](docs/seo-static-delivery.md) | Initial route HTML, crawl files, NGINX behavior and verification |
+| [Static SEO decision](docs/adr/0001-static-seo.md) | Architecture decision and delivery tradeoffs |
 | [Route metadata — #71](docs/seo-metadata.md) | Client-side SEO ownership, route data and integration contract for initial HTML |
 | [SEO audit — #69](docs/seo-audit.md) | Audit baseline, ES/EN policy and follow-up backlog |
 | [Image publication and homelab promotion](docs/image-publication.md) | Current image delivery and deployment ownership contract |

@@ -10,7 +10,7 @@ Implemented by #71. This is the client-side metadata layer for the existing Reac
 - `src/seo/RouteMetadata.tsx` runs once per pathname change at the router root, including client navigation and language switching.
 - `src/seo/head.ts` is the single owner of SEO tags. It adopts matching static tags, removes duplicates and replaces obsolete values. It preserves unrelated head content.
 
-There are 22 indexable localized URLs today. The Blog placeholder has its own localized title/description and self canonical, but receives `noindex, follow` and no language alternates. Unknown/untranslated metadata resolves to an unavailable, nonindexable state without a canonical or Open Graph URL. Existing route redirects are unchanged; actual NotFound handling and HTTP 404 responses remain #72.
+There are 22 indexable localized URLs today. The Blog placeholder has its own localized title/description and self canonical, but receives `noindex, follow` and no language alternates. Unknown/untranslated metadata resolves to an unavailable, nonindexable state without a canonical or Open Graph URL. NotFound handling, initial route metadata and HTTP 404 responses are implemented by #72; see [static SEO delivery](seo-static-delivery.md).
 
 ## URL and image policy
 
@@ -28,7 +28,7 @@ SEO-owned nodes are marked `data-site-seo` and removed on effect cleanup. Matchi
 
 The updater sets attributes and textContent, not interpolated HTML. The existing index.html title is retained as a pre-JavaScript fallback and adopted when React starts; there is no global noindex in that shell.
 
-## Contract for #72
+## Integration with #72
 
 - Reuse `seoPages` and `resolveMetadata` to generate initial metadata and a sitemap. Exclude entries with `indexable: false` and absent locale copy.
 - Keep canonical, alternates, robots policy and image identity identical between the initial HTML and client navigation.
@@ -36,7 +36,7 @@ The updater sets attributes and textContent, not interpolated HTML. The existing
 - Add initial per-route html lang and metadata, robots.txt, sitemap.xml and the image/runtime checks in #72.
 - Validate status codes, redirect normalization, MIME and deployed previews in #73.
 
-The current initial response still contains the generic Vite shell. This change does not claim complete social crawler support or prerendered body content. The public portrait URL becomes available only when this image is deployed through homelab.
+#72 generates initial route metadata from this resolver. Normal body content remains client-rendered. Public proxy/social crawler validation remains #73; the new behavior becomes public only after deployment through homelab.
 
 ## Checks
 

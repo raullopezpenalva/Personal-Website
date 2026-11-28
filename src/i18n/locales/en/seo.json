@@ -2,7 +2,9 @@
   "imageAlt": "Portrait of Raúl López Penalva",
   "notFound": {
     "title": "Page not found",
-    "description": "The requested page is not available."
+    "description": "The requested page is not available.",
+    "home": "Back to home",
+    "projects": "View projects"
   },
   "pages": {
     "home": {
