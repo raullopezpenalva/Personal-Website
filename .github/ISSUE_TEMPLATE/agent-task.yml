@@ -1,0 +1,44 @@
+name: Implementation task
+description: Define a focused, reviewable change for a contributor or agent.
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Problem and outcome
+      description: What happens today, and what should change for the user or maintainer?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: List the responsibilities and files/areas expected to change.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Use observable, verifiable outcomes.
+      placeholder: "- [ ] ..."
+    validations:
+      required: true
+  - type: textarea
+    id: exclusions
+    attributes:
+      label: Exclusions
+      description: State what this task does not authorize.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation
+      description: Relevant checks, fixtures, viewports or environment requirements; distinguish local, CI and production.
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: Dependencies and decisions
+      description: Related issues, accepted ADRs, blockers or decisions still needed.
