@@ -90,11 +90,19 @@ Case study metadata, slugs, tags and image references live in [case-studies.ts](
 | [.github/workflows/](.github/workflows/) | Verification and image publication |
 | [docs/](docs/) | Delivery contract and versioned content/design documentation |
 
+## Working method
+
+Read [AGENTS.md](AGENTS.md) and [CONTRIBUTING.md](CONTRIBUTING.md) before implementation.
+They link the issue/PR workflow, existing-checkout rules, container environment,
+proportional verification and architecture boundaries. Agent application/tooling
+commands run in the existing devcontainer; do not install project tooling on the
+host. Merging requires the maintainer's explicit instruction for the task.
+
 ## Local development
 
-Use **Node.js 22.18+** and **npm**, matching CI and the Docker build. A [VS Code devcontainer](.devcontainer/devcontainer.json) with Node.js 22 is also available; it forwards Vite ports 5173 and 4173 and runs `npm install` on creation.
+Use the existing [VS Code devcontainer](.devcontainer/devcontainer.json) with **Node.js 22.18+** and **npm**, matching CI and the Docker build. It forwards Vite ports 5173 and 4173 and currently runs `npm install` on creation. Verify with `npm ci` against the committed lockfile.
 
-From the repository root:
+Run these commands from the repository root **inside the devcontainer**:
 
 ```bash
 npm ci
@@ -125,15 +133,15 @@ In production, homelab's reverse proxy must route the API path to `contact-servi
 | `npm run test:run` | Run frontend tests once |
 | `npm run test:ci` | Run frontend tests with coverage |
 
-The current frontend test is a basic rendering smoke test, not comprehensive page or integration coverage.
+The current Vitest suite covers the application smoke render and SEO metadata/head/static-generation behavior. It does not provide comprehensive page, accessibility or backend integration coverage.
 
-Publication helper tests can also be run locally with Python 3:
+In an authorized container environment with Python 3, publication helper tests can also be run:
 
 ```bash
 python3 -m unittest discover -s scripts/tests -v
 ```
 
-With Docker available, build a local test image and check its static runtime:
+In an authorized container environment with Docker access (or hosted CI), build a test image and check its static runtime. The current devcontainer does not declare a Docker socket; see [environment guidance](docs/agents/environment.md):
 
 ```bash
 docker build --platform linux/amd64 -t personal-website:local .
@@ -177,6 +185,10 @@ See [Image publication and homelab promotion](docs/image-publication.md) for the
 
 | Document | Purpose |
 | --- | --- |
+| [Agent workflow](docs/agents/workflow.md) | Checkout selection, issue-to-PR delivery and explicit merge authorization |
+| [Environment and verification](docs/agents/environment.md) | Devcontainer commands and checks proportional to the change |
+| [Architecture guardrails](docs/agents/architecture.md) | Frontend, content, SEO, backend and deployment ownership |
+| [Method adoption](docs/agents/method-adoption.md) | Comparison with the maintainer's other repositories and adaptation rationale |
 | [Visual redesign demo — #77](docs/design/visual-redesign.md) | Proposed visual system, page layouts, responsive behavior and local validation |
 | [Static SEO delivery — #72](docs/seo-static-delivery.md) | Initial route HTML, crawl files, NGINX behavior and verification |
 | [Static SEO decision](docs/adr/0001-static-seo.md) | Architecture decision and delivery tradeoffs |
