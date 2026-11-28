@@ -111,7 +111,7 @@ const CaseStudyPage: React.FC = () => {
         <div className="case-study-detail-grid">
           {detailSections.map((section) => (
             <article key={section.id} className="case-study-detail-card">
-              <h2>{section.title}</h2>
+              <h3>{section.title}</h3>
               <Text variant="body">{section.text}</Text>
             </article>
           ))}

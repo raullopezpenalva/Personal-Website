@@ -12,7 +12,7 @@ const ProjectsPage: React.FC = () => {
 
   return (
     <>
-      <Section id="projects-hero" justifyContent="center">
+      <Section id="projects-hero" className="page-intro">
         <Stack direction="column" gap="sm" align="center" margin="lg">
           <Text as="h1" variant="title" align="center">
             {t("hero.title")}

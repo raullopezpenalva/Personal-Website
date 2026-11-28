@@ -24,6 +24,7 @@ const ServicesPage: React.FC = () => {
         {/* Services Hero */}
         <Section
             id="services-hero"
+            className="page-intro"
         >
             <Stack direction="column" gap="none" justifyContent="center" align="stretch" margin="sm">
             <Text as="h1" variant="title" align="center">{t('services-title.title')}</Text>
