@@ -103,9 +103,12 @@ Clean up only disposable resources created for the task.
 ## Hosted checks and evidence
 
 [verify.yml](../../.github/workflows/verify.yml) owns frontend verification and
-the Linux/amd64 image/runtime/helper checks. PRs targeting main invoke it through
-[CI-main-test.yml](../../.github/workflows/CI-main-test.yml). Hosted CI runs in its
-own environment; its tool setup does not authorize host installation by an agent.
+the Linux/amd64 image/runtime/helper checks.
+[CI-dev-test.yml](../../.github/workflows/CI-dev-test.yml) invokes it for issue
+PRs targeting `dev` and for pushes to `dev`.
+[CI-main-test.yml](../../.github/workflows/CI-main-test.yml) invokes it for
+release PRs targeting `main`. Hosted CI runs in its own environment. Its tool
+setup does not authorize host installation by an agent.
 
 Inspect the check results for the delivered PR head. Record passed, failed,
 pending and unavailable checks accurately. Green hosted CI does not prove a

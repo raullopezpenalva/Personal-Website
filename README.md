@@ -98,6 +98,11 @@ proportional verification and architecture boundaries. Agent application/tooling
 commands run in the existing devcontainer; do not install project tooling on the
 host. Merging requires the maintainer's explicit instruction for the task.
 
+Issue branches start from `origin/dev` and their pull requests target `dev`.
+An authorized release uses a separate pull request from `dev` to `main`.
+The push to `main` triggers image publication. Homelab handles production
+promotion and deployment.
+
 ## Local development
 
 Use the existing [VS Code devcontainer](.devcontainer/devcontainer.json) with **Node.js 22.18+** and **npm**, matching CI and the Docker build. It forwards Vite ports 5173 and 4173 and currently runs `npm install` on creation. Verify with `npm ci` against the committed lockfile.

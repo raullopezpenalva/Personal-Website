@@ -26,12 +26,15 @@ documents and provide public UI copy in ES/EN.
 - Track implementation in an issue and deliver a focused PR. Issue creation,
   task branches, fixes, verification, commits, pushes and PR creation are routine
   steps within an authorized implementation request.
+- Start issue branches from current `origin/dev` and target `dev` explicitly.
+  Use a separate `dev` → `main` release PR when the maintainer asks to promote a
+  version.
 - Merge only when the maintainer explicitly requests it for the current work.
   An existing explicit merge request is sufficient; do not ask again. Without
   that request, leave the PR ready for human review. Do not enable auto-merge.
 - Deployment, tags, releases, infrastructure changes and work in other
-  repositories require their own applicable authorization. Merging main can
-  trigger its existing image-publication workflow; publication is not deployment.
+  repositories require their own applicable authorization. A merge into `main`
+  triggers image publication. Homelab owns production promotion and deployment.
 - Run application services, package managers, tests, builds and project tooling
   in the configured devcontainer. Do not install runtimes, packages, browser
   tooling or project dependencies on the host. Existing host editing/Git/Docker

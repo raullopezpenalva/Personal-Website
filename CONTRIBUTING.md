@@ -6,11 +6,13 @@ issue/branch/PR traceability, architecture boundaries and review evidence.
 
 1. Inspect and use the existing checkout; preserve unrelated local work.
 2. Create or select a focused issue with scope, acceptance criteria and exclusions.
-3. Start a task branch from current main, or continue the existing task PR.
+3. Start a task branch from current `origin/dev`, or continue the existing task PR.
 4. Implement with the existing stack and update the owning documentation.
-5. Verify proportionally and publish a PR to main with evidence and limitations.
-6. Merge only with the maintainer's explicit instruction; deployment, tags and
-   releases are separate actions.
+5. Verify proportionally and open a PR targeting `dev` with evidence and limitations.
+6. Merge into `dev` only with the maintainer's explicit instruction.
+7. When the maintainer requests a release, prepare a separate PR from `dev` to
+   `main`. A release merge, tags, GitHub release publication and production
+   deployment each follow the applicable authorization.
 
 Read the [workflow](docs/agents/workflow.md),
 [environment and verification](docs/agents/environment.md) and

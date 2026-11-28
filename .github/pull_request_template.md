@@ -4,9 +4,10 @@
 
 ## Issue and scope
 
-Closes #
+Refs #
 
-<!-- Use Closes only when the delivered scope satisfies the issue. State material exclusions. -->
+<!-- Issue PRs target dev. Link the issue and state material exclusions.
+Release PRs promote dev to main and describe the changes included in the release. -->
 
 ## Verification
 
