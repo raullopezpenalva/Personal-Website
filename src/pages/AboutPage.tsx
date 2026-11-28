@@ -12,30 +12,11 @@ const AboutPage: React.FC = () => {
   const { t } = useTranslation("about");
 
   return (
-    <>
+    <div className="about-page">
       {/* WHO I AM */}
       <Section id="about-who-am-i">
-        <Stack className="stack-60-40" direction="row" gap="none" margin="lg">
-          <Stack
-            align="center"
-            gap="md"
-            justifyContent="center"
-            className="stack-60-40-left"
-          >
-            <img
-              src={headshot}
-              alt="Raúl López Penalva"
-              className="whoami-headshot"
-            />
-          </Stack>
-
-          <Stack
-            align="center"
-            gap="none"
-            direction="column"
-            justifyContent="center"
-            className="stack-60-40-right"
-          >
+        <div className="about-intro">
+          <div>
             <Text as="h1" variant="title" className="whoami-title">
               {t("whoAmI.title")}
             </Text>
@@ -51,8 +32,13 @@ const AboutPage: React.FC = () => {
             <Text variant="parragraph" className="whoami-text">
               {t("whoAmI.text2")}
             </Text>
-          </Stack>
-        </Stack>
+          </div>
+          <img
+            src={headshot}
+            alt="Raúl López Penalva"
+            className="whoami-headshot"
+          />
+        </div>
       </Section>
 
       {/* WHERE I COME FROM */}
@@ -69,12 +55,7 @@ const AboutPage: React.FC = () => {
         <Stack gap="md">
           <Text variant="parragraph">{t("technicalBackground.intro")}</Text>
 
-          <Stack
-            direction="row"
-            justifyContent="space-between"
-            gap="md"
-            className="about-my-journey-grid"
-          >
+          <div className="about-my-journey-grid">
             <SubSection
               id="about-technical-background-training"
               title={t("technicalBackground.trainingTitle")}
@@ -98,7 +79,7 @@ const AboutPage: React.FC = () => {
                 <Bullet>{t("technicalBackground.experienceBullet4")}</Bullet>
               </BulletList>
             </SubSection>
-          </Stack>
+          </div>
         </Stack>
       </Section>
 
@@ -175,7 +156,7 @@ const AboutPage: React.FC = () => {
           <Text variant="parragraph">{t("howIWork.text3")}</Text>
         </Stack>
       </Section>
-    </>
+    </div>
   );
 };
 

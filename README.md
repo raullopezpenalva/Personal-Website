@@ -189,6 +189,7 @@ See [Image publication and homelab promotion](docs/image-publication.md) for the
 | [Environment and verification](docs/agents/environment.md) | Devcontainer commands and checks proportional to the change |
 | [Architecture guardrails](docs/agents/architecture.md) | Frontend, content, SEO, backend and deployment ownership |
 | [Method adoption](docs/agents/method-adoption.md) | Comparison with the maintainer's other repositories and adaptation rationale |
+| [Visual redesign demo — #77](docs/design/visual-redesign.md) | Proposed visual system, page layouts, responsive behavior and local validation |
 | [Static SEO delivery — #72](docs/seo-static-delivery.md) | Initial route HTML, crawl files, NGINX behavior and verification |
 | [Static SEO decision](docs/adr/0001-static-seo.md) | Architecture decision and delivery tradeoffs |
 | [Route metadata — #71](docs/seo-metadata.md) | Client-side SEO ownership, route data and integration contract for initial HTML |

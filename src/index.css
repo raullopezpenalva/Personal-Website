@@ -4,9 +4,11 @@
 
 :root {
   /* Fonts */
-  --font-title: 'Inter', system-ui, sans-serif;
-  --font-text: 'Aeonik', system-ui, sans-serif;
-  --font-code: ui-monospace, SF Mono, SF Mono Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  --font-title: "Inter", system-ui, sans-serif;
+  --font-text: "Inter", system-ui, sans-serif;
+  --font-code:
+    ui-monospace, SF Mono, SF Mono Regular, Consolas, "Liberation Mono", Menlo,
+    Courier, monospace;
   --lh-base: 1.5;
   --fw-base: 400;
 
@@ -15,17 +17,17 @@
 
   /* Colors - Surfaces */
   --surface-1: #151617; /* Section light shade background*/
-  --surface-2: #151517; /* sub sections background */
+  --surface-2: #1d2023; /* sub sections background */
   --surface-3: #313131; /* section highlight background*/
 
   /* Colors - Text */
-  --fg: #8a8f98; /* Primary text */
-  --fg-muted:  #7b8189; /* Secondary text */
+  --fg: #c4c9cf; /* Primary text */
+  --fg-muted: #989fa8; /* Secondary text */
   --fg-subtle: #ebeced; /* Subtle text */
   --fg-title: #f7f8f8; /* Titles text */
 
   /* Colors - Accents */
-  --accent-1: #02b8cc;  /* Bullets */
+  --accent-1: #02b8cc; /* Bullets */
   --accent-2: #5e68d0; /* Header pages hover */
   --accent-3: #4ea6fb;
   --accent-4: #f2c94c; /* Bullets highlight */
@@ -36,11 +38,13 @@
   --accent-9: #68cc58;
   --accent-10: #d4b144;
   --accent-linkedin: #0072b1; /* LinkedIn icon color */
-  
+
   /* Colors - Components */
   --btn-bg-primary: #28282c; /* primary button background*/
   --btn-bg-secondary: #e6e6e6; /* secondary button background*/
-  --btn-bg-alternative: var(--accent-linkedin); /* alternative button background */
+  --btn-bg-alternative: var(
+    --accent-linkedin
+  ); /* alternative button background */
   --btn-fg-secondary: #08090a; /* secondary button text*/
   --btn-fg-primary: #f1f2f2; /* primary button text*/
   --btn-fg-alternative: #f1f2f2; /* alternative button text */
@@ -49,6 +53,13 @@
   --header-bottom-border: #1d1d1e; /* Header bottom border */
   --footer-top-border: #1d1d1e; /* Footer top border */
 
+  /* Shared visual tokens — see docs/design/visual-redesign.md */
+  --border-color: #313131;
+  --border-strong: #53585d;
+  --radius-panel: 12px;
+  --radius-control: 8px;
+  --text-measure: 68ch;
+  --duration-fast: 160ms;
 
   /* Space scale */
   --space-0: 0;
@@ -71,13 +82,13 @@
   --space-list: var(--space-2);
 
   --space-subsection: var(--space-5);
-  --space-section: var(--space-7);
+  --space-section: clamp(3.5rem, 7vw, 6rem);
   --space-column: var(--space-10);
 
   /* Layout variables */
-  --page-padding-left: var(--space-5);
-  --page-padding-right: var(--space-5);
-  --page-max-width: 1024px;
+  --page-padding-left: clamp(1.25rem, 4vw, 3rem);
+  --page-padding-right: var(--page-padding-left);
+  --page-max-width: 1200px;
 
   /* Font sizes */
   --font-size-xxs: 0.5rem; /* 8px */
@@ -94,7 +105,7 @@
 
   /* Font weights */
   --font-weight-normal: 400;
-  --font-weight-medium: 510;
+  --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
@@ -105,8 +116,8 @@
 
   /* Header variables */
   --header-nav-gap: var(--space-3);
-  --header-height: var(--space-8);
-  
+  --header-height: 4.5rem;
+
   /* Footer variables */
   --footer-padding-vertical: var(--space-5);
   --footer-top-gap: var(--space-7);
@@ -144,11 +155,11 @@
   --text-body-margin: var(--space-1);
 
   /* Button variables */
-  --btn-height: var(--space-6);
+  --btn-height: 2.75rem;
   --btn-icon-size: var(--space-4);
-  --btn-font-size: var(--space-3);
+  --btn-font-size: var(--font-size-sm);
   --btn-corner-radius: var(--space-2);
-  --btn-padding: 0 12px;
+  --btn-padding: 0 18px;
   --btn-gap: 8px;
   --kbd-offset: -5px;
   --kbd-size: 18px;
@@ -176,18 +187,24 @@
 *::after {
   box-sizing: border-box;
 }
-html, body {
+html,
+body {
   width: 100%;
-  overflow-x: hidden;
+  min-width: 320px;
 }
 
-img, video, svg {
+img,
+video,
+svg {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-p, h1 ,h2, h3 {
+p,
+h1,
+h2,
+h3 {
   overflow-wrap: anywhere;
 }
 
@@ -200,6 +217,48 @@ body {
   color: var(--fg);
 }
 
-@media (max-width: 599px) { /* Mobile-specific styles */ }
-@media (min-width: 600px) and (max-width: 1023px) { /* Tablet-specific styles */ }
-@media (min-width: 1024px) { /* Desktop-specific styles */ }
+@media (max-width: 599px) {
+  /* Mobile-specific styles */
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  /* Tablet-specific styles */
+}
+@media (min-width: 1024px) {
+  /* Desktop-specific styles */
+}
+html {
+  color-scheme: dark;
+  scroll-padding-top: calc(var(--header-height) + 1rem);
+}
+body {
+  -webkit-font-smoothing: antialiased;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+a {
+  color: inherit;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent-3);
+  outline-offset: 4px;
+}
+::selection {
+  background: var(--accent-1);
+  color: var(--bg);
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}

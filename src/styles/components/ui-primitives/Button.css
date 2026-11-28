@@ -1,65 +1,52 @@
-/* Button styles */
 .btn {
-    display: inline-flex;
-    padding: var(--btn-padding);
-    border-radius: var(--btn-corner-radius);
-    font-size: var(--btn-font-size);
-    font-weight: var(--font-weight-medium);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    height: var(--btn-height);
-    width: max-content;
-    align-items: center;
-    justify-content: center;
-    gap: var(--btn-gap);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--btn-gap);
+  min-height: var(--btn-height);
+  padding: var(--btn-padding);
+  border: 1px solid transparent;
+  border-radius: var(--radius-control);
+  font-size: var(--btn-font-size);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+  cursor: pointer;
+  text-decoration: none;
+  width: fit-content;
+  transition:
+    background-color var(--duration-fast),
+    border-color var(--duration-fast),
+    color var(--duration-fast);
 }
-
-/* Primary button style */
 .btn-primary {
-    background: var(--btn-bg-primary);
-    color: var(--btn-fg-primary);
-    border: 1px solid var(--btn-border-primary);
-    opacity: 0.85;
+  color: var(--btn-fg-primary);
+  background: var(--btn-bg-primary);
+  border-color: var(--btn-border-primary);
 }
-
 .btn-primary:hover {
-    opacity: 1;
+  background: var(--surface-3);
+  border-color: var(--border-strong);
 }
-
-/* Secondary button style */
 .btn-secondary {
-    background: var(--btn-bg-secondary);
-    color: var(--btn-fg-secondary);
-    opacity: 0.85;
+  color: var(--btn-fg-secondary);
+  background: var(--btn-bg-secondary);
 }
-
 .btn-secondary:hover {
-    opacity: 1;
+  background: var(--fg-title);
 }
-
-/* Alternative button style */
 .btn-alternative {
-    background: var(--btn-bg-alternative);
-    color: var(--btn-fg-alternative);
-    opacity: 0.85;
+  background: var(--btn-bg-alternative);
+  color: var(--btn-fg-alternative);
 }
-
 .btn-alternative:hover {
-    opacity: 1;
+  background: #005f92;
 }
-
-/* Muted button style */
 .btn-muted {
-    background: transparent;
-    color: var(--fg);
-    border-color: transparent;
-    font-size: var(--font-size-xs);
-    font-weight: var(--font-weight-normal);
+  color: var(--fg-muted);
+  background: transparent;
+  font-weight: 400;
 }
-
 .btn-muted:hover {
-    background: var(--btn-bg-muted-hover);
-    color: var(--fg-title);
-    
+  color: var(--fg-title);
+  background: var(--surface-1);
 }

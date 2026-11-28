@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
                         <div className="footer-social-icons">
                             <a
                                 href={`/${lang}/contact`}
-                                arial-label={t('btn.contact')}
+                                aria-label={t('btn.contact')}
                                 className="footer-icon-link"
                             >
                                 <EmailIcon />
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
                                 href={githubUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                arial-label="GitHub"
+                                aria-label="GitHub"
                                 className="footer-icon-link"
                             >
                                 <GitHubIcon />
@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
                                 href={linkedinUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                arial-label="LinkedIn"
+                                aria-label="LinkedIn"
                                 className="footer-icon-link"
                             >
                                 <LinkedInIcon />

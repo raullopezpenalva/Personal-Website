@@ -7,44 +7,42 @@ import Stack from "../components/ui-primitives/Stack";
 import Bullet from "../components/ui-patterns/Bullet";
 import Text from "../components/ui-primitives/Text";
 import BulletList from "../components/ui-patterns/BulletList";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 import FeaturedCaseStudyCard from "../components/domain/FeaturedCaseStudyCard";
 import { homeFeaturedCaseStudies } from "../data/home-featured-case-studies";
+import HeroPhoto from "../assets/images/services/sound-engineer.webp";
 import HybridProfilePhoto from "../assets/images/hybrid-profile/back-d-b.webp";
 
 const HomePage: React.FC = () => {
-  const { t } = useTranslation('home');
+  const { t } = useTranslation("home");
   const { lang } = useParams<{ lang: string }>();
-  const { t: tCommon } = useTranslation('common');
+  const { t: tCommon } = useTranslation("common");
   return (
     <>
       {/* HERO */}
       <Section id="hero" className="hero-section" justifyContent="center">
-        <div className="hero-inner">
-          <p className="hero-kicker">{tCommon('main.tagline')}</p>
-          <h1 className="hero-title">
-            {tCommon('main.name')}
-          </h1>
-          <p className="hero-text">
-            {tCommon('main.description')}
-          </p>
+        <img className="hero-photo" src={HeroPhoto} alt="" fetchPriority="high" />
+        <div className="hero-copy">
+          <p className="hero-kicker">{tCommon("main.tagline")}</p>
+          <h1 className="hero-title">{tCommon("main.name")}</h1>
+          <p className="hero-text">{tCommon("main.description")}</p>
           <div className="hero-actions">
             <Button to={`/${lang}/services`} variant="primary">
-              {tCommon('btn.services')}
+              {tCommon("btn.services")}
             </Button>
             <Button to={`/${lang}/contact`} variant="secondary">
-              {tCommon('btn.contact')}
+              {tCommon("btn.contact")}
             </Button>
           </div>
         </div>
       </Section>
-      
+
       {/* SERVICE PREVIEW */}
       <Section
         id="service-preview"
-        title={t('services.title')}
-        subtitles={t('services.subtitle')}
+        title={t("services.title")}
+        subtitles={t("services.subtitle")}
         justifyContent="space-between"
       >
         <div className="services-preview-grid">
@@ -58,7 +56,7 @@ const HomePage: React.FC = () => {
           ))}
         </div>
       </Section>
-      
+
       {/* HYBRID PROFILE */}
       <Section
         id="hybrid-profile"
@@ -67,8 +65,13 @@ const HomePage: React.FC = () => {
         justifyContent="center"
         flexDirection="column"
       >
-        <Stack className="stack-60-40" direction="row" gap="xs" margin="lg">
-          <Stack align="center" justifyContent="space-between" gap="md" className="stack-60-40-left">
+        <Stack className="profile-layout" direction="row" gap="xs" margin="lg">
+          <Stack
+            align="center"
+            justifyContent="space-between"
+            gap="md"
+            className="profile-copy"
+          >
             <Text>{t("hybrid-profile.text1")}</Text>
             <Text>{t("hybrid-profile.text2")}</Text>
             <Text>{t("hybrid-profile.text3")}</Text>
@@ -94,12 +97,15 @@ const HomePage: React.FC = () => {
             gap="md"
             direction="row"
             justifyContent="center"
-            className="stack-60-40-right"
+            className="profile-photo"
           >
             <div className="image-placeholder-40-60">
-              <img className="image-40-60" src={HybridProfilePhoto} alt="Hybrid profile illustration" />
-          
-          </div>
+              <img
+                className="image-40-60"
+                src={HybridProfilePhoto}
+                alt={tCommon("main.name")}
+              />
+            </div>
           </Stack>
         </Stack>
       </Section>
@@ -122,8 +128,6 @@ const HomePage: React.FC = () => {
         </div>
       </Section>
 
-
-
       {/* This web is developed by me */}
       {/* <Section
         id="about-this-web"
@@ -132,8 +136,8 @@ const HomePage: React.FC = () => {
         justifyContent="center"
         flexDirection="column"
       >
-        <Stack className="stack-60-40" direction="row" gap="none" margin="lg">
-          <Stack align="center" gap="md" className="stack-60-40-left">
+        <Stack className="profile-layout" direction="row" gap="none" margin="lg">
+          <Stack align="center" gap="md" className="profile-copy">
             <Text>{t('about-this-web.description')}</Text>
             <BulletList className="personalweb-bullet-list">
               <Bullet>{t('about-this-web.bullet1')}</Bullet>
@@ -149,20 +153,24 @@ const HomePage: React.FC = () => {
               </Button>
             </div>
           </Stack>
-          <Stack align="stretch" gap="md" direction="row" justifyContent="center" className="stack-60-40-right">
+          <Stack align="stretch" gap="md" direction="row" justifyContent="center" className="profile-photo">
             <PipelineYaml />
           </Stack>
         </Stack>
       </Section> */}
 
       {/* CALL TO ACTION */}
-      <Section id="contact" className="call-to-action-section" justifyContent="center">
+      <Section
+        id="contact"
+        className="call-to-action-section"
+        justifyContent="center"
+      >
         <div className="call-to-action">
           <p className="call-to-action__kicker">{t("CTA.kicker")}</p>
-          <h2>{t('CTA.h2')}</h2>
-          <p>{t('CTA.p')}</p>
+          <h2>{t("CTA.h2")}</h2>
+          <p>{t("CTA.p")}</p>
           <Button to={`/${lang}/contact`} variant="primary">
-            {tCommon('btn.contact')}
+            {tCommon("btn.contact")}
           </Button>
         </div>
       </Section>
